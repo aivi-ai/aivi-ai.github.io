@@ -1,26 +1,469 @@
 @import "tailwindcss";
 
+/* ── Design tokens ─────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-ink:          #0F1115;
+  --color-ink-soft:     #3A4048;
+  --color-ink-muted:    #6B7280;
+  --color-paper:        #F7F5F1;
+  --color-surface:      #FFFFFF;
+  --color-surface-alt:  #EEEBE4;
+  --color-line:         #E3E0DA;
+  --color-accent:       #1F4FFF;
+  --color-accent-hover: #1740D6;
+  --color-accent-soft:  #E8EDFF;
+  --color-accent-glow:  rgba(31, 79, 255, 0.08);
+  --color-accent-2:     #5B7BFF;
+  --color-accent-3:     #8AA0FF;
+  --color-positive:     #167A5B;
+  --color-positive-soft: #E6F5EF;
+  --color-warn:         #9A6400;
+  --color-warn-soft:    #FFF3DB;
+
+  /* Dark surface family — hero, CTA band, footer anchor */
+  --color-ink-deep:         #0B0D12;
+  --color-surface-dark:     #12151C;
+  --color-surface-dark-2:   #1A1E27;
+  --color-line-dark:        rgba(255, 255, 255, 0.18);
+  --color-ink-on-dark:      #F5F6F8;
+  --color-ink-on-dark-soft: rgba(245, 246, 248, 0.68);
+
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(15,17,21,.04);
+  --shadow-md: 0 1px 3px rgba(15,17,21,.04), 0 4px 16px rgba(15,17,21,.06);
+  --shadow-lg: 0 2px 4px rgba(15,17,21,.03), 0 8px 32px rgba(15,17,21,.08);
+  --shadow-xl: 0 4px 8px rgba(15,17,21,.03), 0 16px 48px rgba(15,17,21,.10);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-ink:          var(--color-ink);
+  --color-ink-soft:     var(--color-ink-soft);
+  --color-ink-muted:    var(--color-ink-muted);
+  --color-paper:        var(--color-paper);
+  --color-surface:      var(--color-surface);
+  --color-surface-alt:  var(--color-surface-alt);
+  --color-line:         var(--color-line);
+  --color-accent:       var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-soft:  var(--color-accent-soft);
+  --color-accent-2:     var(--color-accent-2);
+  --color-accent-3:     var(--color-accent-3);
+  --color-positive:     var(--color-positive);
+  --color-warn:         var(--color-warn);
+
+  --color-ink-deep:         var(--color-ink-deep);
+  --color-surface-dark:     var(--color-surface-dark);
+  --color-surface-dark-2:   var(--color-surface-dark-2);
+  --color-line-dark:        var(--color-line-dark);
+  --color-ink-on-dark:      var(--color-ink-on-dark);
+  --color-ink-on-dark-soft: var(--color-ink-on-dark-soft);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ── Base ──────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  margin: 0;
+}
+
+::selection {
+  background-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+/* ── Reduced motion ────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
+
+/* ── Focus ring ────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Type scale ────────────────────────────────────── */
+.text-display {
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+.text-h1 {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+.text-h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.text-h3 {
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
+  line-height: 1.25;
+  font-weight: 600;
+}
+
+.text-lede {
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  line-height: 1.55;
+  color: var(--color-ink-soft);
+}
+
+.text-small {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-ink-muted);
+}
+
+/* ── Prose (resources/MDX) ─────────────────────────── */
+.prose {
+  max-width: 68ch;
+  color: var(--color-ink);
+}
+
+.prose h1 { font-size: clamp(2.25rem, 4.5vw, 3.5rem); line-height: 1.08; letter-spacing: -0.025em; font-weight: 800; margin-top: 0; margin-bottom: 1.5rem; }
+.prose h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); line-height: 1.12; letter-spacing: -0.02em; font-weight: 700; margin-top: 3rem; margin-bottom: 1rem; }
+.prose h3 { font-size: clamp(1.25rem, 2vw, 1.5rem); line-height: 1.25; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; }
+.prose p  { margin-bottom: 1.25rem; }
+.prose ul, .prose ol { padding-left: 1.5rem; margin-bottom: 1.25rem; }
+.prose li { margin-bottom: 0.5rem; }
+.prose a  { color: var(--color-accent); text-decoration: underline; text-underline-offset: 2px; }
+.prose a:hover { text-decoration-color: var(--color-accent-hover); }
+.prose strong { font-weight: 600; color: var(--color-ink); }
+.prose code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875em;
+  background: var(--color-surface-alt);
+  padding: 0.15em 0.4em;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-line);
+}
+.prose pre {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.prose pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.875rem;
+  border: none;
+}
+.prose blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.25rem;
+  margin-left: 0;
+  color: var(--color-ink-soft);
+  font-style: italic;
+}
+
+/* ── Reveal animation ──────────────────────────────── */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 500ms cubic-bezier(0.16, 1, 0.3, 1), transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-hidden, .reveal-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Calendly skeleton ─────────────────────────────── */
+.calendly-skeleton {
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-ink-muted);
+  font-size: 0.9375rem;
+  background: linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
+}
+
+/* ── Utility: gradient text ────────────────────────── */
+.text-gradient-accent {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Card hover lift ───────────────────────────────── */
+.card-lift {
+  transition: transform 250ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-lift:hover {
+    transform: none;
+  }
+}
+
+/* ── Link arrow animation ──────────────────────────── */
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  transition: gap 200ms ease;
+}
+.link-arrow:hover {
+  gap: 0.625rem;
+}
+
+/* ── Button system ─────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+}
+
+.btn-md { padding: 0.625rem 1.5rem; font-size: 0.9375rem; }
+.btn-lg { padding: 0.875rem 2rem; font-size: 1.0625rem; }
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 20px -8px rgba(31, 79, 255, 0.4);
+}
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow: 0 10px 28px -8px rgba(23, 64, 214, 0.5);
+  transform: scale(1.02);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+.btn-secondary:hover {
+  background-color: var(--color-accent-soft);
+  transform: scale(1.02);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-accent);
+  border: none;
+  border-radius: var(--radius-sm);
+}
+.btn-ghost:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Neutral outline — reads dark-on-light or light-on-dark automatically,
+   since it inherits --color-ink/--color-line from whichever section
+   (light or .section-dark) it's rendered in. Used for secondary CTAs
+   over the dark hero/CTA band where the accent-bordered .btn-secondary
+   would fail contrast. */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-line);
+  border-radius: var(--radius-pill);
+}
+.btn-outline:hover {
+  background-color: color-mix(in srgb, var(--color-ink) 8%, transparent);
+  border-color: var(--color-ink-soft);
+  transform: scale(1.02);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn:hover { transform: none; }
+}
+
+/* ── Footer link underline ────────────────────────── */
+.footer-link {
+  transition: color 200ms ease;
+}
+.footer-link:hover {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+/* ── Dark surface zones ────────────────────────────────
+   Re-scopes the ink/surface/line tokens that every component
+   already reads via var(--color-*), so existing components go
+   dark automatically inside this wrapper without prop-drilling. */
+.section-dark {
+  background-color: var(--color-ink-deep);
+  color: var(--color-ink-on-dark);
+  --color-ink:          var(--color-ink-on-dark);
+  --color-ink-soft:     var(--color-ink-on-dark-soft);
+  --color-ink-muted:    var(--color-ink-on-dark-soft);
+  --color-line:         var(--color-line-dark);
+  --color-surface:      var(--color-surface-dark);
+  --color-surface-alt:  var(--color-surface-dark-2);
+}
+
+.section-dark .eyebrow {
+  color: var(--color-accent-3);
+}
+
+.section-dark .text-gradient-accent {
+  background-image: linear-gradient(135deg, var(--color-accent-2), var(--color-accent-3));
+}
+
+/* ── Eyebrow label ─────────────────────────────────── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+}
+
+/* ── Hero A/B experiment ───────────────────────────────
+   Control = variant A. Both variants ship in the HTML; only the active
+   slot shows. With no JS (and for crawlers) A is visible and C hidden.
+   The pre-paint script in app/layout.tsx sets html[data-hero]. */
+[data-hero-slot='c'] { display: none; }
+html[data-hero='c'] [data-hero-slot='a'] { display: none; }
+html[data-hero='c'] [data-hero-slot='c'] { display: block; }
+
+/* ── Interior page header ──────────────────────────────
+   Light opener shared by all interior pages: a faint corner
+   accent glow + hairline, consistent premium framing. */
+.page-header {
+  background-color: var(--color-paper);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  border-bottom: 1px solid var(--color-line);
+}
+.page-header-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(620px circle at 88% -20%, rgba(31, 79, 255, 0.10), transparent 62%);
+}
+
+/* ── Students spotlight band ───────────────────────────
+   A warmer, light accent-tinted moment (not the dark anchor). */
+.students-band {
+  background-image:
+    radial-gradient(700px circle at 12% 0%, var(--color-accent-soft), transparent 60%),
+    linear-gradient(180deg, var(--color-surface), var(--color-paper));
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* ── Mono stat / number treatment ──────────────────── */
+.stat-mono {
+  font-family: var(--font-mono), monospace;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Card system ───────────────────────────────────── */
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.card-dark {
+  background-color: var(--color-surface-dark-2);
+  border: 1px solid var(--color-line-dark);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-ink-on-dark);
+  --color-ink:       var(--color-ink-on-dark);
+  --color-ink-soft:  var(--color-ink-on-dark-soft);
+  --color-ink-muted: var(--color-ink-on-dark-soft);
+  --color-line:      var(--color-line-dark);
+}
+
+/* ── Decorative glow / texture layers (aria-hidden) ──
+   Absolutely positioned within a `position: relative;
+   overflow: hidden` ancestor. Static backgrounds — no
+   motion, so no reduced-motion guard is required. */
+.glow-accent {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(640px circle at 18% 0%, rgba(31, 79, 255, 0.35), transparent 60%),
+    radial-gradient(480px circle at 85% 20%, rgba(90, 123, 255, 0.18), transparent 65%);
+}
+
+.grid-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
 }

@@ -1,0 +1,123 @@
+---
+title: "Seven Things Professionals Get Wrong with LLM Tools"
+description: "Concrete mistakes that lawyers, marketers, analysts, and knowledge workers make with AI tools — and what to do instead."
+date: "2026-07-28"
+readingTime: "9 min read"
+audience: "professionals"
+faq:
+  - q: "How do I know if I'm using AI tools effectively?"
+    a: "The clearest signal is whether you can point to specific tasks that take you meaningfully less time than they did six months ago. If you're using the tools frequently but your output speed hasn't changed, you're probably using them for low-leverage tasks or not iterating on your prompts. Track a week of actual usage and look for the tasks that are still manual."
+  - q: "Is it safe to paste client documents into ChatGPT?"
+    a: "For the standard ChatGPT web interface: OpenAI's terms allow training on user data by default (though this can be turned off in settings). For confidential client work — legal documents, financial records, medical information — you should either use an enterprise API tier (which has no training on your data) or not use these tools at all for that content. When in doubt, ask your compliance team."
+---
+
+Most professionals who use AI tools every day are getting meaningful value from them. They are also making predictable mistakes that either limit the value they get or create risks they haven't thought about.
+
+This is not a list of tool recommendations or a prompting guide. It is a list of the specific wrong turns that come up most often when we watch how professionals actually work.
+
+---
+
+## 1. Using it for first drafts when it's better for final-mile editing
+
+The most common pattern: open a blank document, ask the AI to write something, then spend 20 minutes editing what it produced back into something that sounds like you.
+
+This is the most labour-intensive way to use the tool. The model's writing will always have to become your writing, which means you're doing full writing work on top of editing work.
+
+**What to do instead:** Write the draft yourself — even rough, unpolished, incomplete. Then ask the model to improve specific things: "Make this paragraph more direct." "Remove any vague or hedging language." "Suggest a cleaner way to say this." You maintain authorial control and the editing step is the final mile, not the whole process.
+
+This is especially true for legal, medical, and financial professionals: your output needs to sound like you, carry your judgment, and be defensible. Starting from an AI draft makes all of these harder.
+
+---
+
+## 2. Not checking the output against the source
+
+The model will produce a confident, well-formatted answer that is sometimes wrong. This is not a bug that will be fixed — it is a fundamental property of how language models work. They generate plausible text; they do not look things up.
+
+**Where this goes wrong in practice:**
+- Asking for statistics or citations (the model will produce plausible-looking ones that don't exist)
+- Summarising a document (the model will sometimes summarise confidently and incorrectly, especially on edge cases)
+- Legal or regulatory questions (the model knows the general shape of the law; it does not know the current state)
+
+**What to do instead:** Use AI for tasks where you can verify the output — drafting, restructuring, summarising content you can check against the source. For tasks where you cannot easily verify, do not use it, or use it only for structure, not substance.
+
+If you are summarising a document: read the document, then use the AI to help you structure what you already know. Do not ask it to summarise and then skip reading.
+
+---
+
+## 3. Using the chat interface for repeatable tasks
+
+The chat interface is good for one-off questions and exploration. It is bad for tasks you do every week, because it requires you to reconstruct the context every time.
+
+Every Monday, rewriting the same context ("I am a marketing director at a B2B SaaS company targeting mid-market CFOs, here are our recent campaigns, here is the style guide...") to get the same kind of output is a symptom of using a tool in the wrong mode.
+
+**What to do instead:**
+- Save prompts that work as templates (a text file, a Notion page, a custom GPT with pre-loaded context)
+- For tasks you do more than once a week, write a prompt that works and save it. Stop improvising it every time.
+- For genuinely repeatable workflows (processing inbound emails, generating weekly reports), the chat interface is the wrong tool entirely — an API call with a fixed prompt is more reliable and faster.
+
+---
+
+## 4. Treating the output as confidential when it isn't
+
+This is the risk that catches professionals sideways. When you paste a client document, a financial model, a legal brief, or a patient record into a public AI interface: that content is transmitted to a third-party server, potentially logged, and in many cases used for model training.
+
+Many professionals work under confidentiality obligations (attorney-client privilege, medical privacy, financial confidentiality) that prohibit sharing this content with third parties without authorisation. Using a standard consumer AI tool can violate those obligations.
+
+**What to do instead:**
+- For confidential work: use an enterprise API tier (OpenAI's API with your own account, or Microsoft Copilot through your employer's M365 enterprise agreement, or a private deployment). These have contractual data processing agreements and do not train on your data.
+- Know your employer's policy. Many organisations have guidance on this. If yours doesn't, that's a separate problem worth flagging.
+- When in doubt: do not paste the document. Use only the structure or the anonymised version.
+
+---
+
+## 5. Overusing it for tasks that require your judgment
+
+AI tools are very good at tasks that have a right answer, a clear format, or a precedent to follow. They are bad at tasks that require:
+- Weighing competing considerations with no clear precedent
+- Knowing which facts are relevant in a situation you haven't described fully
+- Applying professional judgment that depends on years of domain experience
+
+The mistake is using the AI as a substitute for thinking, rather than as a tool for executing decisions you've already made.
+
+**Where this goes wrong:**
+- Asking "what should I do here?" when the real question requires your expertise to frame
+- Using AI-generated analysis as the basis for a recommendation without reviewing whether the analysis reflects the actual situation
+- Letting the AI's framing of a problem become your framing of the problem
+
+**What to do instead:** Use the AI to do things, not to think. "Draft an email explaining this decision" is a doing task. "Should I make this decision?" is a thinking task that you should own.
+
+---
+
+## 6. Not measuring whether it's actually faster
+
+Many professionals believe they are saving significant time with AI tools. When asked to track a week of actual usage, they often find the gains are smaller and more concentrated than they expected.
+
+The tasks that actually save time are usually: first-mile structuring of a blank page, cleaning up rough notes, transforming content from one format to another, handling repetitive text-processing tasks.
+
+The tasks that don't save time: tasks where the output quality requires more editing than writing from scratch would have taken; tasks where verifying the output takes longer than doing it yourself; tasks where you need to reconstruct the context every time.
+
+**What to do instead:** Track a week. Note which specific tasks became faster and which didn't. Focus your AI usage on the ones where the gain is real.
+
+---
+
+## 7. Skipping the brief when the task is important
+
+For simple tasks, a rough prompt works. For important output — a board presentation, a client brief, a proposal — a rough prompt produces rough output that you will then spend a long time editing.
+
+The discipline that produces good AI output on important tasks is the same discipline that produces good output from a human: brief clearly. Define the audience, the purpose, the constraints, the tone, and the specific outcome you want.
+
+**A better way to think about it:** Before you write the prompt, write a brief as if you were briefing a human writer. What does success look like? Who is the reader? What should they do or believe after reading it? What must not be said? Write that brief, then use it as your prompt. The output will be substantially better.
+
+---
+
+## The underlying pattern
+
+Most of these mistakes share a root: using the tool without a clear theory of what it's good at. AI tools are good at fluent text generation, format transformation, and handling well-defined repetitive tasks. They are bad at judgment, verification, confidentiality, and tasks where the context changes every time.
+
+Knowing which tasks fall into which category — for your specific role and workflow — is the real skill. The tool is a fast typist with broad general knowledge and no professional obligations. That is useful. It is not a colleague.
+
+---
+
+If you want to map where AI genuinely saves time in your workflow — and where it creates risk — an [AI Workflow Audit](/services/ai-workflow-audit) is the practical version of this. We watch how you actually work, map the opportunities, and build the prompt templates together.
+
+[Book a free 30-minute call](/book?topic=ai-workflow-audit) to find out whether it would be worth it for your situation.

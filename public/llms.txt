@@ -1,0 +1,59 @@
+AIVI AI Services
+AI consulting by the hour, from Amsterdam.
+
+What we do: Senior AI expertise in hours, not months — scoped, priced, and delivered in days.
+Website: https://weareaivi.com
+Booking (free 30-min call): https://weareaivi.com/book
+
+--- Engagements ---
+
+Code & Architecture Review
+For: Founders and teams with shipped AI-assisted products
+Scope: 8–10 hours | Price: €1,200 excl. VAT | Turnaround: 5 working days
+Deliverable: Written review (10–20 pages) ranked by what breaks first + 60-min walkthrough + executive summary
+Book: https://weareaivi.com/book?topic=code-architecture-review
+
+AI Workflow Audit
+For: Professionals and teams of 5–50
+Scope: 6–8 hours | Price: €950 excl. VAT | Turnaround: 5 working days
+Deliverable: Workflow map, ranked automation list, tools & prompts, "do not automate" list
+Book: https://weareaivi.com/book?topic=ai-workflow-audit
+
+AI Career Roadmap (student rate)
+For: Students and recent graduates
+Scope: 45-min call + written roadmap | Price: €75 excl. VAT (student rate) | Turnaround: 3 working days
+Deliverable: One-page 90-day roadmap — what to learn, what to build, how to present it
+Book: https://weareaivi.com/book?topic=ai-career-roadmap
+
+Working Session (hourly)
+For: Anyone
+Scope: 60 minutes | Price: €140/hour (€375 for 3 hours) | Turnaround: written notes within 24h
+Book: https://weareaivi.com/book?topic=working-session
+
+Build Sprint
+For: Clients who know what needs building
+Scope: 2 or 3 days (16 or 24 hours) | Price: €2,200 (2 days) / €3,000 (3 days) excl. VAT
+Deliverable: Working code in your repo + README + handover call
+Book: https://weareaivi.com/book?topic=build-sprint
+
+Advisory Retainer
+For: Founders and team leads
+Scope: 4 hours/month (monthly call + async) | Price: €500/month excl. VAT | Cancel any time
+Book: https://weareaivi.com/book?topic=advisory-retainer
+
+Team Workshop
+For: Teams of 5–25
+Scope: 3.5 hours | Price: €1,400 remote / €1,900 on-site NL excl. VAT
+Deliverable: Workshop + written team playbook + prompt templates
+Book: https://weareaivi.com/book?topic=team-workshop
+
+Custom Project
+For: Work needing weeks or months
+Price: Custom quote after paid discovery
+Book: https://weareaivi.com/book?topic=custom-project
+
+--- Company ---
+
+Legal name: AIVI AI Services
+Address: Science Park 608, 1098 XH Amsterdam, The Netherlands
+VAT: NL005436672B26

@@ -1,0 +1,148 @@
+---
+title: "The 12-Point Health Check for a Vibe-Coded App"
+description: "A real checklist a founder can run in an afternoon. Each item tells you what to look for and why it matters."
+date: "2026-07-28"
+readingTime: "8 min read"
+audience: "founders"
+faq:
+  - q: "What is a vibe-coded app?"
+    a: "A vibe-coded app is a product built primarily with AI coding assistants — tools like Cursor, GitHub Copilot, or similar. The term describes apps where the developer directed the AI and reviewed the output, rather than writing every line by hand. These apps often work well but have predictable security and scalability blind spots."
+  - q: "Do I need to be technical to run this checklist?"
+    a: "You need enough access to look at your hosting dashboard, your repository, and your environment variables. For items 4, 7, and 11, you may need a developer's help to interpret what you find — but you can still confirm whether the question has been answered."
+---
+
+You shipped it. It works. People are paying. Now someone — an investor, a co-founder, a developer quoting you a rebuild — has asked whether it's actually safe.
+
+This checklist is for that moment. You can run most of it in an afternoon. The items are ordered roughly by how badly they hurt when they go wrong.
+
+---
+
+## 1. Are your secrets in your code?
+
+Open your repository and search for strings like `sk-`, `API_KEY`, `SECRET`, `PASSWORD`, `TOKEN`. If any of these appear in files that are committed to your repo — even in files that were later "deleted" — you have a problem. Git history preserves deleted content.
+
+**What to look for:** Any credential, API key, or password committed to the repo, even once.
+
+**Why it matters:** Anyone who ever had access to your repo (including a contractor, an ex-employee, or a public GitHub fork) potentially has those keys. Rotate any you find immediately.
+
+---
+
+## 2. Are your environment variables actually secret?
+
+If you use Vercel, Netlify, Railway, or similar: open the environment variable settings and confirm that sensitive values are marked as secret (server-only, not exposed to the browser).
+
+**What to look for:** Variables prefixed `NEXT_PUBLIC_` or `VITE_` or `REACT_APP_` that contain API keys, database URLs, or admin credentials. These are sent to every browser that loads your app.
+
+**Why it matters:** A `NEXT_PUBLIC_STRIPE_SECRET_KEY` is visible in the browser's network tab to every visitor. This is more common than it sounds.
+
+---
+
+## 3. Does your app expose data it shouldn't?
+
+Open your app and look at what's returned from your API endpoints in the browser's Network tab. Find a request that returns user data. Check the full response payload — not just what the UI shows.
+
+**What to look for:** Fields like `passwordHash`, `internalId`, `stripeCustomerId`, `adminFlag`, or other users' data in a response meant for one user.
+
+**Why it matters:** Over-fetching is extremely common in AI-assisted code. The model returned a working query; it did not reason about which fields should be private.
+
+---
+
+## 4. Is there any authentication and authorisation on your API?
+
+For every endpoint in your API: check whether it requires a logged-in user, and whether it checks that the logged-in user is allowed to access the specific resource they're requesting.
+
+**What to look for:**
+- `GET /api/invoices/123` — can you change `123` to another number and get someone else's invoice?
+- `DELETE /api/user/456` — does this check that the caller is actually user 456 or an admin?
+
+**Why it matters:** Missing authorisation is the single most common critical flaw in AI-assisted apps. The code is often syntactically correct but logically wrong — it checks "is the user logged in?" but not "is this user allowed to do this thing?"
+
+---
+
+## 5. What happens to user passwords?
+
+If your app has its own login (not a service like Auth0 or Clerk): check how passwords are stored. Find the sign-up handler and look at what is written to the database.
+
+**What to look for:** `bcrypt`, `argon2`, or `scrypt`. These are the acceptable password hashing algorithms. If you see `md5`, `sha1`, `sha256`, or the password stored as plain text, stop and fix this today.
+
+**Why it matters:** A database leak is bad. A database leak with plain-text passwords destroys your users' accounts on every other site where they reuse that password.
+
+---
+
+## 6. What happens if your LLM API is unavailable or over-budget?
+
+Turn off your LLM API key temporarily (or look at the code). Does your app fail gracefully, or does it crash in a way that breaks core functionality?
+
+**What to look for:** Try/catch around LLM calls. A fallback response or a clear error message to the user. A rate-limit or budget cap set in the LLM provider's dashboard.
+
+**Why it matters:** LLM APIs have outages. They also have rate limits. If you have no budget cap and a feature goes viral, you might owe thousands of euros by morning.
+
+---
+
+## 7. Who can read what in your database?
+
+Open your database and look at the access controls. Is there one user with full access to everything? Are there separate read/write credentials per service?
+
+**What to look for:** A single root-level database user used by the application. No row-level security on tables that contain other users' data. Publicly accessible database without IP allowlist.
+
+**Why it matters:** If your application server is compromised, a single database user gives the attacker access to everything. Least-privilege access limits the blast radius.
+
+---
+
+## 8. Are users' personal data and payment data separated?
+
+If you handle payments (even through Stripe): confirm that raw card data never touches your server. Stripe handles this, but check that you're using Stripe's hosted checkout or Elements — not a custom form that posts card numbers to your API.
+
+**What to look for:** `card_number`, `cvv`, or similar fields in your API code or database. If these exist, you have a PCI compliance problem.
+
+**Why it matters:** Storing raw card data is illegal in most jurisdictions without PCI certification. Stripe handles this for you only if you use it correctly.
+
+---
+
+## 9. Do you have backups?
+
+Find your database settings and confirm that automatic backups are enabled and tested. "Enabled" means they run. "Tested" means someone has actually restored from one.
+
+**What to look for:** Backup frequency (daily minimum), retention period (at least 7 days), and evidence that a restore test has been done.
+
+**Why it matters:** Accidental deletion, a botched migration, or ransomware. Without tested backups, any of these ends the company.
+
+---
+
+## 10. What do your dependencies look like?
+
+Run `npm audit` (or the equivalent for your stack) and look at the severity of findings.
+
+**What to look for:** High or critical severity vulnerabilities in packages your app actually uses (not just dev tools). Known exploited vulnerabilities (KEV) are the ones that are actually being used in attacks.
+
+**Why it matters:** Dependency vulnerabilities are the most common attack vector for apps that haven't been actively maintained. AI-generated code often uses older package versions.
+
+---
+
+## 11. What does 10× traffic look like?
+
+If your app is on a hosted platform (Vercel, Railway, Render), look at your current resource usage and the plan's limits. If it's on a VPS: look at CPU and memory under current load.
+
+**What to look for:** Database connection pool limits, API rate limits (your own and upstream), serverless function timeout settings, and cold-start behaviour under traffic spikes.
+
+**Why it matters:** A shared product link on a popular forum can send 10× your normal traffic in an hour. If your app crashes or your database runs out of connections, that's your one chance at virality, gone.
+
+---
+
+## 12. What happens when someone submits unexpected input?
+
+Find any form in your app that takes text input and try: a very long string (10,000 characters), a SQL statement (`'; DROP TABLE users; --`), and an HTML tag (`<script>alert('xss')</script>`).
+
+**What to look for:** The app should either reject the input gracefully, or store and display it without executing it. If the script alert appears in the browser, you have an XSS vulnerability.
+
+**Why it matters:** Input validation is the most basic web security property. AI-generated code often handles the happy path perfectly and ignores edge cases entirely.
+
+---
+
+## What now?
+
+If items 4, 7, or 11 gave you pause — those are the three that tend to cause the most damage when they fail.
+
+A [Code & Architecture Review](/services/code-architecture-review) covers all twelve of these, plus the parts of the codebase that aren't visible from the outside. The output is a ranked list of what to fix first, written in plain English, within 5 working days. You keep the report whether or not you work with us further.
+
+[Book a free 30-minute call](/book?topic=code-architecture-review) — describe what you've built and what you're worried about. We'll tell you honestly whether a review makes sense.
