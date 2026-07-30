@@ -1,59 +1,121 @@
 @import "tailwindcss";
 
-/* ── Design tokens ─────────────────────────────────── */
-:root {
-  --color-ink:          #0F1115;
-  --color-ink-soft:     #3A4048;
-  --color-ink-muted:    #6B7280;
-  --color-paper:        #F7F5F1;
+/* ═══════════════════════════════════════════════════════════════════════════
+   REGISTER TOKENS
+   substance-light = DEFAULT (no-JS, crawlers, static export)
+   pitch-dark      = opt-in via html[data-theme="dark"]
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root,
+:root[data-theme="light"] {
+  /* Palette */
+  --color-paper:        #FAF6EF;   /* warm paper ground */
   --color-surface:      #FFFFFF;
-  --color-surface-alt:  #EEEBE4;
-  --color-line:         #E3E0DA;
-  --color-accent:       #1F4FFF;
-  --color-accent-hover: #1740D6;
-  --color-accent-soft:  #E8EDFF;
-  --color-accent-glow:  rgba(31, 79, 255, 0.08);
-  --color-accent-2:     #5B7BFF;
-  --color-accent-3:     #8AA0FF;
-  --color-positive:     #167A5B;
-  --color-positive-soft: #E6F5EF;
-  --color-warn:         #9A6400;
-  --color-warn-soft:    #FFF3DB;
+  --color-surface-alt:  #ECE3D2;   /* felt step from paper — the raised panel bg */
+  --color-ink:          #1A1917;
+  --color-ink-soft:     #57534C;
+  --color-ink-muted:    #7A7169;
+  --color-line:         #E2D9C8;
+  --color-accent:       #B0552B;   /* warm clay — AA on paper */
+  --color-accent-hover: #8F441F;
+  --color-accent-soft:  #F3E7D8;   /* warm tint for chips/soft fills */
+  --color-accent-glow:  rgba(176, 85, 43, 0.14);
+  --color-accent-2:     #B0552B;   /* collapsed to single accent */
+  --color-accent-3:     #B0552B;
 
-  /* Dark surface family — hero, CTA band, footer anchor */
-  --color-ink-deep:         #0B0D12;
-  --color-surface-dark:     #12151C;
-  --color-surface-dark-2:   #1A1E27;
-  --color-line-dark:        rgba(255, 255, 255, 0.18);
-  --color-ink-on-dark:      #F5F6F8;
-  --color-ink-on-dark-soft: rgba(245, 246, 248, 0.68);
+  /* Status (not brand, not register-switched) */
+  --color-positive:      #1B7A55;
+  --color-positive-soft: #E7F1EA;
+  --color-warn:          #9A6400;
+  --color-warn-soft:     #FBF0D8;
 
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 16px;
-  --radius-pill: 999px;
+  /* CTA tokens (ink pill) */
+  --cta-bg:  var(--color-ink);
+  --cta-ink: var(--color-paper);
 
-  --shadow-sm: 0 1px 2px rgba(15,17,21,.04);
-  --shadow-md: 0 1px 3px rgba(15,17,21,.04), 0 4px 16px rgba(15,17,21,.06);
-  --shadow-lg: 0 2px 4px rgba(15,17,21,.03), 0 8px 32px rgba(15,17,21,.08);
-  --shadow-xl: 0 4px 8px rgba(15,17,21,.03), 0 16px 48px rgba(15,17,21,.10);
+  /* Closing CTA: paper pill on dark band */
+  --cta-closing-bg:  #FAF6EF;
+  --cta-closing-ink: #1A1917;
+
+  /* Role backgrounds */
+  --bg-raised:  var(--color-surface-alt);  /* = #ECE3D2 */
+  --bg-closing: #0B0D12;                   /* permanent dark anchor */
 }
 
+:root[data-theme="dark"] {
+  /* Palette overrides */
+  --color-paper:        #16171A;   /* neutral near-black */
+  --color-surface:      #1F2125;
+  --color-surface-alt:  #1F2125;
+  --color-ink:          #F5F0E7;   /* warm off-white */
+  --color-ink-soft:     rgba(245, 240, 231, 0.68);
+  --color-ink-muted:    rgba(245, 240, 231, 0.42);
+  --color-line:         rgba(255, 255, 255, 0.14);
+  --color-accent:       #E08A5C;   /* lifted clay — AA on dark */
+  --color-accent-hover: #E8A074;
+  --color-accent-soft:  rgba(224, 138, 92, 0.14);
+  --color-accent-glow:  rgba(224, 138, 92, 0.20);
+  --color-accent-2:     #E08A5C;
+  --color-accent-3:     #E08A5C;
+
+  --cta-bg:  var(--color-ink);
+  --cta-ink: var(--color-paper);
+
+  /* Closing CTA: warm clay pill in dark register */
+  --cta-closing-bg:  #E08A5C;
+  --cta-closing-ink: #0B0D12;
+
+  --bg-raised:  #1F2125;
+  --bg-closing: #1A1D22;   /* elevated dark for closing chapter */
+}
+
+/* ── Fixed dark-surface constants ─────────────────────
+   The permanent dark anchor (footer + section-dark) never
+   register-switches — both registers agree on it.      */
+:root {
+  --color-ink-deep:         #0B0D12;
+  --color-surface-dark:     #16171A;
+  --color-surface-dark-2:   #1F2125;
+  --color-line-dark:        rgba(255, 255, 255, 0.14);
+  --color-ink-on-dark:      #F5F0E7;
+  --color-ink-on-dark-soft: rgba(245, 240, 231, 0.68);
+
+  --header-h: 72px;
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   16px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 1px 2px rgba(15, 17, 21, 0.04);
+  --shadow-md: 0 1px 3px rgba(15, 17, 21, 0.04), 0 4px 16px rgba(15, 17, 21, 0.06);
+  --shadow-lg: 0 2px 4px rgba(15, 17, 21, 0.03), 0 8px 32px rgba(15, 17, 21, 0.08);
+  --shadow-xl: 0 4px 8px rgba(15, 17, 21, 0.03), 0 16px 48px rgba(15, 17, 21, 0.10);
+}
+
+/* ── Alias layer — Tailwind design system ──────────────
+   All --color-* names are aliased back to themselves;
+   @theme inline makes them usable as Tailwind utilities
+   and as CSS custom properties in component JSX.       */
 @theme inline {
-  --color-ink:          var(--color-ink);
-  --color-ink-soft:     var(--color-ink-soft);
-  --color-ink-muted:    var(--color-ink-muted);
   --color-paper:        var(--color-paper);
   --color-surface:      var(--color-surface);
   --color-surface-alt:  var(--color-surface-alt);
+  --color-ink:          var(--color-ink);
+  --color-ink-soft:     var(--color-ink-soft);
+  --color-ink-muted:    var(--color-ink-muted);
   --color-line:         var(--color-line);
   --color-accent:       var(--color-accent);
   --color-accent-hover: var(--color-accent-hover);
   --color-accent-soft:  var(--color-accent-soft);
+  --color-accent-glow:  var(--color-accent-glow);
   --color-accent-2:     var(--color-accent-2);
   --color-accent-3:     var(--color-accent-3);
-  --color-positive:     var(--color-positive);
-  --color-warn:         var(--color-warn);
+
+  --color-positive:         var(--color-positive);
+  --color-positive-soft:    var(--color-positive-soft);
+  --color-warn:             var(--color-warn);
+  --color-warn-soft:        var(--color-warn-soft);
 
   --color-ink-deep:         var(--color-ink-deep);
   --color-surface-dark:     var(--color-surface-dark);
@@ -61,6 +123,9 @@
   --color-line-dark:        var(--color-line-dark);
   --color-ink-on-dark:      var(--color-ink-on-dark);
   --color-ink-on-dark-soft: var(--color-ink-on-dark-soft);
+
+  --cta-bg:  var(--cta-bg);
+  --cta-ink: var(--cta-ink);
 
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -225,12 +290,9 @@ body {
   background: linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
 }
 
-/* ── Utility: gradient text ────────────────────────── */
+/* ── Accent word — solid clay (gradient retired) ───── */
 .text-gradient-accent {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-accent);
 }
 
 /* ── Card hover lift ───────────────────────────────── */
@@ -270,37 +332,40 @@ body {
   border: 1px solid transparent;
   min-height: 44px;
   min-width: 44px;
-  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, box-shadow 200ms ease, transform 200ms ease, opacity 200ms ease;
 }
 
 .btn-md { padding: 0.625rem 1.5rem; font-size: 0.9375rem; }
 .btn-lg { padding: 0.875rem 2rem; font-size: 1.0625rem; }
 
+/* Primary: ink pill — monochrome, register-adaptive */
 .btn-primary {
-  background-color: var(--color-accent);
-  color: #ffffff;
-  border-color: var(--color-accent);
+  background-color: var(--cta-bg);
+  color: var(--cta-ink);
+  border-color: var(--cta-bg);
   border-radius: var(--radius-pill);
-  box-shadow: 0 8px 20px -8px rgba(31, 79, 255, 0.4);
 }
 .btn-primary:hover {
-  background-color: var(--color-accent-hover);
-  border-color: var(--color-accent-hover);
-  box-shadow: 0 10px 28px -8px rgba(23, 64, 214, 0.5);
+  opacity: 0.88;
   transform: scale(1.02);
 }
 
-.btn-secondary {
+/* Secondary + Outline: merged — ink outline, transparent bg */
+.btn-secondary,
+.btn-outline {
   background-color: transparent;
-  color: var(--color-accent);
-  border-color: var(--color-accent);
+  color: var(--color-ink);
+  border-color: var(--color-line);
   border-radius: var(--radius-pill);
 }
-.btn-secondary:hover {
-  background-color: var(--color-accent-soft);
+.btn-secondary:hover,
+.btn-outline:hover {
+  background-color: color-mix(in srgb, var(--color-ink) 8%, transparent);
+  border-color: var(--color-ink-soft);
   transform: scale(1.02);
 }
 
+/* Ghost: clay text, underline on hover */
 .btn-ghost {
   background-color: transparent;
   color: var(--color-accent);
@@ -310,23 +375,6 @@ body {
 .btn-ghost:hover {
   text-decoration: underline;
   text-underline-offset: 3px;
-}
-
-/* Neutral outline — reads dark-on-light or light-on-dark automatically,
-   since it inherits --color-ink/--color-line from whichever section
-   (light or .section-dark) it's rendered in. Used for secondary CTAs
-   over the dark hero/CTA band where the accent-bordered .btn-secondary
-   would fail contrast. */
-.btn-outline {
-  background-color: transparent;
-  color: var(--color-ink);
-  border-color: var(--color-line);
-  border-radius: var(--radius-pill);
-}
-.btn-outline:hover {
-  background-color: color-mix(in srgb, var(--color-ink) 8%, transparent);
-  border-color: var(--color-ink-soft);
-  transform: scale(1.02);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -344,10 +392,10 @@ body {
   text-decoration-thickness: 1px;
 }
 
-/* ── Dark surface zones ────────────────────────────────
-   Re-scopes the ink/surface/line tokens that every component
-   already reads via var(--color-*), so existing components go
-   dark automatically inside this wrapper without prop-drilling. */
+/* ── Permanent dark anchor ─────────────────────────────
+   Both registers agree: footer and role-closing are dark.
+   Re-scopes --color-* so every component inside goes dark
+   automatically, without prop-drilling.               */
 .section-dark {
   background-color: var(--color-ink-deep);
   color: var(--color-ink-on-dark);
@@ -357,14 +405,13 @@ body {
   --color-line:         var(--color-line-dark);
   --color-surface:      var(--color-surface-dark);
   --color-surface-alt:  var(--color-surface-dark-2);
+  --color-accent:       #E08A5C;   /* lifted clay — AA on dark */
+  --color-accent-2:     #E08A5C;
+  --color-accent-3:     #E08A5C;
 }
 
 .section-dark .eyebrow {
-  color: var(--color-accent-3);
-}
-
-.section-dark .text-gradient-accent {
-  background-image: linear-gradient(135deg, var(--color-accent-2), var(--color-accent-3));
+  color: var(--color-accent);
 }
 
 /* ── Eyebrow label ─────────────────────────────────── */
@@ -379,39 +426,132 @@ body {
 }
 
 /* ── Hero A/B experiment ───────────────────────────────
-   Control = variant A. Both variants ship in the HTML; only the active
-   slot shows. With no JS (and for crawlers) A is visible and C hidden.
+   Control = variant A. Both variants ship in the HTML; only
+   the active slot shows. Variant A is visible with no JS.
    The pre-paint script in app/layout.tsx sets html[data-hero]. */
 [data-hero-slot='c'] { display: none; }
 html[data-hero='c'] [data-hero-slot='a'] { display: none; }
 html[data-hero='c'] [data-hero-slot='c'] { display: block; }
 
-/* ── Interior page header ──────────────────────────────
-   Light opener shared by all interior pages: a faint corner
-   accent glow + hairline, consistent premium framing. */
-.page-header {
+/* ── Section roles ─────────────────────────────────────
+   Every section declares a role; the active register decides
+   what that role looks like. No mid-page per-section palette. */
+
+/* body: default reading surface */
+.role-body {
   background-color: var(--color-paper);
-  padding-top: clamp(4rem, 8vw, 7rem);
-  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* raised: emphasis chapter — felt step from body, hairlines */
+.role-raised {
+  background-color: var(--bg-raised);
+  border-top: 1px solid var(--color-line);
   border-bottom: 1px solid var(--color-line);
 }
-.page-header-glow {
+
+/* Light-register subtle grid on raised panels */
+:root .role-raised,
+:root[data-theme="light"] .role-raised {
+  background-image:
+    linear-gradient(rgba(15, 17, 21, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 17, 21, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* No grid in dark register — color step is enough */
+:root[data-theme="dark"] .role-raised {
+  background-image: none;
+}
+
+/* open: page opening (hero / interior page header)
+   Pulls under the sticky header so the transparent header
+   floats over the hero ground in both registers. */
+.role-open {
+  background-color: var(--color-paper);
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: calc(var(--header-h) + clamp(3rem, 7vw, 6rem));
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+  overflow: hidden;
+  position: relative;
+}
+
+/* closing: the earned contrast flip — the page climax */
+.role-closing {
+  background-color: var(--bg-closing);
+  color: var(--color-ink-on-dark);
+  --color-ink:          var(--color-ink-on-dark);
+  --color-ink-soft:     var(--color-ink-on-dark-soft);
+  --color-ink-muted:    var(--color-ink-on-dark-soft);
+  --color-line:         var(--color-line-dark);
+  --color-surface:      var(--color-surface-dark);
+  --color-surface-alt:  var(--color-surface-dark-2);
+  --color-accent:       #E08A5C;   /* lifted clay — AA on dark in both registers */
+  /* Override CTA tokens: paper pill in light, clay pill in dark */
+  --cta-bg:  var(--cta-closing-bg);
+  --cta-ink: var(--cta-closing-ink);
+}
+
+.role-closing .eyebrow {
+  color: var(--color-accent);
+}
+
+/* In dark register, closing body = same dark as page; only intensity differs */
+:root[data-theme="dark"] .role-closing {
+  color: var(--color-ink);
+  --color-ink:         var(--color-ink);
+  --color-ink-soft:    var(--color-ink-soft);
+  --color-ink-muted:   var(--color-ink-muted);
+  --color-line:        var(--color-line);
+  --color-surface:     var(--color-surface);
+  --color-surface-alt: var(--color-surface-alt);
+}
+
+/* ── Decorative glow / texture layers (aria-hidden) ────
+   Absolutely positioned within `position: relative; overflow: hidden`.
+   Static backgrounds — no motion, no reduced-motion guard needed. */
+
+/* Warm accent glow — for dark sections (closing, footer, dark register hero) */
+.glow-accent {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: radial-gradient(620px circle at 88% -20%, rgba(31, 79, 255, 0.10), transparent 62%);
+  background:
+    radial-gradient(640px circle at 18% 0%, color-mix(in srgb, var(--color-accent) 28%, transparent), transparent 60%),
+    radial-gradient(480px circle at 85% 20%, color-mix(in srgb, var(--color-accent) 14%, transparent), transparent 65%);
 }
 
-/* ── Students spotlight band ───────────────────────────
-   A warmer, light accent-tinted moment (not the dark anchor). */
-.students-band {
-  background-image:
-    radial-gradient(700px circle at 12% 0%, var(--color-accent-soft), transparent 60%),
-    linear-gradient(180deg, var(--color-surface), var(--color-paper));
-  border-top: 1px solid var(--color-line);
-  border-bottom: 1px solid var(--color-line);
+/* Subtle warm orb for light-register role-open (hero/page header) */
+.glow-warm {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(620px circle at 88% -20%, var(--color-accent-glow), transparent 62%);
 }
+
+/* Dark-register grid texture */
+.grid-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
+  mask-image: linear-gradient(to bottom, black, transparent 80%);
+}
+
+/* role-open decorative elements — toggled by register via CSS */
+.role-open .glow-warm    { display: block; }
+.role-open .glow-accent,
+.role-open .grid-texture { display: none; }
+
+:root[data-theme="dark"] .role-open .glow-warm    { display: none; }
+:root[data-theme="dark"] .role-open .glow-accent  { display: block; }
+:root[data-theme="dark"] .role-open .grid-texture { display: block; }
 
 /* ── Mono stat / number treatment ──────────────────── */
 .stat-mono {
@@ -441,29 +581,11 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
   --color-line:      var(--color-line-dark);
 }
 
-/* ── Decorative glow / texture layers (aria-hidden) ──
-   Absolutely positioned within a `position: relative;
-   overflow: hidden` ancestor. Static backgrounds — no
-   motion, so no reduced-motion guard is required. */
-.glow-accent {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background:
-    radial-gradient(640px circle at 18% 0%, rgba(31, 79, 255, 0.35), transparent 60%),
-    radial-gradient(480px circle at 85% 20%, rgba(90, 123, 255, 0.18), transparent 65%);
-}
-
-.grid-texture {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-  background-size: 56px 56px;
-  -webkit-mask-image: linear-gradient(to bottom, black, transparent 80%);
-  mask-image: linear-gradient(to bottom, black, transparent 80%);
+/* ── Students spotlight band ───────────────────────────
+   Folds into raised language — uses bg-raised + warm accent soft glow. */
+.students-band {
+  background-color: var(--bg-raised);
+  background-image: radial-gradient(700px circle at 12% 0%, var(--color-accent-soft), transparent 60%);
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
 }

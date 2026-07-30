@@ -16,7 +16,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function BookConfirmedPage() {
   return (
-    <Section tone="paper">
+    <Section role="body">
       <Container>
         <h1 className="text-h1">Payment received. Now pick your time.</h1>
         <p className="text-lede mt-4 max-w-xl" style={{ color: 'var(--color-ink-soft)' }}>

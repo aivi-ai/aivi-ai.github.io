@@ -81,7 +81,7 @@ export default async function ServicePage({
         />
 
         {/* ── FactsBar + main content ───────────────────── */}
-        <Section tone="paper">
+        <Section role="body">
           <Container>
             <div className="lg:grid lg:grid-cols-[1fr_minmax(0,320px)] lg:gap-16 lg:items-start">
               <div className="mb-12 lg:mb-0 lg:col-start-2 lg:row-start-1">
@@ -159,107 +159,118 @@ export default async function ServicePage({
                     items={service.whatThisIsNot}
                   />
                 </section>
+              </div>
+            </div>
+          </Container>
+        </Section>
 
-                {/* ── How it runs ───────────────────────── */}
-                <section aria-labelledby="section-how-it-runs">
-                  <h2
-                    id="section-how-it-runs"
-                    className="text-h2 mb-6"
-                    style={{ color: 'var(--color-ink)' }}
-                  >
-                    How it runs
-                  </h2>
-                  <StepList steps={service.howItRuns} layout="vertical" />
-                </section>
+        {/* ── How it runs — raised emphasis panel ──────── */}
+        <Section role="raised">
+          <Container className="relative z-10">
+            <div className="text-center mb-12">
+              <p className="eyebrow justify-center mb-3">Process</p>
+              <h2
+                id="section-how-it-runs"
+                className="text-h2"
+              >
+                How it runs
+              </h2>
+            </div>
+            <StepList steps={service.howItRuns} layout="vertical" />
+          </Container>
+        </Section>
 
-                {/* ── Price ─────────────────────────────── */}
-                <section aria-labelledby="section-price">
-                  <h2
-                    id="section-price"
-                    className="text-h2 mb-6"
-                    style={{ color: 'var(--color-ink)' }}
+        {/* ── Price + FAQ ───────────────────────────────── */}
+        <Section role="body">
+          <Container>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem', maxWidth: '720px' }}>
+              {/* ── Price ───────────────────────────────── */}
+              <section aria-labelledby="section-price">
+                <h2
+                  id="section-price"
+                  className="text-h2 mb-6"
+                  style={{ color: 'var(--color-ink)' }}
+                >
+                  Price
+                </h2>
+                <div className="card p-7">
+                  <p
+                    className="stat-mono"
+                    style={{
+                      fontSize: 'clamp(2rem, 4vw, 2.5rem)',
+                      color: 'var(--color-accent)',
+                      marginBottom: '0.25rem',
+                    }}
                   >
-                    Price
-                  </h2>
-                  <div className="card p-7">
+                    {service.price}
+                  </p>
+                  {service.priceNote && (
                     <p
-                      className="stat-mono"
-                      style={{
-                        fontSize: 'clamp(2rem, 4vw, 2.5rem)',
-                        color: 'var(--color-accent)',
-                        marginBottom: '0.25rem',
-                      }}
-                    >
-                      {service.price}
-                    </p>
-                    {service.priceNote && (
-                      <p
-                        className="text-small mb-4"
-                        style={{ color: 'var(--color-ink-muted)' }}
-                      >
-                        {service.priceNote}
-                      </p>
-                    )}
-                    <dl
-                      className="flex flex-col gap-3 mt-5 pt-5"
-                      style={{ color: 'var(--color-ink-soft)', borderTop: '1px solid var(--color-line)' }}
-                    >
-                      <div className="flex gap-3">
-                        <dt
-                          className="font-medium text-sm"
-                          style={{ color: 'var(--color-ink)', minWidth: '6rem' }}
-                        >
-                          Hours
-                        </dt>
-                        <dd className="text-sm">{service.hours}</dd>
-                      </div>
-                      <div className="flex gap-3">
-                        <dt
-                          className="font-medium text-sm"
-                          style={{ color: 'var(--color-ink)', minWidth: '6rem' }}
-                        >
-                          Turnaround
-                        </dt>
-                        <dd className="text-sm">{service.turnaround}</dd>
-                      </div>
-                      <div className="flex gap-3">
-                        <dt
-                          className="font-medium text-sm"
-                          style={{ color: 'var(--color-ink)', minWidth: '6rem' }}
-                        >
-                          Format
-                        </dt>
-                        <dd className="text-sm">{service.format}</dd>
-                      </div>
-                    </dl>
-                    <p
-                      className="text-small mt-5"
+                      className="text-small mb-4"
                       style={{ color: 'var(--color-ink-muted)' }}
                     >
-                      Prices exclude VAT.
+                      {service.priceNote}
                     </p>
-                  </div>
-                </section>
-
-                {/* ── FAQ ───────────────────────────────── */}
-                <section aria-labelledby="section-faq">
-                  <h2
-                    id="section-faq"
-                    className="text-h2 mb-6"
-                    style={{ color: 'var(--color-ink)' }}
+                  )}
+                  <dl
+                    className="flex flex-col gap-3 mt-5 pt-5"
+                    style={{ color: 'var(--color-ink-soft)', borderTop: '1px solid var(--color-line)' }}
                   >
-                    Questions about this engagement
-                  </h2>
-                  <Faq items={service.faq} />
-                </section>
-              </div>
+                    <div className="flex gap-3">
+                      <dt
+                        className="font-medium text-sm"
+                        style={{ color: 'var(--color-ink)', minWidth: '6rem' }}
+                      >
+                        Hours
+                      </dt>
+                      <dd className="text-sm">{service.hours}</dd>
+                    </div>
+                    <div className="flex gap-3">
+                      <dt
+                        className="font-medium text-sm"
+                        style={{ color: 'var(--color-ink)', minWidth: '6rem' }}
+                      >
+                        Turnaround
+                      </dt>
+                      <dd className="text-sm">{service.turnaround}</dd>
+                    </div>
+                    <div className="flex gap-3">
+                      <dt
+                        className="font-medium text-sm"
+                        style={{ color: 'var(--color-ink)', minWidth: '6rem' }}
+                      >
+                        Format
+                      </dt>
+                      <dd className="text-sm">{service.format}</dd>
+                    </div>
+                  </dl>
+                  <p
+                    className="text-small mt-5"
+                    style={{ color: 'var(--color-ink-muted)' }}
+                  >
+                    Prices exclude VAT.
+                  </p>
+                </div>
+              </section>
+
+              {/* ── FAQ ─────────────────────────────────── */}
+              <section aria-labelledby="section-faq">
+                <h2
+                  id="section-faq"
+                  className="text-h2 mb-6"
+                  style={{ color: 'var(--color-ink)' }}
+                >
+                  Questions about this engagement
+                </h2>
+                <Faq items={service.faq} />
+              </section>
             </div>
           </Container>
         </Section>
 
         {/* ── Related engagements ───────────────────────── */}
         {relatedServices.length > 0 && (
-          <Section tone="alt">
+          <Section role="body">
             <Container>
               <h2
                 className="text-h2 mb-10"

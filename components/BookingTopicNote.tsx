@@ -24,7 +24,7 @@ export function BookingTopicNote({ paramName = 'topic', lead }: Props) {
       className="mt-8 rounded-[var(--radius-lg)] px-5 py-4"
       role="note"
       style={{
-        background: 'linear-gradient(135deg, var(--color-accent-soft), rgba(31, 79, 255, 0.06))',
+        background: 'linear-gradient(135deg, var(--color-accent-soft), var(--color-accent-glow))',
         borderLeft: '3px solid var(--color-accent)',
       }}
     >

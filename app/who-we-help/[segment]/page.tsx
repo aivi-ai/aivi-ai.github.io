@@ -92,7 +92,7 @@ export default async function SegmentPage({ params }: Props) {
       </PageHeader>
 
       {/* Sound familiar? */}
-      <Section tone="alt">
+      <Section role="body">
         <Container>
           <div style={{ maxWidth: '720px' }}>
             <h2 className="text-h2" style={{ color: 'var(--color-ink)', marginBottom: '1.5rem' }}>
@@ -104,7 +104,7 @@ export default async function SegmentPage({ params }: Props) {
       </Section>
 
       {/* Where to start */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <h2 className="text-h2" style={{ color: 'var(--color-ink)', marginBottom: '0.5rem' }}>
             Where to start
@@ -182,11 +182,12 @@ export default async function SegmentPage({ params }: Props) {
         </Container>
       </Section>
 
-      {/* What changes after */}
-      <Section tone="alt">
-        <Container>
-          <div style={{ maxWidth: '720px' }}>
-            <h2 className="text-h2" style={{ color: 'var(--color-ink)', marginBottom: '1rem' }}>
+      {/* What changes after — raised emphasis panel */}
+      <Section role="raised">
+        <Container className="relative z-10">
+          <div style={{ maxWidth: '720px', marginLeft: 'auto', marginRight: 'auto' }}>
+            <p className="eyebrow mb-3">Outcomes</p>
+            <h2 className="text-h2" style={{ marginBottom: '1rem' }}>
               What changes after
             </h2>
             <p
@@ -201,7 +202,7 @@ export default async function SegmentPage({ params }: Props) {
       </Section>
 
       {/* FAQ */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div style={{ maxWidth: '720px' }}>
             <h2 className="text-h2" style={{ color: 'var(--color-ink)', marginBottom: '1.5rem' }}>

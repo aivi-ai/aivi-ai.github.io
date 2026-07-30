@@ -76,14 +76,14 @@ export function CalendlyEmbed({ paramName = 'topic' }: Props) {
         </div>
       )}
 
-      {/* The Calendly widget — always in DOM when script is loaded */}
-      {scriptLoaded && (
-        <div
-          className="calendly-inline-widget min-h-[1000px] md:min-h-[700px]"
-          data-url={url}
-          style={{ minWidth: '320px' }}
-        />
-      )}
+      {/* The Calendly widget — always in DOM so Calendly's init scan finds it.
+          height (not min-height) is required: the iframe inside uses height="100%"
+          which only resolves against an explicit parent height, not min-height. */}
+      <div
+        className="calendly-inline-widget"
+        data-url={url}
+        style={{ minWidth: '320px', height: '700px', display: scriptLoaded ? undefined : 'none' }}
+      />
 
       {/* Noscript fallback */}
       <noscript>
@@ -109,7 +109,7 @@ export function CalendlyEmbed({ paramName = 'topic' }: Props) {
 
       <Script
         src="https://assets.calendly.com/assets/external/widget.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         onLoad={handleScriptLoad}
       />
     </div>

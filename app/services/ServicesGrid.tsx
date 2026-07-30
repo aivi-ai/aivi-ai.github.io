@@ -9,10 +9,10 @@ type FilterValue = 'all' | Audience;
 
 const FILTERS: { label: string; value: FilterValue }[] = [
   { label: 'All', value: 'all' },
-  { label: 'Students', value: 'students' },
+  { label: 'Teams', value: 'teams' },
   { label: 'Founders', value: 'founders' },
   { label: 'Professionals', value: 'professionals' },
-  { label: 'Teams', value: 'teams' },
+  { label: 'Students', value: 'students' },
 ];
 
 interface Props {

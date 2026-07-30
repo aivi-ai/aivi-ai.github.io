@@ -70,11 +70,12 @@ export default function ApproachPage() {
         lede="No discovery phases, no scope creep, no sales script. Here's exactly what happens from the first call to the work in your hands."
       />
 
-      {/* 5-step timeline */}
-      <Section tone="alt">
-        <Container>
+      {/* 5-step timeline — raised emphasis panel (replaces mid-page dark island) */}
+      <Section role="raised">
+        <Container className="relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-h2" style={{ color: 'var(--color-ink)' }}>
+            <p className="eyebrow justify-center mb-3">Process</p>
+            <h2 className="text-h2">
               From first call to delivery
             </h2>
           </div>
@@ -83,7 +84,7 @@ export default function ApproachPage() {
       </Section>
 
       {/* What we won't do */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2
@@ -98,7 +99,7 @@ export default function ApproachPage() {
       </Section>
 
       {/* Confidentiality & data */}
-      <Section tone="alt">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2
@@ -119,7 +120,7 @@ export default function ApproachPage() {
                 },
                 {
                   title: 'What we never publish',
-                  text: "Client code, client names, case study details, or any description of a client’s system without explicit written permission. When we do publish with permission, we show the client what we plan to write before it appears anywhere.",
+                  text: "Client code, client names, case study details, or any description of a client's system without explicit written permission. When we do publish with permission, we show the client what we plan to write before it appears anywhere.",
                 },
               ].map((item) => (
                 <div
@@ -142,7 +143,7 @@ export default function ApproachPage() {
       </Section>
 
       {/* Who does the work */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2
@@ -168,7 +169,7 @@ export default function ApproachPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="alt">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">

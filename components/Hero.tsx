@@ -14,43 +14,26 @@ interface Props {
   primaryCta: Cta;
   secondaryCta?: Cta;
   trustLine?: string;
-  variant?: 'light' | 'dark';
 }
 
-export function Hero({
-  eyebrow,
-  h1,
-  lede,
-  primaryCta,
-  secondaryCta,
-  trustLine,
-  variant = 'light',
-}: Props) {
-  const isDark = variant === 'dark';
-
+export function Hero({ eyebrow, h1, lede, primaryCta, secondaryCta, trustLine }: Props) {
   return (
-    <div
-      className={`relative overflow-hidden pt-24 pb-16 md:pt-32 md:pb-24 text-center ${isDark ? 'section-dark' : ''}`}
-      style={isDark ? undefined : { backgroundColor: 'var(--color-paper)' }}
-    >
-      {isDark && (
-        <>
-          <div aria-hidden="true" className="glow-accent" />
-          <div aria-hidden="true" className="grid-texture" />
-        </>
-      )}
+    <div className="role-open text-center">
+      {/* Light-register: subtle warm orb top-right */}
+      <div aria-hidden="true" className="glow-warm" />
+      {/* Dark-register: warm accent glow + grid (toggled via CSS per register) */}
+      <div aria-hidden="true" className="glow-accent" />
+      <div aria-hidden="true" className="grid-texture" />
+
       <Container className="relative z-10">
         <div className="max-w-[760px] mx-auto flex flex-col items-center gap-6">
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}
 
-          <h1 className="text-h1" style={{ color: 'var(--color-ink)' }}>
+          <h1 className="text-display" style={{ color: 'var(--color-ink)' }}>
             {h1}
           </h1>
 
-          <p
-            className="text-lede max-w-[600px]"
-            style={isDark ? { color: 'var(--color-ink-on-dark-soft)' } : undefined}
-          >
+          <p className="text-lede max-w-[600px]">
             {lede}
           </p>
 
@@ -59,11 +42,7 @@ export function Hero({
               {primaryCta.label}
             </Button>
             {secondaryCta && (
-              <Button
-                href={secondaryCta.href}
-                variant={isDark ? 'outline' : 'secondary'}
-                size="lg"
-              >
+              <Button href={secondaryCta.href} variant="outline" size="lg">
                 {secondaryCta.label}
               </Button>
             )}
@@ -73,8 +52,8 @@ export function Hero({
             <p
               className="text-sm mt-1"
               style={{
-                color: isDark ? 'var(--color-ink-on-dark-soft)' : 'var(--color-ink-muted)',
-                fontFamily: isDark ? 'var(--font-mono)' : undefined,
+                color: 'var(--color-ink-muted)',
+                fontFamily: 'var(--font-mono)',
               }}
             >
               {trustLine}

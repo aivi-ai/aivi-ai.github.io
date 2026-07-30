@@ -61,7 +61,7 @@ export default function HomePage() {
 
       {/* 2 — Segment chooser */}
       <Reveal>
-        <Section tone="alt">
+        <Section role="body">
           <Container>
             <div className="text-center mb-12">
               <p className="eyebrow justify-center mb-3">Where you start</p>
@@ -86,7 +86,7 @@ export default function HomePage() {
 
       {/* 3 — Featured services */}
       <Reveal>
-        <Section tone="paper">
+        <Section role="body">
           <Container>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
               <div>
@@ -113,10 +113,10 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 4 — How it works */}
+      {/* 4 — How it works (raised emphasis chapter — replaces mid-page dark island) */}
       <Reveal>
-        <Section tone="alt">
-          <Container>
+        <Section role="raised">
+          <Container className="relative z-10">
             <div className="text-center mb-12">
               <p className="eyebrow justify-center mb-3">Process</p>
               <h2 className="text-h2">How it works</h2>
@@ -140,7 +140,7 @@ export default function HomePage() {
 
       {/* 5 — What you walk away with */}
       <Reveal>
-        <Section tone="paper">
+        <Section role="body">
           <Container>
             <div className="lg:grid lg:grid-cols-[1fr_1fr] lg:gap-16 lg:items-center">
               <div>
@@ -160,7 +160,7 @@ export default function HomePage() {
 
       {/* 6 — Honesty band */}
       <Reveal>
-        <Section tone="alt">
+        <Section role="body">
           <Container>
             <div className="max-w-3xl mx-auto">
               <HonestyNote />
@@ -171,7 +171,7 @@ export default function HomePage() {
 
       {/* 7 — FAQ */}
       <Reveal>
-        <Section tone="paper">
+        <Section role="body">
           <Container>
             <div className="max-w-3xl mx-auto">
               <div className="text-center mb-10">

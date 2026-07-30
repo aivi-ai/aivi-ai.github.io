@@ -36,7 +36,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
 export function SiteFooter() {
   return (
     <footer className="section-dark relative overflow-hidden" aria-label="Site footer">
-      <div aria-hidden="true" className="glow-accent" style={{ opacity: 0.5 }} />
+      <div aria-hidden="true" className="glow-accent" />
       <div className="relative z-10 max-w-[1200px] mx-auto px-5 md:px-8 lg:px-12 py-16 md:py-20">
         <div
           className="pb-12 mb-12 flex items-baseline justify-between flex-wrap gap-4"
@@ -134,7 +134,7 @@ export function SiteFooter() {
                 <a
                   href={`mailto:${company.email}`}
                   className="mt-1"
-                  style={{ color: 'var(--color-accent-3)', textDecoration: 'none' }}
+                  style={{ color: 'var(--color-accent)', textDecoration: 'none' }}
                 >
                   {company.email}
                 </a>

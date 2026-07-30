@@ -12,9 +12,9 @@ interface Props {
   maxWidth?: string;
 }
 
-// Shared interior-page header. Light section with a subtle corner accent
-// glow and a hairline separator, so every interior page shares one confident,
-// consistent opening without needing the full dark hero. Server component.
+// Interior-page opening — shares the role-open geometry with HomeHero
+// but at reduced scale (text-h1, lighter padding). Register-adaptive:
+// light register gets the warm glow orb; dark register gets glow-accent + grid.
 export function PageHeader({
   eyebrow,
   title,
@@ -24,8 +24,13 @@ export function PageHeader({
   maxWidth = '60ch',
 }: Props) {
   return (
-    <section className="page-header relative overflow-hidden">
-      <div aria-hidden="true" className="page-header-glow" />
+    <section
+      className="role-open"
+      style={{ borderBottom: '1px solid var(--color-line)' }}
+    >
+      <div aria-hidden="true" className="glow-warm" />
+      <div aria-hidden="true" className="glow-accent" />
+      <div aria-hidden="true" className="grid-texture" />
       <Container className="relative z-10">
         {breadcrumbs && <div className="mb-6">{breadcrumbs}</div>}
         <div style={{ maxWidth }}>

@@ -32,7 +32,6 @@ export function HomeHero() {
         return (
           <div key={id} data-hero-slot={id}>
             <Hero
-              variant="dark"
               h1={renderHeadline(content)}
               lede={content.lede}
               primaryCta={content.primaryCta}

@@ -69,11 +69,10 @@ export function FactsBar({
         href={ctaHref}
         className="mt-5 flex items-center justify-center px-5 py-3 rounded-[var(--radius-pill)] text-sm font-semibold transition-all duration-200 text-center hover:-translate-y-0.5"
         style={{
-          backgroundColor: 'var(--color-accent)',
-          color: '#ffffff',
+          backgroundColor: 'var(--cta-bg)',
+          color: 'var(--cta-ink)',
           minHeight: '44px',
           textDecoration: 'none',
-          boxShadow: '0 8px 20px -6px rgba(31, 79, 255, 0.45)',
         }}
       >
         {ctaLabel}

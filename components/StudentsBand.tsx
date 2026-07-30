@@ -11,7 +11,7 @@ export function StudentsBand() {
   const { eyebrow, heading, body, price, priceNote, points, cta } = studentsBand;
 
   return (
-    <section className="relative overflow-hidden py-20 md:py-28 students-band">
+    <section className="relative overflow-hidden py-20 md:py-28 students-band role-raised">
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
           {/* Left — the anthem + offer */}

@@ -12,10 +12,10 @@ type FilterValue = 'all' | Audience;
 
 const FILTERS: { label: string; value: FilterValue }[] = [
   { label: 'All', value: 'all' },
-  { label: 'Students', value: 'students' },
+  { label: 'Teams', value: 'teams' },
   { label: 'Founders', value: 'founders' },
   { label: 'Professionals', value: 'professionals' },
-  { label: 'Teams', value: 'teams' },
+  { label: 'Students', value: 'students' },
 ];
 
 export function PriceTable({ services }: Props) {
@@ -23,40 +23,71 @@ export function PriceTable({ services }: Props) {
 
   return (
     <div className="flex flex-col gap-6">
-      {/* Filter row */}
+      {/* Filter row + book nudge */}
       <div
-        className="flex flex-wrap gap-2"
+        className="flex flex-wrap items-center justify-between gap-3"
         role="group"
         aria-label="Filter services by audience"
       >
-        {FILTERS.map(({ label, value }) => {
-          const isActive = filter === value;
-          return (
-            <button
-              key={value}
-              type="button"
-              onClick={() => setFilter(value)}
-              aria-pressed={isActive}
-              className="px-4 py-1.5 rounded-[var(--radius-pill)] text-sm font-semibold transition-all duration-200"
-              style={{
-                backgroundColor: isActive
-                  ? 'var(--color-accent)'
-                  : 'var(--color-surface)',
-                color: isActive ? '#ffffff' : 'var(--color-ink-soft)',
-                border: isActive
-                  ? '1px solid var(--color-accent)'
-                  : '1px solid var(--color-line)',
-                boxShadow: isActive
-                  ? '0 6px 16px -4px rgba(31, 79, 255, 0.4)'
-                  : 'none',
-                cursor: 'pointer',
-                minHeight: '36px',
-              }}
+        <div className="flex flex-wrap gap-2">
+          {FILTERS.map(({ label, value }) => {
+            const isActive = filter === value;
+            return (
+              <button
+                key={value}
+                type="button"
+                onClick={() => setFilter(value)}
+                aria-pressed={isActive}
+                className="px-4 py-1.5 rounded-[var(--radius-pill)] text-sm font-semibold transition-all duration-200"
+                style={{
+                  backgroundColor: isActive
+                    ? 'var(--color-accent)'
+                    : 'var(--color-surface)',
+                  color: isActive ? 'var(--cta-closing-ink, #0B0D12)' : 'var(--color-ink-soft)',
+                  border: isActive
+                    ? '1px solid var(--color-accent)'
+                    : '1px solid var(--color-line)',
+                  boxShadow: isActive
+                    ? '0 4px 12px -4px var(--color-accent-glow)'
+                    : 'none',
+                  cursor: 'pointer',
+                  minHeight: '36px',
+                }}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+        <span
+          className="text-sm font-medium flex items-center gap-1.5 shrink-0"
+          style={{ color: 'var(--color-ink-muted)' }}
+        >
+          Ready to start?
+          <Link
+            href="/book"
+            className="inline-flex items-center gap-1 font-semibold"
+            style={{ color: 'var(--color-accent)', textDecoration: 'none' }}
+          >
+            Book a free call
+            <svg
+              width="13"
+              height="13"
+              viewBox="0 0 13 13"
+              fill="none"
+              aria-hidden="true"
+              style={{ display: 'inline', verticalAlign: 'middle' }}
             >
-              {label}
-            </button>
-          );
-        })}
+              <path
+                d="M2.5 10.5L10.5 2.5M10.5 2.5H4.5M10.5 2.5V8.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </Link>
+        </span>
       </div>
 
       {/* Desktop table (md+) */}
@@ -73,7 +104,6 @@ export function PriceTable({ services }: Props) {
                 'Hours',
                 'Price (excl. VAT)',
                 'Turnaround',
-                'Book',
               ].map((col) => (
                 <th
                   key={col}
@@ -146,21 +176,6 @@ export function PriceTable({ services }: Props) {
                     style={{ color: 'var(--color-ink-soft)', whiteSpace: 'nowrap' }}
                   >
                     {service.turnaround}
-                  </td>
-                  <td className="py-4 px-4">
-                    <Link
-                      href={`/book?topic=${service.slug}`}
-                      className="inline-flex items-center justify-center px-3 py-2 rounded-[var(--radius-sm)] text-xs font-medium transition-colors duration-150"
-                      style={{
-                        backgroundColor: 'var(--color-accent-soft)',
-                        color: 'var(--color-accent)',
-                        textDecoration: 'none',
-                        whiteSpace: 'nowrap',
-                        minHeight: '36px',
-                      }}
-                    >
-                      Book a free call
-                    </Link>
                   </td>
                 </tr>
               );
@@ -251,18 +266,6 @@ export function PriceTable({ services }: Props) {
                   </dd>
                 </div>
               </dl>
-              <Link
-                href={`/book?topic=${service.slug}`}
-                className="inline-flex items-center justify-center px-4 py-2.5 rounded-[var(--radius-sm)] text-sm font-medium"
-                style={{
-                  backgroundColor: 'var(--color-accent)',
-                  color: '#ffffff',
-                  textDecoration: 'none',
-                  minHeight: '44px',
-                }}
-              >
-                Book a free call
-              </Link>
             </article>
           );
         })}

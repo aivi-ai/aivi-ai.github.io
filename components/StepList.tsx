@@ -67,9 +67,8 @@ export function StepList({ steps, layout = 'horizontal' }: Props) {
                   width: '40px',
                   height: '40px',
                   backgroundColor: 'var(--color-accent)',
-                  color: '#ffffff',
+                  color: 'var(--cta-closing-ink, #0B0D12)',
                   zIndex: 1,
-                  boxShadow: '0 4px 10px rgba(31, 79, 255, 0.25)',
                 }}
                 aria-hidden="true"
               >

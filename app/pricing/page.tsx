@@ -34,7 +34,7 @@ export default function PricingPage() {
       {/* Free call band */}
       <div
         style={{
-          background: 'linear-gradient(135deg, var(--color-accent-soft), rgba(31, 79, 255, 0.06))',
+          background: 'linear-gradient(135deg, var(--color-accent-soft), var(--color-accent-glow))',
           borderTop: '2px solid var(--color-accent)',
         }}
       >
@@ -61,7 +61,7 @@ export default function PricingPage() {
       </div>
 
       {/* Price table */}
-      <Section tone="paper" id="services">
+      <Section role="body" id="services">
         <Container>
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-8">
             <div>
@@ -83,44 +83,37 @@ export default function PricingPage() {
         </Container>
       </Section>
 
-      {/* How billing works */}
-      <Section tone="alt" id="billing">
-        <Container>
+      {/* How billing works — raised emphasis panel (replaces mid-page dark island) */}
+      <Section role="raised" id="billing">
+        <Container className="relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2
-              className="text-h2"
-              style={{ color: 'var(--color-ink)', marginBottom: '1.5rem' }}
-            >
-              How billing works
-            </h2>
+            <div className="text-center mb-8">
+              <p className="eyebrow justify-center mb-3">Billing</p>
+              <h2 className="text-h2">
+                How billing works
+              </h2>
+            </div>
             <div
               className="flex flex-col gap-6"
-              style={{ color: 'var(--color-ink-soft)', lineHeight: '1.7' }}
             >
-              <div
-                className="card p-6"
-              >
+              <div className="card p-6">
                 <h3 className="text-h3 mb-3" style={{ color: 'var(--color-ink)' }}>Payment</h3>
-                <p style={{ margin: 0 }}>
+                <p style={{ color: 'var(--color-ink-soft)', lineHeight: '1.7', margin: 0 }}>
                   We invoice after the free call, once you have accepted the written scope.
                   Payment is due within 14 days of the invoice date by bank transfer (SEPA or
                   international) or a card payment link. Retainers are billed monthly in advance.
                 </p>
               </div>
-              <div
-                className="card p-6"
-              >
+              <div className="card p-6">
                 <h3 className="text-h3 mb-3" style={{ color: 'var(--color-ink)' }}>Deposits</h3>
-                <p style={{ margin: 0 }}>
+                <p style={{ color: 'var(--color-ink-soft)', lineHeight: '1.7', margin: 0 }}>
                   Engagements under €500 are prepaid before work begins. Engagements above €2,000
                   require a 50% deposit, with the remainder due on delivery.
                 </p>
               </div>
-              <div
-                className="card p-6"
-              >
+              <div className="card p-6">
                 <h3 className="text-h3 mb-3" style={{ color: 'var(--color-ink)' }}>VAT</h3>
-                <p style={{ margin: 0 }}>
+                <p style={{ color: 'var(--color-ink-soft)', lineHeight: '1.7', margin: 0 }}>
                   Prices on this page exclude VAT. Dutch BTW is added for Netherlands clients
                   and EU consumers. EU businesses with a valid VAT number are reverse-charged.
                   Clients outside the EU are generally invoiced without Dutch VAT. Your invoice
@@ -133,7 +126,7 @@ export default function PricingPage() {
       </Section>
 
       {/* Cancellation & rescheduling + Student rate in a 2-col */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto grid gap-8 md:grid-cols-2">
             <div
@@ -159,7 +152,7 @@ export default function PricingPage() {
               className="rounded-[var(--radius-lg)] p-6"
               style={{
                 backgroundColor: 'var(--color-accent-soft)',
-                border: '1px solid rgba(31, 79, 255, 0.15)',
+                border: '1px solid var(--color-accent-glow)',
               }}
             >
               <h2
@@ -179,7 +172,7 @@ export default function PricingPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="alt" id="faq">
+      <Section role="body" id="faq">
         <Container>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">

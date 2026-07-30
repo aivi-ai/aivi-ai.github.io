@@ -24,12 +24,11 @@ export function MobileCtaBar() {
         href="/book"
         className="flex items-center justify-center w-full px-4 py-3.5 text-base font-medium"
         style={{
-          backgroundColor: 'var(--color-accent)',
-          color: '#ffffff',
+          backgroundColor: 'var(--cta-bg)',
+          color: 'var(--cta-ink)',
           textDecoration: 'none',
           minHeight: '52px',
           borderRadius: 'var(--radius-pill)',
-          boxShadow: '0 10px 24px -8px rgba(31, 79, 255, 0.5)',
         }}
       >
         Book a free call

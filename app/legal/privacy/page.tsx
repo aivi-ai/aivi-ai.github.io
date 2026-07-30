@@ -24,7 +24,7 @@ export default function PrivacyPage() {
         </p>
       </PageHeader>
 
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="prose max-w-3xl">
           <p>

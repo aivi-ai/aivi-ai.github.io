@@ -23,7 +23,7 @@ export default function WhoWeHelpPage() {
         lede="A degree, a product, a workflow, a team — whatever you're building toward, one of these is the closest fit. Pick it and see what we'd do next."
       />
 
-      <Section tone="alt">
+      <Section role="body">
         <Container>
           <div className="grid gap-4 sm:grid-cols-2">
             {segments.map((segment) => (

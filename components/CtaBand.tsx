@@ -13,7 +13,7 @@ export function CtaBand({ heading, sub, cta, href, topic }: Props) {
   const resolvedHref = topic ? `${href}?topic=${topic}` : href;
 
   return (
-    <div className="section-dark relative py-20 md:py-28 text-center overflow-hidden">
+    <div className="role-closing relative py-20 md:py-28 text-center overflow-hidden">
       <div aria-hidden="true" className="glow-accent" />
       <div aria-hidden="true" className="grid-texture" />
       <Container className="relative z-10">
@@ -22,7 +22,7 @@ export function CtaBand({ heading, sub, cta, href, topic }: Props) {
             {heading}
           </h2>
           {sub && (
-            <p className="text-lede" style={{ color: 'var(--color-ink-on-dark-soft)' }}>
+            <p className="text-lede" style={{ color: 'var(--color-ink-soft)' }}>
               {sub}
             </p>
           )}

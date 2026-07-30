@@ -55,7 +55,7 @@ export function ServiceCard({ service }: Props) {
             style={{
               backgroundColor: 'var(--color-accent-soft)',
               color: 'var(--color-accent)',
-              boxShadow: 'inset 0 0 0 1px rgba(31, 79, 255, 0.12)',
+              boxShadow: 'inset 0 0 0 1px var(--color-accent-glow)',
             }}
           >
             {price}

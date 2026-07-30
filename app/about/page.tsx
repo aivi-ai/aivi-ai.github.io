@@ -42,13 +42,14 @@ export default function AboutPage() {
         lede="AIVI is senior AI help, scoped and priced on the page, delivered in days. We're the front door to real expertise — not a six-month engagement, not a discovery phase. When you need the whole building, we'll tell you."
       />
 
-      {/* Firm statement */}
-      <Section tone="alt">
-        <Container>
+      {/* Firm statement — raised emphasis panel (replaces mid-page dark island) */}
+      <Section role="raised">
+        <Container className="relative z-10">
           <div className="max-w-3xl mx-auto">
+            <p className="eyebrow mb-3">The firm</p>
             <h2
               className="text-h2"
-              style={{ color: 'var(--color-ink)', marginBottom: '1.5rem' }}
+              style={{ marginBottom: '1.5rem' }}
             >
               What AIVI is
             </h2>
@@ -76,7 +77,7 @@ export default function AboutPage() {
       </Section>
 
       {/* People */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2
@@ -114,7 +115,7 @@ export default function AboutPage() {
 
       {/* Testimonials — renders nothing if empty */}
       {testimonials.length > 0 && (
-        <Section tone="alt">
+        <Section role="body">
           <Container>
             <h2
               className="text-h2"
@@ -128,7 +129,7 @@ export default function AboutPage() {
       )}
 
       {/* Company info */}
-      <Section tone="alt">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <h2
@@ -184,7 +185,7 @@ export default function AboutPage() {
       </Section>
 
       {/* FAQ */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-10">

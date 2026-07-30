@@ -24,7 +24,7 @@ export default function TermsPage() {
         </p>
       </PageHeader>
 
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           <div className="prose max-w-3xl">
           {/* Founder review note — visible on the page */}

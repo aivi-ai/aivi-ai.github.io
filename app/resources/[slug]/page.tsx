@@ -91,7 +91,7 @@ export default async function ResourcePage({
       <JsonLd data={jsonLd} />
 
       {/* Header */}
-      <Section tone="paper">
+      <Section role="body">
         <Container>
           {/* Breadcrumbs */}
           <nav aria-label="Breadcrumb" className="mb-8">
@@ -159,7 +159,7 @@ export default async function ResourcePage({
       </Section>
 
       {/* Article body */}
-      <Section tone="surface">
+      <Section role="body">
         <Container>
           <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-16">
             {/* Main content */}

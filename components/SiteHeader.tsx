@@ -38,13 +38,12 @@ export function SiteHeader() {
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
 
-  // The home page opens on the dark hero; only there does the header float over
-  // a dark surface. Elsewhere the page header is light. While over the dark hero
-  // and not yet scrolled, the header goes transparent with light text; once
-  // scrolled onto light content (or on any other page) it's the solid light bar.
-  const overDarkHero = pathname === '/';
-  const solid = scrolled || !overDarkHero;
-  const headerInk = solid ? 'var(--color-ink)' : 'var(--color-ink-on-dark)';
+  // Header text uses semantic --color-ink: dark in light-register, off-white in
+  // dark-register. Works over the warm paper hero (light) and the near-black
+  // hero (dark) without register-specific logic.
+  const overHero = pathname === '/';
+  const solid = scrolled || !overHero;
+  const headerInk = 'var(--color-ink)';
 
   useFocusTrap(mobileMenuRef, mobileOpen);
 
@@ -333,23 +332,20 @@ export function SiteHeader() {
             href="/book"
             className="hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium"
             style={{
-              backgroundColor: 'var(--color-accent)',
-              color: '#ffffff',
+              backgroundColor: 'var(--cta-bg)',
+              color: 'var(--cta-ink)',
               textDecoration: 'none',
               minHeight: '44px',
               borderRadius: 'var(--radius-pill)',
-              boxShadow: '0 8px 20px -8px rgba(31, 79, 255, 0.45)',
-              transition: 'background-color 200ms ease, box-shadow 200ms ease, transform 200ms ease',
+              transition: 'opacity 200ms ease, transform 200ms ease',
               transform: 'scale(1)',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--color-accent-hover)';
-              e.currentTarget.style.boxShadow = '0 10px 26px -8px rgba(23, 64, 214, 0.55)';
+              e.currentTarget.style.opacity = '0.88';
               e.currentTarget.style.transform = 'scale(1.02)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'var(--color-accent)';
-              e.currentTarget.style.boxShadow = '0 8px 20px -8px rgba(31, 79, 255, 0.45)';
+              e.currentTarget.style.opacity = '1';
               e.currentTarget.style.transform = 'scale(1)';
             }}
           >
@@ -516,12 +512,11 @@ export function SiteHeader() {
                 href="/book"
                 className="flex items-center justify-center px-4 py-3 text-base font-medium"
                 style={{
-                  backgroundColor: 'var(--color-accent)',
-                  color: '#ffffff',
+                  backgroundColor: 'var(--cta-bg)',
+                  color: 'var(--cta-ink)',
                   textDecoration: 'none',
                   minHeight: '44px',
                   borderRadius: 'var(--radius-pill)',
-                  boxShadow: '0 8px 20px -8px rgba(31, 79, 255, 0.45)',
                 }}
                 onClick={() => setMobileOpen(false)}
               >

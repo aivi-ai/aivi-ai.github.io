@@ -7,10 +7,10 @@ export const company = {
   country: 'The Netherlands',
   countryCode: 'NL',
   vat: 'NL005436672B26',
-  kvk: 'TODO_KVK',        // [FOUNDER INPUT] — blocks launch
-  email: 'TODO_EMAIL',    // [FOUNDER INPUT]
+  kvk: '42024018',
+  email: 'hello@weareaivi.com',
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://weareaivi.com',
-  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/aivi/30min',
+  calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/dev-weareaivi/30min',
   tagline: 'AI expertise, by the hour.',
   socials: [] as string[], // [FOUNDER INPUT] — LinkedIn etc.
 };
