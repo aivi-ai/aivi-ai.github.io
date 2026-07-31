@@ -18,7 +18,7 @@ import { segments } from '@/content/segments';
 import { services } from '@/content/services';
 import { generalFaq } from '@/content/faq';
 import { faqJsonLd } from '@/lib/jsonld';
-import { aiExperts, aiExpertCapabilities, aiExpertInstitutions, advisoryCompanies } from '@/content/people';
+import { aiExperts, aiExpertCapabilities, aiExpertInstitutions, advisoryCapabilities, advisoryCompanies } from '@/content/people';
 import { PersonCard } from '@/components/PersonCard';
 
 export const metadata: Metadata = {
@@ -256,15 +256,57 @@ export default function HomePage() {
               <h3 className="text-h3 mb-6" style={{ color: 'var(--color-ink)' }}>
                 Software Advisory Board
               </h3>
-              <div className="card p-6 md:p-8 flex flex-col gap-5">
+              <div className="card p-6 md:p-8 flex flex-col gap-8">
+                {/* 1 — One-line framing of the bench */}
                 <p
-                  className="text-base leading-relaxed"
-                  style={{ color: 'var(--color-ink-soft)', maxWidth: '70ch' }}
+                  className="text-lg md:text-xl font-semibold leading-snug"
+                  style={{ color: 'var(--color-ink)', maxWidth: '70ch' }}
                 >
-                  A bench of Staff-level engineers from teams that run at real scale &mdash;
-                  large-scale distributed systems, payments infrastructure, and reliability.
-                  They pressure-test the technical calls we make for you.
+                  Staff- and Principal-level engineers from teams that run at production
+                  scale &mdash;{' '}
+                  <span style={{ color: 'var(--color-ink-soft)', fontWeight: 400 }}>
+                    we design and build your solution together, pressure-testing every
+                    technical call before it reaches you.
+                  </span>
                 </p>
+
+                {/* 2 — Collective capabilities, mirroring the AI Experts checklist */}
+                <div>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-widest mb-5"
+                    style={{ color: 'var(--color-ink-muted)' }}
+                  >
+                    What this bench brings
+                  </p>
+                  <ul className="grid grid-cols-1 gap-x-8 gap-y-3.5 md:grid-cols-2">
+                    {advisoryCapabilities.map(item => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="var(--color-accent)"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                          className="mt-0.5 shrink-0"
+                        >
+                          <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        <span
+                          className="text-base leading-snug"
+                          style={{ color: 'var(--color-ink-soft)' }}
+                        >
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 3 — Company tags, shared across the section */}
                 <div className="flex flex-wrap gap-1.5">
                   {advisoryCompanies.map(company => (
                     <span

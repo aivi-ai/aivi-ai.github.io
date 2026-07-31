@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { company } from '@/content/company';
+import { AiviMark } from '@/components/AiviMark';
 import { services } from '@/content/services';
 import { segments } from '@/content/segments';
 
@@ -44,12 +45,16 @@ export function SiteFooter() {
         >
           <span
             style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.625rem',
               fontWeight: 800,
               fontSize: '2.25rem',
               letterSpacing: '-0.04em',
               color: 'var(--color-ink)',
             }}
           >
+            <AiviMark size={40} />
             AIVI
           </span>
           <p

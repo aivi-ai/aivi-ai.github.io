@@ -54,6 +54,17 @@ export const aiExpertInstitutions = Array.from(
   new Set(aiExperts.flatMap(p => p.institutions ?? [])),
 );
 
+// What the advisory bench brings — production-grade engineering rigor, rendered
+// as a shared checklist mirroring the AI Experts section.
+export const advisoryCapabilities = [
+  'Distributed systems designed to stay up under real load',
+  'Fault-tolerant payments infrastructure at scale',
+  'Failure modes and blast radius mapped before they ship',
+  'Trade-offs weighed across consistency, latency & cost',
+  'High-availability platforms held to strict SLOs',
+  'Architecture decisions pressure-tested end to end',
+];
+
 // A generalized bench — Staff-level engineers whose current employment means
 // they are represented by credential and company, never by name.
 export const advisoryCompanies = [

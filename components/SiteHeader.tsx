@@ -11,6 +11,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { services } from '@/content/services';
 import { segments } from '@/content/segments';
+import { AiviMark } from '@/components/AiviMark';
 
 type DropdownId = 'services' | 'who-we-help' | null;
 
@@ -180,6 +181,9 @@ export function SiteHeader() {
           <Link
             href="/"
             style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
               fontWeight: 800,
               fontSize: '1.5rem',
               letterSpacing: '-0.04em',
@@ -189,6 +193,7 @@ export function SiteHeader() {
             }}
             aria-label="AIVI — home"
           >
+            <AiviMark size={28} />
             AIVI
           </Link>
 
