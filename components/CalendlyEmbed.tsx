@@ -6,6 +6,13 @@ import Script from 'next/script';
 import { buildCalendlyUrl, isKnownSlug } from '@/lib/calendly';
 import { company } from '@/content/company';
 
+/** Fire a GA4 event if gtag is loaded. */
+function gtagEvent(name: string, params?: Record<string, unknown>) {
+  if (typeof window !== 'undefined' && typeof (window as Window & { gtag?: Function }).gtag === 'function') {
+    (window as Window & { gtag: Function }).gtag('event', name, params ?? {});
+  }
+}
+
 interface Props {
   /** Query string key the topic slug is read from, e.g. "topic" or "s". */
   paramName?: string;
@@ -32,6 +39,25 @@ export function CalendlyEmbed({ paramName = 'topic' }: Props) {
       }
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Track Calendly booking completions via postMessage API.
+  // Calendly fires 'calendly.event_scheduled' when the user confirms a slot.
+  useEffect(() => {
+    function handleCalendlyMessage(e: MessageEvent) {
+      if (
+        typeof e.data === 'object' &&
+        e.data !== null &&
+        e.data.event === 'calendly.event_scheduled'
+      ) {
+        gtagEvent('booking_scheduled', {
+          event_category: 'engagement',
+          event_label: 'calendly',
+        });
+      }
+    }
+    window.addEventListener('message', handleCalendlyMessage);
+    return () => window.removeEventListener('message', handleCalendlyMessage);
   }, []);
 
   function handleScriptLoad() {

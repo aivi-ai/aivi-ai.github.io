@@ -18,6 +18,8 @@ import { segments } from '@/content/segments';
 import { services } from '@/content/services';
 import { generalFaq } from '@/content/faq';
 import { faqJsonLd } from '@/lib/jsonld';
+import { aiExperts, aiExpertCapabilities, aiExpertInstitutions, advisoryCompanies } from '@/content/people';
+import { PersonCard } from '@/components/PersonCard';
 
 export const metadata: Metadata = {
   title: 'AIVI — AI expertise, by the hour.',
@@ -169,7 +171,122 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 7 — FAQ */}
+      {/* 7 — Team */}
+      <Reveal>
+        <Section role="body" id="team">
+          <Container>
+            <div className="text-center mb-14">
+              <p className="eyebrow justify-center mb-3">The team</p>
+              <h2 className="text-h2">Senior people, where AI is actually being built.</h2>
+              <p className="text-lede mt-3 mx-auto" style={{ maxWidth: '54ch' }}>
+                Engineers and researchers who&rsquo;ve shipped real AI inside real startups &mdash; the same people you brief are the ones who do the work.
+              </p>
+            </div>
+
+            <div className="mb-12">
+              <h3 className="text-h3 mb-6" style={{ color: 'var(--color-ink)' }}>
+                AI Experts
+              </h3>
+              <div className="card p-6 md:p-8 flex flex-col gap-8">
+                {/* 1 — People: name / title / location */}
+                <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
+                  {aiExperts.map(person => (
+                    <PersonCard key={person.name} person={person} />
+                  ))}
+                </div>
+
+                <div style={{ borderTop: '1px solid var(--color-line)' }} />
+
+                {/* 2 — Collective capabilities, not tied to any one person */}
+                <div>
+                  <p
+                    className="text-xs font-semibold uppercase tracking-widest mb-5"
+                    style={{ color: 'var(--color-ink-muted)' }}
+                  >
+                    What this bench brings
+                  </p>
+                  <ul className="grid grid-cols-1 gap-x-8 gap-y-3.5 md:grid-cols-2">
+                    {aiExpertCapabilities.map(item => (
+                      <li key={item} className="flex items-start gap-2.5">
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="var(--color-accent)"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          aria-hidden="true"
+                          className="mt-0.5 shrink-0"
+                        >
+                          <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                        <span
+                          className="text-base leading-snug"
+                          style={{ color: 'var(--color-ink-soft)' }}
+                        >
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* 3 — Affiliation tags, shared across the section */}
+                <div className="flex flex-wrap gap-1.5">
+                  {aiExpertInstitutions.map(inst => (
+                    <span
+                      key={inst}
+                      className="text-xs font-medium px-2.5 py-1 rounded-full"
+                      style={{
+                        background: 'var(--color-surface-alt)',
+                        color: 'var(--color-ink-muted)',
+                        border: '1px solid var(--color-line)',
+                      }}
+                    >
+                      {inst}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-h3 mb-6" style={{ color: 'var(--color-ink)' }}>
+                Software Advisory Board
+              </h3>
+              <div className="card p-6 md:p-8 flex flex-col gap-5">
+                <p
+                  className="text-base leading-relaxed"
+                  style={{ color: 'var(--color-ink-soft)', maxWidth: '70ch' }}
+                >
+                  A bench of Staff-level engineers from teams that run at real scale &mdash;
+                  large-scale distributed systems, payments infrastructure, and reliability.
+                  They pressure-test the technical calls we make for you.
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {advisoryCompanies.map(company => (
+                    <span
+                      key={company}
+                      className="text-xs font-medium px-2.5 py-1 rounded-full"
+                      style={{
+                        background: 'var(--color-surface-alt)',
+                        color: 'var(--color-ink-muted)',
+                        border: '1px solid var(--color-line)',
+                      }}
+                    >
+                      {company}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Container>
+        </Section>
+      </Reveal>
+
+      {/* 9 — FAQ */}
       <Reveal>
         <Section role="body">
           <Container>
@@ -185,7 +302,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 8 — Closing CTA band */}
+      {/* 10 — Closing CTA band */}
       <CtaBand
         heading="Tell us what you're building."
         sub="No commitment until after the call. We&rsquo;ll tell you honestly whether we&rsquo;re the right help."
