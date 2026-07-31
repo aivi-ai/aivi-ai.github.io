@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   description:
     'Senior AI consulting in hours, not months. Fixed-scope engagements with prices on the page. Book a free 30-minute call.',
   metadataBase: new URL(company.siteUrl),
+  verification: {
+    google: 'MWkSW8PhSekAGI1izKN2o9TVa-76eVmvGt_gGIafU2o',
+  },
 };
 
 export const viewport: Viewport = {
