@@ -12,7 +12,7 @@ export const company = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://weareaivi.com',
   calendlyUrl: process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/dev-weareaivi/30min',
   tagline: 'AI expertise, by the hour.',
-  socials: [] as string[], // [FOUNDER INPUT] — LinkedIn etc.
+  socials: [] as string[], // [FOUNDER INPUT] - LinkedIn etc.
 };
 
 export type Company = typeof company;

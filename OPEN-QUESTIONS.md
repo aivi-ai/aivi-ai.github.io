@@ -23,14 +23,14 @@ Every `[FOUNDER INPUT]` item that was defaulted or stubbed. Change these before 
 | # | Item | File:line | Default shipped | What to confirm |
 |---|------|-----------|-----------------|-----------------|
 | 5 | **VAT treatment wording** | `app/pricing/page.tsx`, `app/legal/privacy/page.tsx` | Generic "VAT applied per your location and status" | Have your accountant confirm the exact wording for NL clients, EU business clients (reverse charge), and non-EU clients |
-| 6 | **Terms of Service** | `app/legal/terms/page.tsx` | Draft terms shipped | Dutch lawyer review before launch — especially the B2C/B2B split clause (§16.1 of the plan) |
+| 6 | **Terms of Service** | `app/legal/terms/page.tsx` | Draft terms shipped | Dutch lawyer review before launch - especially the B2C/B2B split clause (§16.1 of the plan) |
 
 ## Defaults shipped (can be changed post-launch without a rebuild)
 
 | # | Item | File:line | Default | Alternative |
 |---|------|-----------|---------|-------------|
 | 7 | Tagline | `content/company.ts` | "AI expertise, by the hour." | "Senior AI help, in hours not months." / "Start small. Get the real answer." |
-| 8 | Accent colour | `app/globals.css` | `#1F4FFF` (Ink & Signal) | `#C2571A` (Ink & Ochre) — change all `--color-accent` vars |
+| 8 | Accent colour | `app/globals.css` | `#1F4FFF` (Ink & Signal) | `#C2571A` (Ink & Ochre) - change all `--color-accent` vars |
 | 9 | Working Session rate | `content/services.ts` | €140/hr, €375 for 3hr | Change `price` in the working-session entry |
 | 10 | Code & Architecture Review price | `content/services.ts` | €1,200 | Change `price` in the code-architecture-review entry |
 | 11 | AI Workflow Audit price | `content/services.ts` | €950 | Change `price` in the ai-workflow-audit entry |

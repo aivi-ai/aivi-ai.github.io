@@ -7,7 +7,7 @@ export interface FaqItem {
 export const generalFaq: FaqItem[] = [
   {
     q: 'How much does it cost to work with AIVI?',
-    a: 'Engagements start at €75 for a student career roadmap and €140 for a one-hour working session. Most fixed-scope engagements are between €950 and €1,400. Every price is listed on our pricing page. There are no hidden fees — what you see is what you pay.',
+    a: 'Engagements start at €75 for a student career roadmap and €140 for a one-hour working session. Most fixed-scope engagements are between €950 and €1,400. Every price is listed on our pricing page. There are no hidden fees - what you see is what you pay.',
     category: 'pricing',
   },
   {
@@ -55,7 +55,7 @@ export const pricingFaq: FaqItem[] = [
   },
   {
     q: 'What payment methods do you accept?',
-    a: 'Bank transfer (SEPA and international), or a card payment link for credit and debit cards. iDEAL is available for Dutch clients. We do not ask for SEPA bank transfers from US clients — we send a card payment link instead.',
+    a: 'Bank transfer (SEPA and international), or a card payment link for credit and debit cards. iDEAL is available for Dutch clients. We do not ask for SEPA bank transfers from US clients - we send a card payment link instead.',
     category: 'billing',
   },
   ...generalFaq,

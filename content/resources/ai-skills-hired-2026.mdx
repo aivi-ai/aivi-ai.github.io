@@ -1,19 +1,19 @@
 ---
-title: "What AI Skills Are Actually Being Hired For in 2026 — and What to Build to Prove You Have Them"
+title: "What AI Skills Are Actually Being Hired For in 2026 - and What to Build to Prove You Have Them"
 description: "An honest look at what hiring managers are actually selecting for in AI-adjacent roles, and the specific portfolio projects that make candidates credible."
 date: "2026-07-28"
 readingTime: "10 min read"
 audience: "students"
 faq:
   - q: "Do I need to know how to train large language models to get an AI job?"
-    a: "For almost all roles, no. Training frontier models is done by a handful of companies with massive compute budgets. The vast majority of AI jobs involve using, deploying, fine-tuning, evaluating, or building products around existing models. The skills that matter are inference, prompt engineering, RAG, evals, and systems thinking — not pretraining."
+    a: "For almost all roles, no. Training frontier models is done by a handful of companies with massive compute budgets. The vast majority of AI jobs involve using, deploying, fine-tuning, evaluating, or building products around existing models. The skills that matter are inference, prompt engineering, RAG, evals, and systems thinking - not pretraining."
   - q: "Which programming language should I learn for AI roles?"
     a: "Python is the default for most AI/ML work. If you are targeting software engineering roles that involve AI features, TypeScript/JavaScript is increasingly common for the application layer. SQL is underrated and valuable in almost every data-adjacent role. Learn Python first, then the language of the specific role you want."
 ---
 
 The problem with most advice about AI careers is that it is either too abstract ("learn machine learning!") or too specific to one company's stack. This guide tries to be neither.
 
-It is based on what hiring managers are actually selecting for in 2026 across a range of AI-adjacent roles — not what sounds impressive, but what shows up in technical interviews and portfolio reviews.
+It is based on what hiring managers are actually selecting for in 2026 across a range of AI-adjacent roles - not what sounds impressive, but what shows up in technical interviews and portfolio reviews.
 
 ---
 
@@ -21,17 +21,17 @@ It is based on what hiring managers are actually selecting for in 2026 across a 
 
 Before we talk about skills, it helps to name the roles. "AI jobs" covers a wide range:
 
-**AI/ML Engineer** — builds and deploys AI-powered features in production software. Needs: Python, APIs, inference, prompt engineering, some knowledge of fine-tuning and evals. Not: pretraining from scratch.
+**AI/ML Engineer** - builds and deploys AI-powered features in production software. Needs: Python, APIs, inference, prompt engineering, some knowledge of fine-tuning and evals. Not: pretraining from scratch.
 
-**AI Product Manager** — owns the roadmap for AI features. Needs: enough technical depth to discuss trade-offs with engineers, user research, metrics, and familiarity with LLM capabilities and limits. Not: the ability to write the code.
+**AI Product Manager** - owns the roadmap for AI features. Needs: enough technical depth to discuss trade-offs with engineers, user research, metrics, and familiarity with LLM capabilities and limits. Not: the ability to write the code.
 
-**Data Scientist / ML Analyst** — builds models and analyses data to answer business questions. Needs: Python, pandas, SQL, statistics, some ML frameworks (scikit-learn, XGBoost), and increasingly, the ability to incorporate LLM tools into analytical workflows.
+**Data Scientist / ML Analyst** - builds models and analyses data to answer business questions. Needs: Python, pandas, SQL, statistics, some ML frameworks (scikit-learn, XGBoost), and increasingly, the ability to incorporate LLM tools into analytical workflows.
 
-**AI-assisted Developer** — builds software with AI coding tools. This is increasingly just "developer." Needs: strong fundamentals, the ability to review and correct AI-generated code, and good judgment about when to trust the AI.
+**AI-assisted Developer** - builds software with AI coding tools. This is increasingly just "developer." Needs: strong fundamentals, the ability to review and correct AI-generated code, and good judgment about when to trust the AI.
 
-**Prompt Engineer / AI Tooling Specialist** — designs and maintains the prompts, workflows, and automations that drive AI features. Needs: systematic thinking, clear writing, familiarity with major LLM APIs, and the ability to measure whether something works.
+**Prompt Engineer / AI Tooling Specialist** - designs and maintains the prompts, workflows, and automations that drive AI features. Needs: systematic thinking, clear writing, familiarity with major LLM APIs, and the ability to measure whether something works.
 
-**AI Safety / Eval Engineer** — builds the systems that test whether AI behaves as intended. Needs: Python, evaluation design, red-teaming, familiarity with safety and alignment concepts. Growing fast.
+**AI Safety / Eval Engineer** - builds the systems that test whether AI behaves as intended. Needs: Python, evaluation design, red-teaming, familiarity with safety and alignment concepts. Growing fast.
 
 ---
 
@@ -39,21 +39,21 @@ Before we talk about skills, it helps to name the roles. "AI jobs" covers a wide
 
 ### 1. Working with LLM APIs (not just the chat UI)
 
-Being able to use ChatGPT is not a skill. Being able to call the OpenAI or Anthropic API, structure prompts programmatically, handle streaming responses, manage context windows, and build a simple chain of calls — that is a skill.
+Being able to use ChatGPT is not a skill. Being able to call the OpenAI or Anthropic API, structure prompts programmatically, handle streaming responses, manage context windows, and build a simple chain of calls - that is a skill.
 
 Specifically: know how to write a system prompt, a user message, and parse the response. Know what temperature does (and when to change it). Know the difference between a single call and a chain of calls.
 
 ### 2. Retrieval-Augmented Generation (RAG)
 
-Almost every company building with LLMs eventually needs to give the model access to their own documents. RAG — chunking documents, embedding them, storing in a vector database, and retrieving relevant chunks at inference time — is the standard approach.
+Almost every company building with LLMs eventually needs to give the model access to their own documents. RAG - chunking documents, embedding them, storing in a vector database, and retrieving relevant chunks at inference time - is the standard approach.
 
 This is not hard to learn, but it has enough moving parts (chunking strategy, embedding model choice, retrieval relevance) that people who have actually built one have a real advantage over people who have only read about it.
 
 ### 3. Evals (knowing whether your AI feature works)
 
-This is the skill most students don't have and most job listings are asking for. An eval is a test for an AI feature — a set of inputs and expected outputs (or criteria) that tells you whether the model is behaving as intended.
+This is the skill most students don't have and most job listings are asking for. An eval is a test for an AI feature - a set of inputs and expected outputs (or criteria) that tells you whether the model is behaving as intended.
 
-Companies learned the hard way that shipping AI features without evals leads to silent regressions. A candidate who has built evals — even simple ones — is rare and valuable.
+Companies learned the hard way that shipping AI features without evals leads to silent regressions. A candidate who has built evals - even simple ones - is rare and valuable.
 
 ### 4. Prompt engineering with systematic thinking
 
@@ -65,7 +65,7 @@ The difference between "knows Python" and "good at Python" matters at interview.
 
 ### 6. SQL
 
-Underrated in AI job listings, essential in practice. If your AI pipeline touches a database — and it almost always does — someone has to write the queries. Being good at SQL (joins, aggregations, window functions, query planning) is a competitive advantage that many Python-first candidates lack.
+Underrated in AI job listings, essential in practice. If your AI pipeline touches a database - and it almost always does - someone has to write the queries. Being good at SQL (joins, aggregations, window functions, query planning) is a competitive advantage that many Python-first candidates lack.
 
 ---
 
@@ -81,13 +81,13 @@ The credible parts: explain why you chunked the documents the way you did, what 
 
 ### Project 2: An evaluation suite for an AI feature
 
-Build something that generates text — a summariser, a classifier, a question-answerer — and then build a suite of tests for it. Include: unit tests for specific inputs, LLM-as-judge evaluations for quality, and a regression test that runs whenever you change the prompt.
+Build something that generates text - a summariser, a classifier, a question-answerer - and then build a suite of tests for it. Include: unit tests for specific inputs, LLM-as-judge evaluations for quality, and a regression test that runs whenever you change the prompt.
 
 The credible parts: the failing cases you found, how you fixed them, and what your eval suite caught that manual testing missed.
 
 ### Project 3: A working automation that saves real time
 
-Find something in your life or a volunteer organisation's workflow that currently takes manual effort — processing emails, categorising support tickets, extracting data from PDFs — and automate it with an LLM. Deploy it so it runs without you.
+Find something in your life or a volunteer organisation's workflow that currently takes manual effort - processing emails, categorising support tickets, extracting data from PDFs - and automate it with an LLM. Deploy it so it runs without you.
 
 The credible parts: what you learned about prompt reliability in production, what broke when the input format changed, and what you would do differently.
 
@@ -109,7 +109,7 @@ The presentation matters as much as the project. Three things that make a hiring
 
 This is a rough order, not a rigid plan. Adjust based on your starting point.
 
-**Weeks 1–4:** Python fluency and APIs. If Python is shaky, fix that first. Then build the simplest possible thing with an LLM API — a command-line tool that answers questions about a text file. Get it working, then extend it.
+**Weeks 1–4:** Python fluency and APIs. If Python is shaky, fix that first. Then build the simplest possible thing with an LLM API - a command-line tool that answers questions about a text file. Get it working, then extend it.
 
 **Weeks 5–8:** RAG project. Pick the documents. Build the pipeline. Break it on purpose (what happens with very short documents? Very long ones? Documents in another language?). Write up what you learned.
 

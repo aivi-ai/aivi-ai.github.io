@@ -167,7 +167,7 @@ export default async function ResourcePage({
               <MDXContent />
             </article>
 
-            {/* Sidebar — soft CTA */}
+            {/* Sidebar - soft CTA */}
             <aside className="hidden lg:block">
               <div
                 className="sticky top-10 rounded-[var(--radius-lg)] p-6 space-y-4"
@@ -178,7 +178,7 @@ export default async function ResourcePage({
               >
                 <p className="text-h3">Want expert help?</p>
                 <p className="text-sm" style={{ color: 'var(--color-ink-soft)' }}>
-                  AIVI offers fixed-scope AI consulting — code reviews, workflow
+                  AIVI offers fixed-scope AI consulting - code reviews, workflow
                   audits, career roadmaps, and more. Book a free 30-minute call
                   to find out if we&rsquo;re useful to you.
                 </p>
@@ -205,7 +205,7 @@ export default async function ResourcePage({
             </aside>
           </div>
 
-          {/* Mobile CTA — below article */}
+          {/* Mobile CTA - below article */}
           <div
             className="mt-16 lg:hidden rounded-[var(--radius-lg)] p-6 space-y-4"
             style={{
@@ -215,7 +215,7 @@ export default async function ResourcePage({
           >
             <p className="text-h3">Want expert help?</p>
             <p className="text-sm" style={{ color: 'var(--color-ink-soft)' }}>
-              AIVI offers fixed-scope AI consulting — code reviews, workflow
+              AIVI offers fixed-scope AI consulting - code reviews, workflow
               audits, career roadmaps, and more. Book a free 30-minute call.
             </p>
             <Link

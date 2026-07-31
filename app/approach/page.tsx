@@ -13,7 +13,7 @@ import { JsonLd } from '@/components/JsonLd';
 import Link from 'next/link';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'How We Work — AIVI',
+  title: 'How We Work - AIVI',
   description:
     'Fixed scope, honest advice, and deliverables in days. Here is the complete process from first call to delivery.',
   path: '/approach',
@@ -48,7 +48,7 @@ const steps = [
 ];
 
 const whatWeWontDo = [
-  'No vendor commissions or referral fees — we recommend what works, not what pays us.',
+  'No vendor commissions or referral fees - we recommend what works, not what pays us.',
   'No six-month discovery phases. If it takes that long to define the problem, the problem is the discovery phase.',
   'No billing for scoping. The free 30-minute call is genuinely free.',
   'No work we are not the right team for. We will tell you on the call if that is the case.',
@@ -70,7 +70,7 @@ export default function ApproachPage() {
         lede="No discovery phases, no scope creep, no sales script. Here's exactly what happens from the first call to the work in your hands."
       />
 
-      {/* 5-step timeline — raised emphasis panel (replaces mid-page dark island) */}
+      {/* 5-step timeline - raised emphasis panel (replaces mid-page dark island) */}
       <Section role="raised">
         <Container className="relative z-10">
           <div className="text-center mb-12">

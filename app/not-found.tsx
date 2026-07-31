@@ -3,7 +3,7 @@ import { Container } from '@/components/Container';
 import { Button } from '@/components/Button';
 
 export const metadata: Metadata = {
-  title: 'Page Not Found — AIVI',
+  title: 'Page Not Found - AIVI',
   description: 'The page you were looking for could not be found.',
   robots: { index: false, follow: false },
 };

@@ -6,7 +6,7 @@ import { CtaBand } from '@/components/CtaBand';
 import { PageHeader } from '@/components/PageHeader';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'All Engagements — AIVI',
+  title: 'All Engagements - AIVI',
   description:
     'Fixed scope, fixed price, measured in hours. Eight AI consulting engagements from €75 to €3,000. Book a free 30-minute call.',
   path: '/services',
@@ -19,10 +19,10 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="What we offer"
         title="Pick what moves you forward."
-        lede="Each engagement is a fixed scope, a price you can see, and something real in your hands in days. Take what you need — skip what you don't."
+        lede="Each engagement is a fixed scope, a price you can see, and something real in your hands in days. Take what you need - skip what you don't."
       />
 
-      {/* Filtered services grid — all 8 cards always in SSR HTML */}
+      {/* Filtered services grid - all 8 cards always in SSR HTML */}
       <ServicesGrid services={services} />
 
       {/* CTA band */}

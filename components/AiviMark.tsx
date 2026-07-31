@@ -1,5 +1,5 @@
 /**
- * AiviMark — inline SVG of the AIVI geometric brand mark.
+ * AiviMark - inline SVG of the AIVI geometric brand mark.
  *
  * The two-layer design (dark L-shaped frame + clay accent square) adapts to
  * the site's data-theme attribute: near-black frame / warm clay in light

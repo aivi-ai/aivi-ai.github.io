@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 // Reports which register the visitor saw (substance-light vs pitch-dark),
 // so the A/B test is measurable when analytics is wired. The register is
 // chosen before paint by the inline script in app/layout.tsx; this only
-// reads the resulting attribute and forwards it. Fully guarded — a no-op
+// reads the resulting attribute and forwards it. Fully guarded - a no-op
 // until PostHog or another analytics tool is connected.
 
 const DEFAULT_THEME = 'light';
@@ -23,12 +23,12 @@ export function ThemeExperiment() {
     try {
       w.posthog?.capture?.('theme_view', { theme });
     } catch {
-      /* analytics not present — ignore */
+      /* analytics not present - ignore */
     }
     try {
       w.dataLayer?.push?.({ event: 'theme_view', site_theme: theme });
     } catch {
-      /* analytics not present — ignore */
+      /* analytics not present - ignore */
     }
   }, []);
 

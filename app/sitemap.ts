@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const serviceRoutes = services.map((s) => `/services/${s.slug}`);
   const segmentRoutes = segments.map((s) => `/who-we-help/${s.slug}`);
 
-  // Resource slugs from MDX files — read at build time
+  // Resource slugs from MDX files - read at build time
   const resourceDir = path.join(process.cwd(), 'content/resources');
   const resourceSlugs = fs.existsSync(resourceDir)
     ? fs

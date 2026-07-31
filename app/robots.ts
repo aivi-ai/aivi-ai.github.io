@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // Keep confirmation page out of crawl — it's noindexed but belt-and-braces
+      // Keep confirmation page out of crawl - it's noindexed but belt-and-braces
       disallow: ['/book/confirmed'],
     },
     sitemap: `${company.siteUrl}/sitemap.xml`,

@@ -1,4 +1,4 @@
-# AIVI AI — Website Implementation Plan
+# AIVI AI - Website Implementation Plan
 
 **Version:** 2.0 (supersedes v1.0 "premium boutique / Stripe checkout" plan)
 **Audience:** A cold implementation agent (design + build + deploy). Assume no prior context.
@@ -17,7 +17,7 @@
 4. §18 is the phased task list. Work through it in order. Each phase is independently shippable.
 5. **`[FOUNDER INPUT]`** marks a value only the founder can supply (legal numbers, real names,
    final rates). Where a `[FOUNDER INPUT]` item has a **proposed default**, *use the default and
-   keep building* — do not block. Collect every one you touched into `OPEN-QUESTIONS.md` at the
+   keep building* - do not block. Collect every one you touched into `OPEN-QUESTIONS.md` at the
    repo root and list them in the handoff.
 6. **Never fabricate**: no invented team members, credentials, clients, testimonials, logos,
    metrics, or case studies. Placeholder slots must read as placeholders (see §7.9), not as
@@ -31,7 +31,7 @@ Build a fast, static, SEO/AEO-optimized marketing site for **AIVI AI**, a boutiq
 firm registered in the Netherlands, operating remotely.
 
 **The single conversion goal:** the visitor books a **free 30-minute call** on **one Calendly
-event type**, backed by **one calendar**. That booking *is* the lead capture — Calendly collects
+event type**, backed by **one calendar**. That booking *is* the lead capture - Calendly collects
 name, email, and intake answers, sends the invite, and handles reminders and reschedules.
 
 Consequences of that single goal, which the whole build must respect:
@@ -59,7 +59,7 @@ they are the *exit* of the funnel, not the entrance.
 
 ### 2.1 One-sentence positioning
 
-> AIVI gives you senior AI expertise in hours, not months — scoped, priced, and delivered in days.
+> AIVI gives you senior AI expertise in hours, not months - scoped, priced, and delivered in days.
 
 ### 2.2 The strategic wedge
 
@@ -72,23 +72,23 @@ they are the *exit* of the funnel, not the entrance.
 | Who it's for | Funded companies with budget | Students, solo founders, professionals, small teams |
 | Output | A built system | **A decision, a roadmap, a review, a working habit** |
 
-We are not competing with partner firms — we are their front door. When an engagement genuinely
+We are not competing with partner firms - we are their front door. When an engagement genuinely
 needs months of build, we say so and refer or scope it up. State this honestly on `/approach`; it
 is a trust asset, not a weakness.
 
-### 2.3 Who we help (four segments — these drive the whole IA)
+### 2.3 Who we help (four segments - these drive the whole IA)
 
-1. **Students & early-career** — anxious about entering an AI-reshaped job market. Want to know
+1. **Students & early-career** - anxious about entering an AI-reshaped job market. Want to know
    what to learn, what to build, and how to signal it. Very price-sensitive → student rate.
-2. **Non-technical / solo founders** — vibe-coded a product with AI tooling, it *works*, it has
+2. **Non-technical / solo founders** - vibe-coded a product with AI tooling, it *works*, it has
    real users and revenue, and now they are quietly terrified about security, data, cost, and what
    happens at 10× the traffic. They cannot evaluate a CTO hire. They need an honest second opinion,
    fast, under NDA.
-3. **Professionals & knowledge workers** — lawyers, marketers, analysts, researchers, clinicians,
+3. **Professionals & knowledge workers** - lawyers, marketers, analysts, researchers, clinicians,
    ops managers. Suspect they are using 10% of what LLM tools can do. Want their *actual* weekly
    workflow made faster, not a generic prompting webinar.
-4. **Small teams & SMB leaders** — 5–50 people. Want to know where AI helps, where it is a trap,
-   what it costs, and what to do in the next quarter — without hiring a consultancy for six months.
+4. **Small teams & SMB leaders** - 5–50 people. Want to know where AI helps, where it is a trap,
+   what it costs, and what to do in the next quarter - without hiring a consultancy for six months.
 
 Everything on the site must let a visitor self-identify into one of these four within ~5 seconds.
 
@@ -100,7 +100,7 @@ number of hours. We say what you will walk away holding.
 - **Do:** "Eight hours. A written review of your codebase, ranked by what will break first. €1,200."
 - **Don't:** "Leverage cutting-edge AI synergies to unlock transformational value."
 
-Use the firm voice ("we", "AIVI"), never "I". Never imply headcount we don't have — the value
+Use the firm voice ("we", "AIVI"), never "I". Never imply headcount we don't have - the value
 claim is *seniority and honesty*, not size. Second person ("you", "your app", "your workflow")
 throughout body copy.
 
@@ -113,9 +113,9 @@ seamless, synergy, empower, transformative, journey, elevate, harness, unleash, 
 Brand is **AIVI** (one word, all caps in the logo, "AIVI" in running text). Legal name
 **AIVI AI Services**.
 
-Tagline — **proposed default: "AI expertise, by the hour."**
+Tagline - **proposed default: "AI expertise, by the hour."**
 Alternates for the founder to consider: *"Senior AI help, in hours not months."* /
-*"Start small. Get the real answer."* **[FOUNDER INPUT — confirm; default is usable at launch]**
+*"Start small. Get the real answer."* **[FOUNDER INPUT - confirm; default is usable at launch]**
 
 ---
 
@@ -132,14 +132,14 @@ This is the most important section. Each offering below becomes (a) a card on `/
 - A **turnaround** commitment.
 - Bookable through the *same* free 30-minute call.
 
-### 3.1 Offering 1 — Code & Architecture Review
+### 3.1 Offering 1 - Code & Architecture Review
 `slug: code-architecture-review` · **Primary revenue driver.**
 
 - **For:** Non-technical or solo founders with a shipped, AI-assisted ("vibe-coded") product that
   has real users; also small teams without a senior engineer.
 - **Scope:** 8–10 hours.
 - **Turnaround:** written report within 5 working days of receiving repo access.
-- **Price:** **€1,200** (excl. VAT). *[FOUNDER INPUT — proposed default]*
+- **Price:** **€1,200** (excl. VAT). *[FOUNDER INPUT - proposed default]*
 - **What we do:** read the codebase and infrastructure; check authentication and authorization,
   secrets handling, data storage and personal-data exposure, third-party API key usage, LLM cost
   and rate-limit exposure, prompt-injection surface, error handling, backups, dependency risk, and
@@ -151,7 +151,7 @@ This is the most important section. Each offering below becomes (a) a card on `/
   implemented, that is a separate Build Sprint (§3.5).
 - **Confidentiality:** mutual NDA offered by default, before repo access.
 
-### 3.2 Offering 2 — AI Workflow Audit
+### 3.2 Offering 2 - AI Workflow Audit
 `slug: ai-workflow-audit`
 
 - **For:** Professionals, and teams of 5–50.
@@ -159,8 +159,8 @@ This is the most important section. Each offering below becomes (a) a card on `/
   handover).
 - **Turnaround:** 5 working days.
 - **Price:** **€950** (excl. VAT) for an individual or a single team workflow.
-  *[FOUNDER INPUT — proposed default]*
-- **What we do:** watch how the work actually gets done this week — the documents, the tools, the
+  *[FOUNDER INPUT - proposed default]*
+- **What we do:** watch how the work actually gets done this week - the documents, the tools, the
   handoffs, the repetitive parts. Map where an LLM genuinely saves hours, where it silently creates
   risk, and where it is simply the wrong tool.
 - **Deliverable:** a workflow map, a ranked list of automation candidates with estimated hours
@@ -169,42 +169,42 @@ This is the most important section. Each offering below becomes (a) a card on `/
 - **Explicitly not:** a software purchase recommendation dressed up as advice. We take no vendor
   commissions and say so.
 
-### 3.3 Offering 3 — AI Career Roadmap (students & early-career)
+### 3.3 Offering 3 - AI Career Roadmap (students & early-career)
 `slug: ai-career-roadmap`
 
 - **For:** Students, recent graduates, career changers.
 - **Scope:** 45-minute call + written roadmap.
 - **Turnaround:** roadmap within 3 working days.
 - **Price:** **€75** (excl. VAT), student rate, valid student ID or recent graduation required.
-  *[FOUNDER INPUT — proposed default]*
+  *[FOUNDER INPUT - proposed default]*
 - **What we do:** an honest read of where you are, what the market is actually hiring for in your
   target role and region, and what to do in the next 90 days.
-- **Deliverable:** a one-page 90-day roadmap — what to learn in what order, two or three portfolio
+- **Deliverable:** a one-page 90-day roadmap - what to learn in what order, two or three portfolio
   projects chosen to be *credible* rather than impressive, and how to present the work so a hiring
   manager believes you built it.
 - **Optional add-on:** portfolio / project review, 1 hour, at the standard hourly rate.
 - **Note:** this is priced near cost on purpose. It is goodwill, pipeline, and the best source of
   honest signal about what the market wants. Say the student rate exists, plainly, on the page.
 
-### 3.4 Offering 4 — Working Session (hourly)
+### 3.4 Offering 4 - Working Session (hourly)
 `slug: working-session`
 
 - **For:** Anyone. The universal entry point.
 - **Scope:** 60 minutes, one-to-one or small group, screen-share, recorded if you want.
 - **Price:** **€140/hour** (excl. VAT). Blocks of 3 hours: **€375**.
-  *[FOUNDER INPUT — proposed default]*
-- **What we do:** you bring an actual problem — a decision, a stuck build, a tool choice, a
+  *[FOUNDER INPUT - proposed default]*
+- **What we do:** you bring an actual problem - a decision, a stuck build, a tool choice, a
   proposal you need reviewed, a workflow you want faster. We work on it together, live.
 - **Deliverable:** written notes and next steps within 24 hours. The recording, if requested.
 - **Positioning line:** *"The cheapest way to find out whether we're useful to you."*
 
-### 3.5 Offering 5 — Build Sprint
+### 3.5 Offering 5 - Build Sprint
 `slug: build-sprint`
 
 - **For:** Clients who already know what needs building and want it done, not scoped forever.
 - **Scope:** 2 or 3 days of focused implementation (16 or 24 hours).
 - **Turnaround:** scheduled within 2 weeks of agreement.
-- **Price:** **€2,200** (2 days) / **€3,000** (3 days), excl. VAT. *[FOUNDER INPUT — proposed default]*
+- **Price:** **€2,200** (2 days) / **€3,000** (3 days), excl. VAT. *[FOUNDER INPUT - proposed default]*
 - **Typical uses:** implement the top findings from a Code & Architecture Review; ship a working
   RAG prototype over your documents; set up evals for an LLM feature that keeps regressing; wire an
   internal automation end to end.
@@ -213,36 +213,36 @@ This is the most important section. Each offering below becomes (a) a card on `/
 - **Boundary:** a sprint is fixed-length, not fixed-outcome. We agree the target before we start
   and report honestly on what landed.
 
-### 3.6 Offering 6 — Advisory Retainer
+### 3.6 Offering 6 - Advisory Retainer
 `slug: advisory-retainer`
 
 - **For:** Founders and team leads who want a senior person reachable on an ongoing basis.
-- **Scope:** 4 hours per month — a monthly call plus async questions (email/Slack), unused hours
+- **Scope:** 4 hours per month - a monthly call plus async questions (email/Slack), unused hours
   do not roll over.
-- **Price:** **€500/month** (excl. VAT), monthly, cancel any time. *[FOUNDER INPUT — proposed default]*
+- **Price:** **€500/month** (excl. VAT), monthly, cancel any time. *[FOUNDER INPUT - proposed default]*
 - **Deliverable:** ongoing access, monthly written notes, and honest "don't do that" advice.
 
-### 3.7 Offering 7 — Team Workshop
+### 3.7 Offering 7 - Team Workshop
 `slug: team-workshop`
 
 - **For:** Teams of 5–25 who want everyone at a shared baseline.
 - **Scope:** half day (3.5 hours), remote or on-site in NL.
 - **Price:** **€1,400** remote / **€1,900** on-site in the Netherlands, excl. VAT, up to 25 people.
-  *[FOUNDER INPUT — proposed default]*
-- **What we do:** hands-on, using the team's *own* documents and tasks — not slideware. Covers
+  *[FOUNDER INPUT - proposed default]*
+- **What we do:** hands-on, using the team's *own* documents and tasks - not slideware. Covers
   what these tools are actually good at, where they fail, verification habits, and the data and
   confidentiality rules your team needs.
 - **Deliverable:** the session, a written team playbook, and prompt templates for the team's real
   recurring tasks.
 
-### 3.8 Offering 8 — Project (custom)
+### 3.8 Offering 8 - Project (custom)
 `slug: custom-project`
 
 - **For:** Work that genuinely needs weeks or months.
 - **Price:** custom quote after a paid discovery engagement.
 - **Copy stance:** *"Sometimes the honest answer is that your problem needs a real project. We take
   on a small number of these, and we will tell you plainly if we are not the right team for it."*
-- This page exists to catch high-value leads and to prove we are not hiding the option — but it is
+- This page exists to catch high-value leads and to prove we are not hiding the option - but it is
   visually de-emphasized relative to 3.1–3.4.
 
 ### 3.9 Offering-to-audience matrix
@@ -271,20 +271,20 @@ ordered by weight.
 
 1. **Statement of intent (h1 + lede):** *"Our prices are on this page. Most engagements are
    measured in hours and start under €1,500."*
-2. **The free call band** — 30 minutes, free, no obligation, no sales script. Primary CTA.
-3. **Price table** — every offering from §3 as a row: name · what you get · hours · price ·
+2. **The free call band** - 30 minutes, free, no obligation, no sales script. Primary CTA.
+3. **Price table** - every offering from §3 as a row: name · what you get · hours · price ·
    turnaround · "Book a call" link. Renders as stacked cards below `md`.
-4. **How billing works** — invoice after the call, paid by bank transfer or a card payment link,
+4. **How billing works** - invoice after the call, paid by bank transfer or a card payment link,
    standard terms 14 days; retainers billed monthly in advance. Anything under €500 is prepaid.
    50% deposit above €2,000 *[FOUNDER INPUT: confirm]*. Prices exclude VAT. Dutch BTW is added for
    Netherlands clients and for EU consumers; EU businesses with a valid VAT number are reverse
    charged; **clients outside the EU (including the US) are generally invoiced without Dutch VAT**
-   — see §16.1. *[FOUNDER INPUT: confirm all three cases with your accountant before publishing
+   - see §16.1. *[FOUNDER INPUT: confirm all three cases with your accountant before publishing
    any VAT wording.]*
-5. **Cancellation & rescheduling** — free reschedule up to 24 hours before a session; late
-   cancellation billed at 50% *[FOUNDER INPUT — proposed default]*.
-6. **Student rate** — stated openly, with eligibility.
-7. **FAQ** (`FAQPage` JSON-LD) — see §7.6.
+5. **Cancellation & rescheduling** - free reschedule up to 24 hours before a session; late
+   cancellation billed at 50% *[FOUNDER INPUT - proposed default]*.
+6. **Student rate** - stated openly, with eligibility.
+7. **FAQ** (`FAQPage` JSON-LD) - see §7.6.
 8. Closing CTA band.
 
 **Currency:** EUR, prices excl. VAT, stated once at the top of the table. Do not build a currency
@@ -292,7 +292,7 @@ switcher.
 
 ---
 
-## 5. Conversion model — Calendly, and only Calendly
+## 5. Conversion model - Calendly, and only Calendly
 
 ### 5.1 The rule
 
@@ -309,14 +309,14 @@ quote" form competing with it, no live chat widget, no exit-intent popup.
 
 ### 5.3 The three CTA surfaces
 
-1. **Nav button** (`Book a free call`) — accent-filled, present in the header on every page and
+1. **Nav button** (`Book a free call`) - accent-filled, present in the header on every page and
    pinned in a bottom bar on mobile.
-2. **Inline CTA blocks** — end of every page section group, and end of every service page.
-3. **`/book`** — the destination page with the inline Calendly embed.
+2. **Inline CTA blocks** - end of every page section group, and end of every service page.
+3. **`/book`** - the destination page with the inline Calendly embed.
 
 `/book` is the *only* page that embeds Calendly inline. Every other CTA is a normal
 `<a href="/book?topic=...">` link. Rationale: one third-party script, loaded on one page,
-keeps Core Web Vitals clean everywhere else. **Do not use the Calendly popup widget** — it loads
+keeps Core Web Vitals clean everywhere else. **Do not use the Calendly popup widget** - it loads
 the script on every page for a worse experience.
 
 ### 5.4 Topic pre-selection (important for the founder's prep)
@@ -328,10 +328,10 @@ embed as a UTM parameter so it appears on the booking notification. Details in �
 
 ### 5.5 What happens after the call (state this on `/approach`)
 
-1. Free 30-minute call — we listen, ask, and say what we think. If we are not the right help, we
+1. Free 30-minute call - we listen, ask, and say what we think. If we are not the right help, we
    say so on the call.
 2. Within 1 working day: a short written summary and a fixed-price proposal for one of the
-   engagements in §3 — scope, hours, price, turnaround.
+   engagements in §3 - scope, hours, price, turnaround.
 3. You accept by replying. We invoice (bank transfer or a card payment link). Work starts.
 4. Delivery, then a walkthrough call.
 
@@ -363,7 +363,7 @@ are available and offered by default for code access.
 /about                              The firm, the people, how we work
 /resources                          Free, ungated, useful (AEO engine)
 /resources/<slug>                   Individual articles/checklists
-/book                               Calendly embed — the only conversion page
+/book                               Calendly embed - the only conversion page
 /contact                            Email + optional form (secondary, de-emphasized)
 /legal/privacy
 /legal/terms
@@ -387,7 +387,7 @@ name, KvK number, VAT/BTW number, contact email, "Remote, from the Netherlands"
 
 ## 7. Page-by-page specification
 
-Write real first-draft copy in the §2.4 voice — the founder edits rather than starts from blank.
+Write real first-draft copy in the §2.4 voice - the founder edits rather than starts from blank.
 Every price, hour count, and turnaround must come from `content/services.ts` (§10), never be
 retyped inline, so a rate change is a one-line edit.
 
@@ -406,27 +406,27 @@ Sections in order:
    - Visually calm: type-led, generous whitespace, one restrained abstract graphic element. No
      stock photography of robots, brains, glowing circuit boards, or people pointing at monitors.
 
-2. **"Where are you starting from?" — segment chooser.** Four large clickable cards (Students /
+2. **"Where are you starting from?" - segment chooser.** Four large clickable cards (Students /
    Founders / Professionals / Teams), each one line of copy, each linking to
    `/who-we-help/<segment>`. This is the instant-value moment: the visitor sees themselves within
    five seconds. Keyboard accessible, real `<a>` elements.
 
 3. **Three headline engagements.** Cards for Code & Architecture Review, AI Workflow Audit,
-   Working Session — each showing **name · one-line outcome · hours · price · turnaround** and a
+   Working Session - each showing **name · one-line outcome · hours · price · turnaround** and a
    link to the detail page. Showing the price here, above the fold on a second scroll, is the whole
    strategy. Below the cards: a quiet link, `See all engagements →`.
 
-4. **"How it works" — four steps.** Book a free call → we scope it in writing → you accept and we
+4. **"How it works" - four steps.** Book a free call → we scope it in writing → you accept and we
    invoice → you get the deliverable in days. Compact, horizontal on desktop, stacked on mobile.
    Link to `/approach`.
 
-5. **"What you actually walk away with."** Three or four short items with concrete nouns — a
+5. **"What you actually walk away with."** Three or four short items with concrete nouns - a
    written review ranked by what breaks first; a 90-day roadmap; a workflow map with hours saved;
    working code in your repo. Counter-programming against consultancies that deliver slide decks.
 
 6. **Honesty band.** Short, plain-text block: *"We'll tell you when you don't need us. Some
    problems need a two-hour conversation, not a project. Some need a team we're not. You'll hear
-   that on the free call, not after an invoice."* This is a differentiator — give it room.
+   that on the free call, not after an invoice."* This is a differentiator - give it room.
 
 7. **FAQ** (4–6 questions, `FAQPage` JSON-LD). See §7.6 for the bank.
 
@@ -447,23 +447,23 @@ quotes exist, they slot in as section 6a (§7.9).
 
 ### 7.3 Service detail template (`/services/[slug]`)
 
-One template, driven by data. Section order — identical on every service page:
+One template, driven by data. Section order - identical on every service page:
 
-1. **Header block** — eyebrow (audience), h1 (offering name), one-paragraph outcome statement.
-2. **Facts bar** — sticky-ish row (or aside on `lg+`): **Hours · Price (excl. VAT) · Turnaround ·
+1. **Header block** - eyebrow (audience), h1 (offering name), one-paragraph outcome statement.
+2. **Facts bar** - sticky-ish row (or aside on `lg+`): **Hours · Price (excl. VAT) · Turnaround ·
    Format** + `Book a free call` button linking to `/book?topic=<slug>`.
-3. **"Is this you?"** — 3–5 bullet symptoms in the client's own words. E.g. for the Code &
-   Architecture Review: *"You shipped it with AI tooling and it works — but you can't tell anyone
+3. **"Is this you?"** - 3–5 bullet symptoms in the client's own words. E.g. for the Code &
+   Architecture Review: *"You shipped it with AI tooling and it works - but you can't tell anyone
    whether it's safe."* / *"You have paying users and no idea what happens at 10× traffic."* /
    *"A developer quoted you €40k and you can't tell if that's fair."*
-4. **What we do** — 4–6 concrete items. Verbs, not adjectives.
-5. **What you get** — the deliverable, described physically ("a 10–20 page written review", "a
+4. **What we do** - 4–6 concrete items. Verbs, not adjectives.
+5. **What you get** - the deliverable, described physically ("a 10–20 page written review", "a
    one-page 90-day roadmap"). Include the walkthrough call.
-6. **What this is not** — explicit boundaries. Builds more trust than any testimonial.
-7. **How it runs** — timeline from booking to delivery, in days.
-8. **Price** — repeated, with what is and isn't included, and VAT note.
-9. **FAQ** — 3–5 offering-specific questions, `FAQPage` JSON-LD.
-10. **Related engagements** — 2–3 cards.
+6. **What this is not** - explicit boundaries. Builds more trust than any testimonial.
+7. **How it runs** - timeline from booking to delivery, in days.
+8. **Price** - repeated, with what is and isn't included, and VAT note.
+9. **FAQ** - 3–5 offering-specific questions, `FAQPage` JSON-LD.
+10. **Related engagements** - 2–3 cards.
 11. **CTA band** → `/book?topic=<slug>`.
 
 Breadcrumbs (`Home / Engagements / <name>`) with `BreadcrumbList` JSON-LD.
@@ -472,13 +472,13 @@ Breadcrumbs (`Home / Engagements / <name>`) with `BreadcrumbList` JSON-LD.
 
 One template, four data-driven instances. Section order:
 
-1. h1 naming the segment in *their* language — e.g. *"You built it with AI. Now you need to know
+1. h1 naming the segment in *their* language - e.g. *"You built it with AI. Now you need to know
    if it will hold."* (founders), *"You're entering a job market that changed while you were
    studying."* (students).
-2. **"Sound familiar?"** — 4–6 pain bullets, specific and unflattering-but-kind.
-3. **Where to start** — the offerings for that segment from the §3.9 matrix, in weight order,
+2. **"Sound familiar?"** - 4–6 pain bullets, specific and unflattering-but-kind.
+3. **Where to start** - the offerings for that segment from the §3.9 matrix, in weight order,
    each with price and hours.
-4. **What changes after** — the concrete outcome for that segment.
+4. **What changes after** - the concrete outcome for that segment.
 5. Segment-specific FAQ (`FAQPage`).
 6. CTA band.
 
@@ -491,12 +491,12 @@ after delivery, no client work used as a public example without written permissi
 
 - The five steps from §5.5 as a numbered vertical timeline, with what *you* do and what *we* do
   at each step, plus elapsed time.
-- **"What we won't do"** — no vendor commissions or referral fees; no six-month discovery phases;
+- **"What we won't do"** - no vendor commissions or referral fees; no six-month discovery phases;
   no billing for scoping; we don't take work we're not the right team for. Each with one sentence
   of why.
-- **Confidentiality & data** — mutual NDA on request and offered by default for code access; what
+- **Confidentiality & data** - mutual NDA on request and offered by default for code access; what
   we do with client code and documents; what we never publish.
-- **Who does the work** — link to `/about`; honest statement about the associate network (§7.9).
+- **Who does the work** - link to `/about`; honest statement about the associate network (§7.9).
 - FAQ + CTA band.
 
 ### 7.6 FAQ bank (write these; distribute across pages; each gets `FAQPage` JSON-LD)
@@ -531,26 +531,26 @@ Students:
 - *Can you get me a job?* → no. We can tell you honestly what the market is hiring for and what
   to build to be credible.
 
-Write the answers so each is **self-contained and quotable in 2–4 sentences** — AI answer engines
+Write the answers so each is **self-contained and quotable in 2–4 sentences** - AI answer engines
 lift short factual passages, and a passage that only makes sense in page context won't get lifted.
 
 ### 7.7 Resources (`/resources`)
 
-The AEO engine. Ungated (no email wall — that would compete with the one conversion action) and
+The AEO engine. Ungated (no email wall - that would compete with the one conversion action) and
 genuinely useful. Ship **three** pieces at launch, as MDX:
 
-1. **"The 12-point health check for a vibe-coded app"** — a real checklist a founder can run in an
+1. **"The 12-point health check for a vibe-coded app"** - a real checklist a founder can run in an
    afternoon, each item with what to look for and why it matters. Ends with: if items 4, 7, or 11
    worry you, that's what the Code & Architecture Review is for.
-2. **"What AI skills are actually being hired for in 2026 — and what to build to prove you have
-   them"** — for students.
-3. **"Seven things professionals get wrong with LLM tools"** — concrete, with the fix for each.
+2. **"What AI skills are actually being hired for in 2026 - and what to build to prove you have
+   them"** - for students.
+3. **"Seven things professionals get wrong with LLM tools"** - concrete, with the fix for each.
 
 Each resource: `Article` JSON-LD, question-led h2s, a table of contents on `lg+`, a soft
 contextual CTA at the end (not a banner mid-article). Index page lists them with title, one-line
 description, reading time, date.
 
-Add new pieces by dropping an MDX file in `content/resources/` — document this in the README.
+Add new pieces by dropping an MDX file in `content/resources/` - document this in the README.
 
 ### 7.8 Book (`/book`)
 
@@ -559,7 +559,7 @@ Add new pieces by dropping an MDX file in `content/resources/` — document this
   tell you what we think; if there's a fit, you get a written scope and price within one working
   day.
 - If `?topic=` is present and matches a known service slug, show a one-line banner: *"You're
-  booking about: **Code & Architecture Review**"* — and pass it into the embed (§12).
+  booking about: **Code & Architecture Review**"* - and pass it into the embed (§12).
 - **Calendly inline embed**, min-height 700px, with a reserved-height skeleton so it causes no
   layout shift (CLS).
 - Below the embed: *"Prefer email? <a href="mailto:...">hello@…</a>"* and the time-zone note
@@ -595,11 +595,11 @@ Short, human, with links to `/services`, `/pricing`, `/book`.
 
 **Aesthetic:** modern, minimal, inviting, type-led. Editorial calm, not SaaS gradient. Lots of
 whitespace. One accent colour used sparingly so that every accent element is a CTA. The page should
-feel like it respects the reader's time — which is also the product promise.
+feel like it respects the reader's time - which is also the product promise.
 
 ### 8.1 Colour tokens
 
-Default direction — **"Ink & Signal"** (use this; it's approved to build with):
+Default direction - **"Ink & Signal"** (use this; it's approved to build with):
 
 ```css
 --color-ink:          #0F1115;  /* near-black, primary text */
@@ -616,7 +616,7 @@ Default direction — **"Ink & Signal"** (use this; it's approved to build with)
 --color-warn:         #9A6400;  /* used only in review-severity contexts */
 ```
 
-Alternative direction if the founder rejects blue — **"Ink & Ochre"**: same neutrals,
+Alternative direction if the founder rejects blue - **"Ink & Ochre"**: same neutrals,
 `--color-accent: #C2571A`, `--color-accent-soft: #FBEDE3`. **[FOUNDER INPUT: confirm; default is
 Ink & Signal]**
 
@@ -624,7 +624,7 @@ Ink & Signal]**
 `prefers-color-scheme` + a `[data-theme]` override, and verify contrast in both.
 
 **Contrast:** every text/background pair must meet WCAG AA (4.5:1 body, 3:1 large text). Verify
-`--color-ink-muted` on `--color-surface-alt` specifically — it is the pair most likely to fail.
+`--color-ink-muted` on `--color-surface-alt` specifically - it is the pair most likely to fail.
 
 ### 8.2 Typography
 
@@ -697,44 +697,44 @@ gradients, no counters ticking up.
 
 ## 9. Component library
 
-Build these as reusable, typed components in `components/`. No component invents content — all
+Build these as reusable, typed components in `components/`. No component invents content - all
 copy arrives via props or from `content/`.
 
 **Layout & chrome**
-- `SiteHeader` — logo, nav with two mega-menu panels, accent CTA button; sticky with a subtle border
+- `SiteHeader` - logo, nav with two mega-menu panels, accent CTA button; sticky with a subtle border
   once scrolled; mobile hamburger → full-screen panel.
-- `MobileCtaBar` — fixed bottom bar with the primary CTA; hidden on `/book`; respects safe-area.
-- `SiteFooter` — four link columns + legal/company block.
+- `MobileCtaBar` - fixed bottom bar with the primary CTA; hidden on `/book`; respects safe-area.
+- `SiteFooter` - four link columns + legal/company block.
 - `Container`, `Section` (props: `tone: 'paper' | 'alt'`, `spacing`).
 - `Breadcrumbs` (+ emits `BreadcrumbList` JSON-LD).
 - `SkipLink`.
 
 **Content**
-- `Hero` — eyebrow, h1, lede, primary + secondary CTA, trust line.
-- `ServiceCard` — name, outcome, hours, price, turnaround, href. Price and hours come from the
+- `Hero` - eyebrow, h1, lede, primary + secondary CTA, trust line.
+- `ServiceCard` - name, outcome, hours, price, turnaround, href. Price and hours come from the
   service record; never hardcoded.
-- `SegmentCard` — the four "where are you starting from" cards.
-- `FactsBar` — the hours/price/turnaround/format strip on service pages.
-- `StepList` — numbered process timeline (vertical mobile, horizontal desktop).
-- `BulletList` — "Is this you?" / "What we do" / "What you get" / "What this is not". Variant prop
+- `SegmentCard` - the four "where are you starting from" cards.
+- `FactsBar` - the hours/price/turnaround/format strip on service pages.
+- `StepList` - numbered process timeline (vertical mobile, horizontal desktop).
+- `BulletList` - "Is this you?" / "What we do" / "What you get" / "What this is not". Variant prop
   controls the marker (check / dash / cross).
-- `PriceTable` — full table on `md+`, stacked cards below; rendered from `content/services.ts`.
-- `Faq` — accessible accordion; also emits `FAQPage` JSON-LD from the same data.
-- `CtaBand` — heading, one line, primary button; `topic` prop appends `?topic=`.
-- `HonestyNote` — the plain-text trust block.
-- `PersonCard` — for `/about`, real people only.
-- `Testimonial` — built, but rendered only when `content/testimonials.ts` is non-empty (launch:
+- `PriceTable` - full table on `md+`, stacked cards below; rendered from `content/services.ts`.
+- `Faq` - accessible accordion; also emits `FAQPage` JSON-LD from the same data.
+- `CtaBand` - heading, one line, primary button; `topic` prop appends `?topic=`.
+- `HonestyNote` - the plain-text trust block.
+- `PersonCard` - for `/about`, real people only.
+- `Testimonial` - built, but rendered only when `content/testimonials.ts` is non-empty (launch:
   empty array).
-- `Prose` — MDX typography wrapper for `/resources`.
+- `Prose` - MDX typography wrapper for `/resources`.
 - `ResourceCard`, `TableOfContents`.
 
 **Utility**
-- `Button` — variants `primary | secondary | ghost`, sizes `md | lg`, renders `<a>` when `href` is
+- `Button` - variants `primary | secondary | ghost`, sizes `md | lg`, renders `<a>` when `href` is
   given and `<button>` otherwise.
-- `CalendlyEmbed` — §12.
-- `Reveal` — IntersectionObserver fade-up, no-op under reduced motion.
-- `JsonLd` — serializes an object into `<script type="application/ld+json">` with proper escaping.
-- `Seo` helper / `generateMetadata` factory — §13.
+- `CalendlyEmbed` - §12.
+- `Reveal` - IntersectionObserver fade-up, no-op under reduced motion.
+- `JsonLd` - serializes an object into `<script type="application/ld+json">` with proper escaping.
+- `Seo` helper / `generateMetadata` factory - §13.
 
 ---
 
@@ -768,7 +768,7 @@ export interface Service {
   related: string[];            // slugs
   order: number;                // display order in /services
   featured: boolean;            // shown on home
-  paymentMode: 'call-first' | 'self-serve';  // §12.5 — launch: all 'call-first'
+  paymentMode: 'call-first' | 'self-serve';  // §12.5 - launch: all 'call-first'
   paymentLink?: string;         // Stripe Payment Link; required iff self-serve
   seo: { title: string; description: string };
 }
@@ -781,9 +781,9 @@ export const servicesFor = (a: Audience) =>
 ```
 
 Other content files:
-- `content/segments.ts` — the four audiences: slug, headline, pains, outcome, faq, seo.
-- `content/faq.ts` — the general FAQ bank (§7.6).
-- `content/company.ts` — confirmed values, use verbatim:
+- `content/segments.ts` - the four audiences: slug, headline, pains, outcome, faq, seo.
+- `content/faq.ts` - the general FAQ bank (§7.6).
+- `content/company.ts` - confirmed values, use verbatim:
 
   ```ts
   export const company = {
@@ -795,19 +795,19 @@ Other content files:
     country: 'The Netherlands',
     countryCode: 'NL',
     vat: 'NL005436672B26',        // VIES-validated 2026-07-28
-    kvk: 'TODO_KVK',              // [FOUNDER INPUT] — blocks launch
+    kvk: 'TODO_KVK',              // [FOUNDER INPUT] - blocks launch
     email: 'TODO_EMAIL',          // [FOUNDER INPUT]
     siteUrl: process.env.NEXT_PUBLIC_SITE_URL!,
-    socials: [] as string[],      // [FOUNDER INPUT] — LinkedIn etc.; empty renders nothing
+    socials: [] as string[],      // [FOUNDER INPUT] - LinkedIn etc.; empty renders nothing
   };
   ```
 
   These values feed the footer, `/legal/*`, and the `ProfessionalService` JSON-LD `address` /
-  `vatID` fields (§13.2). Never invent a registration number — `validate-content.ts` must fail the
+  `vatID` fields (§13.2). Never invent a registration number - `validate-content.ts` must fail the
   production build while any `TODO_` token remains.
-- `content/people.ts` — real, consented people only. May be a single entry.
-- `content/testimonials.ts` — `export const testimonials: Testimonial[] = [];` at launch.
-- `content/resources/*.mdx` — articles with frontmatter (title, description, date, readingTime,
+- `content/people.ts` - real, consented people only. May be a single entry.
+- `content/testimonials.ts` - `export const testimonials: Testimonial[] = [];` at launch.
+- `content/resources/*.mdx` - articles with frontmatter (title, description, date, readingTime,
   audience, faq?).
 
 Add a build-time validation step (`scripts/validate-content.ts`, run in `prebuild`) that fails the
@@ -821,10 +821,10 @@ under 40 characters, or any banned word from §2.4 appears in content files.
 ### 11.1 Stack
 
 - **Next.js (App Router, latest stable) + TypeScript**, fully static (`output: 'export'` is
-  acceptable; plain SSG on Vercel is also fine — no dynamic server rendering is needed).
+  acceptable; plain SSG on Vercel is also fine - no dynamic server rendering is needed).
 - **Tailwind CSS** with the §8 tokens defined as CSS custom properties in `app/globals.css` and
   mapped into the Tailwind theme. Do not scatter raw hex values in components.
-- **MDX** for `/resources` (`@next/mdx` or `contentlayer`-style local loader — prefer the simplest
+- **MDX** for `/resources` (`@next/mdx` or `contentlayer`-style local loader - prefer the simplest
   that works).
 - **Hosting: Vercel.** Auto-deploy `main` → production, PRs → previews.
 - **No** state library, no UI kit, no animation library (use CSS + one small IntersectionObserver
@@ -835,7 +835,7 @@ Rationale: SSG emits complete semantic HTML at build time, which is what both se
 AI answer engines need, and it makes the "no backend" requirement literal rather than aspirational.
 
 **Acceptable alternative:** Astro, same structure and same Calendly approach. **Not acceptable:** a
-client-rendered SPA (Vite/CRA without SSR/SSG) — it degrades SEO/AEO, which is a stated first-class
+client-rendered SPA (Vite/CRA without SSR/SSG) - it degrades SEO/AEO, which is a stated first-class
 requirement.
 
 ### 11.2 File tree
@@ -860,7 +860,7 @@ aivi-website/
 │  │  └─ [slug]/page.tsx
 │  ├─ book/
 │  │  ├─ page.tsx
-│  │  └─ confirmed/page.tsx      # §12.5.4 — noindex, unlinked, post-payment landing
+│  │  └─ confirmed/page.tsx      # §12.5.4 - noindex, unlinked, post-payment landing
 │  ├─ contact/page.tsx
 │  ├─ legal/{privacy,terms,cookies}/page.tsx
 │  ├─ not-found.tsx
@@ -896,29 +896,29 @@ aivi-website/
 
 ### 12.1 Calendly account setup (document what you configure in `HANDOFF.md`)
 
-- **One event type only: "AIVI — Free 30-minute call"**, 30 minutes, remote (Google Meet or Zoom
-  — **[FOUNDER INPUT: which]**).
+- **One event type only: "AIVI - Free 30-minute call"**, 30 minutes, remote (Google Meet or Zoom
+  - **[FOUNDER INPUT: which]**).
 - Connected to **one** calendar. **[FOUNDER INPUT: Google or Microsoft, which account]**
 - Availability: **[FOUNDER INPUT: working hours + time zone Europe/Amsterdam]**. Recommend a
   minimum scheduling notice of 12 hours and a daily cap of 3 so the founder isn't swamped.
 - **US-reachable slots (do not skip this).** A Mon–Fri 09:00–17:00 Europe/Amsterdam window gives a
-  US East Coast visitor only 03:00–11:00 ET, and a West Coast visitor 00:00–08:00 PT — i.e. the
+  US East Coast visitor only 03:00–11:00 ET, and a West Coast visitor 00:00–08:00 PT - i.e. the
   West Coast sees almost nothing bookable. If US clients are wanted, add a recurring evening block,
   e.g. **Tue + Thu 18:00–20:30 CET** (= 12:00–14:30 ET / 09:00–11:30 PT). This costs two evenings a
   week and is the difference between a US visitor booking and bouncing. Calendly handles the
   time-zone conversion automatically; the constraint is purely which hours you open.
 - Buffers: 15 minutes after each booking.
-- **Intake questions** (this is our lead qualification — keep it to four, all short):
+- **Intake questions** (this is our lead qualification - keep it to four, all short):
   1. Name *(built-in)* · 2. Email *(built-in)*
-  3. "Which best describes you?" — single select: *Student / early career · Founder with a product ·
+  3. "Which best describes you?" - single select: *Student / early career · Founder with a product ·
      Professional wanting better AI workflows · Team or company lead · Something else*
-  4. "In one or two sentences, what would you like help with?" — long text, required.
-  5. "Anything we should look at before the call? (link to your app, repo, or site)" — short text,
+  4. "In one or two sentences, what would you like help with?" - long text, required.
+  5. "Anything we should look at before the call? (link to your app, repo, or site)" - short text,
      optional.
 - Confirmation & reminder workflows on: confirmation immediately, reminder 24h and 1h before.
 - Brand colour set to `--color-accent`; remove Calendly branding if the plan tier allows.
 - Time zone auto-detection on (default).
-- **[FOUNDER INPUT: Calendly plan tier]** — the free tier supports one event type and is
+- **[FOUNDER INPUT: Calendly plan tier]** - the free tier supports one event type and is
   sufficient for launch; paid tiers add branding removal and workflows.
 
 Store the scheduling URL in an env var, not in source:
@@ -926,7 +926,7 @@ Store the scheduling URL in an env var, not in source:
 
 ### 12.2 The embed component
 
-`components/CalendlyEmbed.tsx` — client component, used **only** on `/book`:
+`components/CalendlyEmbed.tsx` - client component, used **only** on `/book`:
 
 - Renders `<div class="calendly-inline-widget" data-url={url} data-auto-load="false" />` with a
   reserved `min-height: 700px` (and `min-height: 1000px` below `md`) so there is **no layout
@@ -958,10 +958,10 @@ export function buildCalendlyUrl(topic?: string) {
 
 `utm_campaign`/`utm_content` surface in Calendly's booking notification, so the founder sees which
 engagement the visitor was reading before they booked. Validate `topic` against the known service
-slugs before using it — never interpolate an arbitrary query param into a URL or into the page.
+slugs before using it - never interpolate an arbitrary query param into a URL or into the page.
 
 Set `hide_gdpr_banner=1` **only if** the site's own privacy policy and (if used) cookie notice
-cover Calendly as a processor — see §16. Otherwise leave Calendly's banner on.
+cover Calendly as a processor - see §16. Otherwise leave Calendly's banner on.
 
 ### 12.4 What we deliberately do not build
 
@@ -971,7 +971,7 @@ paid bookings are wanted later is §12.5. Note it in `HANDOFF.md`.
 
 ---
 
-## 12.5 Taking payment on the site — deferred by design, seams reserved
+## 12.5 Taking payment on the site - deferred by design, seams reserved
 
 ### 12.5.1 The decision
 
@@ -980,7 +980,7 @@ invoice. This is correct for the €950–€3,000 work (it needs scoping, an ND
 a price is honest) and acceptable everywhere else while volume is zero.
 
 **It is not correct forever for the low tier.** A €75 student roadmap that requires a free 30-minute
-call first costs ~2 hours of founder time for €75 — under €40/hour, before invoicing admin. A €140
+call first costs ~2 hours of founder time for €75 - under €40/hour, before invoicing admin. A €140
 working session has the same problem in miniature, plus it contradicts the "published price, start
 now" positioning: making someone book a sales call to buy one hour is the friction we differentiate
 against.
@@ -988,7 +988,7 @@ against.
 So: the site launches call-only, and the implementing agent must make switching a single service to
 self-serve a **content edit, not a rebuild.**
 
-### 12.5.2 The seam (build this at launch — it is ~20 lines)
+### 12.5.2 The seam (build this at launch - it is ~20 lines)
 
 Add two optional fields to the `Service` type in `content/services.ts` (§10):
 
@@ -1005,7 +1005,7 @@ absent, or if `paymentLink` is set on a `call-first` service.
 | `paymentMode` | CTA label | href |
 |---|---|---|
 | `call-first` | "Book a free 30-min call" | `/book?topic=<slug>` |
-| `self-serve` | "Book and pay — €140" | `service.paymentLink` |
+| `self-serve` | "Book and pay - €140" | `service.paymentLink` |
 
 That branch is the entire feature. Every service ships `call-first`; nothing else changes at launch.
 
@@ -1014,7 +1014,7 @@ That branch is the entire feature. Every service ships `call-first`; nothing els
 1. In the **Stripe dashboard**, create a Payment Link for the product. Set its post-payment redirect
    to `https://<site>/book/confirmed?s=<slug>`. Enable card, **iDEAL** (Dutch clients expect it),
    and international cards if selling to the US. Optionally enable **Stripe Tax** so VAT is
-   determined and applied automatically at checkout — this is the main reason to prefer a Payment
+   determined and applied automatically at checkout - this is the main reason to prefer a Payment
    Link over a manual invoice for cross-border self-serve sales.
 2. In `content/services.ts`, set `paymentMode: 'self-serve'` and paste the `paymentLink`.
 3. Commit. Vercel redeploys. Done.
@@ -1026,7 +1026,7 @@ with `topic` read from the `?s=` param and validated against known slugs. `noind
 `sitemap.ts`, not in any nav.
 
 No session verification, no webhook, no API call. The page is only reachable via Stripe's redirect,
-and the worst case if someone guesses the URL is that they book a call they didn't pay for — which
+and the worst case if someone guesses the URL is that they book a call they didn't pay for - which
 you see on your calendar before it happens. Do not add server-side verification to close that
 hole; the cure costs more than the disease.
 
@@ -1039,7 +1039,7 @@ necessary, that is a separate project with its own plan.
 **Alternative worth knowing about:** Calendly's native Stripe payment collection takes payment *at
 the moment of booking*, which is a cleaner single-flow UX than link-then-schedule. It needs a paid
 Calendly tier and one event type per priced product. If the founder is already paying for Calendly,
-prefer it over §12.5.3. **[FOUNDER INPUT: verify the current Calendly tier that includes payments —
+prefer it over §12.5.3. **[FOUNDER INPUT: verify the current Calendly tier that includes payments -
 their plan structure changes.]**
 
 ---
@@ -1060,7 +1060,7 @@ their plan structure changes.]**
 - No `noindex` anywhere except previews (set `X-Robots-Tag: noindex` on non-production Vercel
   deployments).
 
-### 13.2 Structured data (JSON-LD) — critical for AEO
+### 13.2 Structured data (JSON-LD) - critical for AEO
 
 In `lib/jsonld.ts`, build and inject:
 
@@ -1070,7 +1070,7 @@ In `lib/jsonld.ts`, build and inject:
   `name`, `description`, and `priceSpecification` (EUR, `valueAddedTaxIncluded: false`).
 - **`Service`** on each `/services/<slug>`: `name`, `serviceType`, `provider` (@id ref to the
   organization), `description`, `areaServed`, `offers` with price + currency, `audience`.
-- **`FAQPage`** on home, pricing, every service page, every segment page — generated from the same
+- **`FAQPage`** on home, pricing, every service page, every segment page - generated from the same
   data the visible accordion renders, so they can never disagree.
 - **`BreadcrumbList`** on all nested pages.
 - **`Person`** on `/about` for each real, consented person only.
@@ -1083,7 +1083,7 @@ Validate every page against Google's Rich Results Test and the Schema.org valida
 ### 13.3 AEO content patterns
 
 - Each page opens by answering its own question in the first 40 words. No throat-clearing.
-- Answers are **self-contained** — an AI answer engine lifting one paragraph must get a complete,
+- Answers are **self-contained** - an AI answer engine lifting one paragraph must get a complete,
   accurate statement including the price or the number of hours where relevant.
 - Use question-form h2/h3s on service and resource pages ("What do you need from me?", "What does
   a code review cost?").
@@ -1103,7 +1103,7 @@ Each should have an obvious landing page. Map query → page in `HANDOFF.md`.
 
 ### 13.5 `llms.txt`
 
-Publish `/public/llms.txt` — a plain-text summary of what AIVI is, the eight offerings with prices
+Publish `/public/llms.txt` - a plain-text summary of what AIVI is, the eight offerings with prices
 and hours, who each is for, and the booking URL. Cheap to maintain, increasingly used by answer
 engines.
 
@@ -1116,12 +1116,12 @@ sitemap submitted for both. **[FOUNDER INPUT: domain + registrar access]**
 
 ## 14. Analytics
 
-- **Vercel Web Analytics** (default) or **Plausible** — both cookieless, so no consent banner is
+- **Vercel Web Analytics** (default) or **Plausible** - both cookieless, so no consent banner is
   required for analytics alone. **[FOUNDER INPUT: preference; default Vercel Web Analytics]**
 - Do **not** install Google Analytics unless the founder insists; if they do, it must be gated
   behind an opt-in consent banner (§16) and `/legal/cookies` must ship.
 - Events worth tracking (custom events, no PII):
-  - `cta_click` with `{ location, topic }` — every primary CTA.
+  - `cta_click` with `{ location, topic }` - every primary CTA.
   - `book_page_view`, `calendly_loaded`.
   - `segment_card_click` with `{ segment }`.
   - `pricing_view`, `service_view` with `{ slug }`.
@@ -1131,12 +1131,12 @@ sitemap submitted for both. **[FOUNDER INPUT: domain + registrar access]**
 
 ## 15. Contact form (optional, secondary)
 
-Default: **no form** — publish an email address and steer to the call. This keeps the build fully
+Default: **no form** - publish an email address and steer to the call. This keeps the build fully
 static and the funnel single-threaded.
 
 If the founder wants a form, implement the smallest version:
 - Fields: name, email, message, plus a honeypot input hidden from users and screen readers.
-- Submit to a **hosted provider** (Formspree/Basin) — no API keys in the repo, no serverless
+- Submit to a **hosted provider** (Formspree/Basin) - no API keys in the repo, no serverless
   function, still zero backend. Alternative: one Vercel Function → Resend, with the API key in a
   server-only env var, never `NEXT_PUBLIC_`.
 - Cloudflare Turnstile if spam appears; do not add it preemptively.
@@ -1147,7 +1147,7 @@ If the founder wants a form, implement the smallest version:
 
 ## 16. Legal & compliance (Netherlands / EU)
 
-- **Footer + `/legal/*` company block — confirmed values, use verbatim:**
+- **Footer + `/legal/*` company block - confirmed values, use verbatim:**
 
   ```
   AIVI AI Services
@@ -1155,15 +1155,15 @@ If the founder wants a form, implement the smallest version:
   1098 XH Amsterdam
   The Netherlands
   VAT / BTW: NL005436672B26
-  KvK: [FOUNDER INPUT — still outstanding]
+  KvK: [FOUNDER INPUT - still outstanding]
   ```
 
   VAT number validated against the EU VIES registry on 2026-07-28: valid, registered to
   "AIVI AI SERVICES", Science Park 00608, 1098XH Amsterdam. **KvK number is the only company
-  identifier still missing and it blocks launch** — Dutch law requires it on business
+  identifier still missing and it blocks launch** - Dutch law requires it on business
   communications. Do not invent it; ship the `[FOUNDER INPUT]` token and flag it in
   `OPEN-QUESTIONS.md`.
-- **Privacy policy** (`/legal/privacy`) — GDPR. Must cover:
+- **Privacy policy** (`/legal/privacy`) - GDPR. Must cover:
   - What we collect: booking data via Calendly (name, email, answers, calendar entry), analytics
     (cookieless, aggregate), form data if §15 is enabled, email correspondence.
   - Lawful basis: legitimate interest / performance of a contract for bookings; consent for
@@ -1173,68 +1173,68 @@ If the founder wants a form, implement the smallest version:
     international-transfer mechanism (SCCs / DPF as applicable).
   - Retention periods, data-subject rights (access, erasure, portability, objection), and the
     contact address for requests. Right to complain to the Autoriteit Persoonsgegevens.
-- **Terms** (`/legal/terms`) — engagement scope, what a deliverable is and is not, payment terms
+- **Terms** (`/legal/terms`) - engagement scope, what a deliverable is and is not, payment terms
   (14 days), cancellation/reschedule policy (§4), IP ownership of deliverables (client owns the
   deliverable; AIVI retains generic know-how), confidentiality, and a limitation of liability.
   **[FOUNDER INPUT: confirm; have a Dutch lawyer or accountant review before launch.]**
-- **Cookies** — with cookieless analytics and Calendly loading only on `/book`, a consent banner is
+- **Cookies** - with cookieless analytics and Calendly loading only on `/book`, a consent banner is
   likely unnecessary sitewide. **Verify empirically:** load every page with devtools open and
   confirm no cookies or localStorage are set before interaction. If `/book` sets Calendly cookies,
   either (a) disclose it in the privacy policy and leave Calendly's own GDPR banner enabled (i.e.
   drop `hide_gdpr_banner`), or (b) gate the embed behind a click-to-load consent card. **Prefer
-  (b) if the founder wants to be conservative** — it's a small component and removes the question.
-- **VAT** — prices shown excl. VAT with a clear note. Dutch BTW applied per NL/EU rules; reverse
+  (b) if the founder wants to be conservative** - it's a small component and removes the question.
+- **VAT** - prices shown excl. VAT with a clear note. Dutch BTW applied per NL/EU rules; reverse
   charge for valid EU VAT-registered business clients; outside the EU see §16.1. **[FOUNDER INPUT:
   confirm with accountant; the site must not state a VAT treatment that hasn't been confirmed.]**
-- **No unverifiable claims** — see §0.6.
+- **No unverifiable claims** - see §0.6.
 
-### 16.1 Selling outside the EU — the United States in particular
+### 16.1 Selling outside the EU - the United States in particular
 
 The founder has a KvK registration, so AIVI is a registered Dutch business supplying services
 cross-border. Six things matter, roughly in order of how likely each is to actually bite.
 
-**1. Scheduling is the real barrier, not tax.** See §12.1 — default Amsterdam office hours make
+**1. Scheduling is the real barrier, not tax.** See §12.1 - default Amsterdam office hours make
 AIVI effectively unbookable from the US West Coast. Fix the availability window before worrying
 about anything else on this list.
 
-**2. Getting paid — never ask a US client for a SEPA/IBAN transfer.** An international wire from a
+**2. Getting paid - never ask a US client for a SEPA/IBAN transfer.** An international wire from a
 US bank costs the sender $25–50, can lose value to intermediary banks, and takes days; US finance
 teams treat it as friction and some will simply stall. Send a **Stripe-hosted invoice or payment
-link** instead — they pay by card or ACH in one click. Note that international cards cost
+link** instead - they pay by card or ACH in one click. Note that international cards cost
 noticeably more in Stripe fees than EEA cards, with currency conversion on top; check Stripe's
 current rate card. At these ticket sizes, absorb it rather than surcharging. If US revenue becomes
 regular, a Wise Business USD receiving account is worth opening.
 
-**3. Have a W-8BEN-E filled out and ready — this is the most common cause of a stalled first US
+**3. Have a W-8BEN-E filled out and ready - this is the most common cause of a stalled first US
 invoice.** Most US companies' accounts-payable systems will not release payment to a foreign
 supplier without a W-8 on file. It certifies foreign status and claims benefits under the
 US–Netherlands income tax treaty. **W-8BEN-E** if invoicing as an entity (BV); **W-8BEN** if
 invoicing as an individual/eenmanszaak. Because the services are performed from the Netherlands,
-the income is foreign-source and generally not subject to the 30% withholding at all — but the form
+the income is foreign-source and generally not subject to the 30% withholding at all - but the form
 is still what unblocks the payment. Fill one in now, keep the PDF, send it the same day it's asked
 for. Relatedly: with no US office, employees, or dependent agent, there is no US permanent
 establishment, so the treaty's business-profits article keeps AIVI outside US income tax.
 
 **4. Dutch VAT generally does not apply to US clients.** Consultancy and advisory services fall
 under the place-of-supply rules that locate the supply where the customer belongs, so a client
-established outside the EU is outside the scope of Dutch BTW — invoice shows €0 VAT with a short
+established outside the EU is outside the scope of Dutch BTW - invoice shows €0 VAT with a short
 note explaining why. **Two carve-outs to check specifically:** services *physically performed* in
 the US (an on-site workshop) and anything that qualifies as an electronically-supplied service
 rather than live human consulting can follow different rules. **[FOUNDER INPUT: confirm the general
 case and both carve-outs with the accountant. Until confirmed, the website states only "prices
 exclude VAT; VAT is applied per your location and status" and nothing more specific.]**
 
-**5. US state sales tax — almost certainly not a concern yet.** Most states do not tax professional
+**5. US state sales tax - almost certainly not a concern yet.** Most states do not tax professional
 consulting services; a few tax certain computer or data-processing services. Economic-nexus
 thresholds are typically $100k or 200 transactions per state per year, far above launch volume.
 **Publish nothing about US tax on the website.** Revisit only if US revenue becomes material.
 
-**6. Currency and governing law.** Keep **EUR as the single published currency** — a US buyer
+**6. Currency and governing law.** Keep **EUR as the single published currency** - a US buyer
 seeing €140 is not friction, and a currency switcher is (see §12.5.5). Be willing to invoice in USD
 if their AP asks.
 
 `/legal/terms` states: **governed by the laws of the Netherlands, with the Rechtbank Amsterdam
-(Amsterdam District Court) having exclusive jurisdiction** — the registered seat is Amsterdam, so
+(Amsterdam District Court) having exclusive jurisdiction** - the registered seat is Amsterdam, so
 this is the natural forum. Include the liability cap (recommend: capped at the fees paid for the
 engagement in question). Expect occasional pushback from larger US clients; at these engagement
 sizes, declining to negotiate is reasonable.
@@ -1244,7 +1244,7 @@ sold to **consumers**, not businesses. Under EU consumer-protection rules a choi
 cannot strip an EU consumer of the mandatory protections of their own country of residence, and
 consumer jurisdiction rules differ from B2B. The terms should therefore distinguish business
 clients from consumers rather than applying one clause to everyone. **[FOUNDER INPUT: Dutch lawyer
-review before launch — this is the one clause worth paying for.]**
+review before launch - this is the one clause worth paying for.]**
 
 ---
 
@@ -1272,58 +1272,58 @@ minimal client components, Calendly isolated to one lazily-loaded page.
 
 Each phase is a shippable PR. Deploy to a Vercel preview at the end of each.
 
-**Phase 0 — Setup (½ day)**
+**Phase 0 - Setup (½ day)**
 - Init Next.js + TS + Tailwind. Configure tokens from §8 in `globals.css` + Tailwind theme.
 - Self-host fonts via `next/font/local`. ESLint, Prettier, strict TS.
 - `content/` skeleton with all §10 types. `OPEN-QUESTIONS.md` created.
 - Deploy an empty shell to Vercel. Confirm previews work.
 
-**Phase 1 — Chrome & design system (1 day)**
+**Phase 1 - Chrome & design system (1 day)**
 - `SiteHeader` (with working keyboard-accessible mega-menus), `SiteFooter`, `MobileCtaBar`,
   `Container`, `Section`, `Button`, `SkipLink`, `Reveal`, `JsonLd`.
 - `app/layout.tsx` with fonts, metadata defaults, `ProfessionalService` + `WebSite` JSON-LD.
 - A `/styleguide` route (excluded from sitemap and `noindex`) rendering every component and type
-  scale — delete or keep behind an env flag before launch.
+  scale - delete or keep behind an env flag before launch.
 
-**Phase 2 — Content data (1 day)**
+**Phase 2 - Content data (1 day)**
 - Fill `content/services.ts` with all eight offerings from §3, verbatim scope/price/turnaround.
 - Fill `content/segments.ts`, `content/faq.ts`, `content/company.ts` (placeholders flagged),
   `content/people.ts`, empty `content/testimonials.ts`.
 - `scripts/validate-content.ts` + wire into `prebuild`.
 
-**Phase 3 — Core pages (2–3 days)**
+**Phase 3 - Core pages (2–3 days)**
 - Home (§7.1) with all eight sections.
 - `/services` + the `[slug]` template → 8 pages.
 - `/who-we-help` + `[segment]` → 4 pages.
 - `/approach`, `/pricing`, `/about`, `/contact`, `/404`.
 - All CTAs wired to `/book?topic=…`.
 
-**Phase 4 — Booking (½ day)**
+**Phase 4 - Booking (½ day)**
 - `/book` with `CalendlyEmbed`, topic banner, skeleton, no-JS fallback, cleanup on unmount.
 - Verify: no layout shift, works with JS disabled, works on mobile Safari.
 - Build the §12.5 payment seam: `paymentMode` / `paymentLink` fields, the CTA branch in
   `ServiceCard` / `FactsBar` / `CtaBand`, the validator rule, and `/book/confirmed` (noindex,
   unlinked). All services stay `call-first`. Test the branch once with a dummy link, then revert.
 
-**Phase 5 — SEO/AEO (1 day)**
+**Phase 5 - SEO/AEO (1 day)**
 - `lib/seo.ts` metadata for every route; `sitemap.ts`; `robots.ts`; OG images.
 - All JSON-LD from §13.2; validate every type in the Rich Results Test.
 - `/public/llms.txt`. Banned-word lint pass over all copy.
 
-**Phase 6 — Resources (1 day)**
+**Phase 6 - Resources (1 day)**
 - MDX pipeline, `Prose`, `/resources` index, three launch articles (§7.7), `Article` JSON-LD, TOC.
 
-**Phase 7 — Legal & analytics (½ day)**
+**Phase 7 - Legal & analytics (½ day)**
 - `/legal/privacy`, `/legal/terms`, `/legal/cookies` (if needed). Footer company block.
 - Analytics installed; events from §14 firing.
 - Cookie audit per §16.
 
-**Phase 8 — QA & launch (1 day)**
+**Phase 8 - QA & launch (1 day)**
 - Full §19 checklist. Lighthouse on mobile for home, a service page, pricing, `/book`.
 - Keyboard-only pass and a VoiceOver pass.
 - Cross-browser: Safari (macOS + iOS), Chrome, Firefox. Widths 320 / 375 / 768 / 1024 / 1440.
 - Domain + DNS + HTTPS. Search Console + Bing verification, sitemaps submitted.
-- Email domain auth: **SPF, DKIM, DMARC** on the sending domain — the founder will be emailing
+- Email domain auth: **SPF, DKIM, DMARC** on the sending domain - the founder will be emailing
   prospects and proposals from it, and without these the mail lands in spam.
 - `HANDOFF.md` + `OPEN-QUESTIONS.md` finalized.
 
@@ -1334,7 +1334,7 @@ Estimated total: **8–10 working days.**
 ## 19. Acceptance criteria
 
 Functionality
-- [ ] Every page server-renders full content (view-source, JS disabled) — including FAQ answers and
+- [ ] Every page server-renders full content (view-source, JS disabled) - including FAQ answers and
       all service cards.
 - [ ] Every primary CTA on every page reaches `/book`; service-page CTAs carry the correct
       `?topic=` slug.
@@ -1345,12 +1345,12 @@ Functionality
 - [ ] Every service ships `paymentMode: 'call-first'`; no Stripe key, link, or SDK appears anywhere
       in the repo or the client bundle (grep confirms).
 - [ ] Flipping one service to `'self-serve'` with a dummy `paymentLink` changes its CTA correctly
-      and the build still passes — verify once locally, then revert (proves the §12.5 seam works).
+      and the build still passes - verify once locally, then revert (proves the §12.5 seam works).
 - [ ] `/book/confirmed` renders, is `noindex`, and is absent from `sitemap.xml` and all navigation.
 - [ ] Nav mega-menus and the FAQ accordion are fully keyboard operable; Escape closes menus.
 
 Content integrity
-- [ ] Every price, hour count, and turnaround on the site traces to `content/services.ts` — grep
+- [ ] Every price, hour count, and turnaround on the site traces to `content/services.ts` - grep
       confirms no hardcoded prices in JSX.
 - [ ] Zero fabricated people, credentials, clients, testimonials, logos, or metrics.
 - [ ] No banned words from §2.4 (lint script passes).
@@ -1375,7 +1375,7 @@ Performance & accessibility
 Compliance
 - [ ] Privacy, terms (and cookies, if applicable) published and linked from the footer.
 - [ ] Footer shows legal name, KvK, VAT, and contact email (real values, or the launch is blocked
-      on founder input — flag it, don't invent).
+      on founder input - flag it, don't invent).
 - [ ] Cookie audit done: no non-essential cookies set before interaction on any page but `/book`,
       and `/book` handled per §16.
 - [ ] SPF, DKIM, DMARC configured on the sending domain.
@@ -1388,9 +1388,9 @@ Compliance
 2. GitHub repo, clean history, README covering: local setup, env vars, **how to change a price**,
    **how to add a service**, **how to add a resource article**, **how to add a person**, and how to
    swap the logo.
-3. `OPEN-QUESTIONS.md` — every founder input still outstanding, with the default currently shipped
+3. `OPEN-QUESTIONS.md` - every founder input still outstanding, with the default currently shipped
    and the exact file:line to change.
-4. `HANDOFF.md` — Calendly configuration as built (event type, intake questions, availability,
+4. `HANDOFF.md` - Calendly configuration as built (event type, intake questions, availability,
    workflows), analytics setup, DNS records, Search Console access, the query→page map (§13.4), and
    the documented migration path to paid Calendly bookings (§12.4).
 5. Lighthouse reports (mobile) for home, one service page, `/pricing`, `/book`.
@@ -1398,11 +1398,11 @@ Compliance
 
 ---
 
-## 21. Open decisions (consolidated) — every one has a shipping default
+## 21. Open decisions (consolidated) - every one has a shipping default
 
 | # | Decision | Proposed default (build with this) |
 |---|---|---|
-| 1 | Domain | [FOUNDER INPUT — blocks launch only, not build] |
+| 1 | Domain | [FOUNDER INPUT - blocks launch only, not build] |
 | 2 | Tagline | "AI expertise, by the hour." |
 | 3 | Accent colour | Ink & Signal (`#1F4FFF`) |
 | 4 | Logo | Wordmark set in the display font |
@@ -1420,15 +1420,15 @@ Compliance
 | 16 | Analytics | Vercel Web Analytics |
 | 17 | Contact form | No form; email address only |
 | 18 | People on `/about` | Founder only + honest associate-network statement |
-| 19a | VAT/BTW number | ✅ **NL005436672B26** — VIES-validated 2026-07-28 |
+| 19a | VAT/BTW number | ✅ **NL005436672B26** - VIES-validated 2026-07-28 |
 | 19b | Registered address | ✅ **Science Park 608, 1098 XH Amsterdam, NL** |
-| 19c | KvK number | **No default — must be supplied before launch** |
-| 19d | Public contact email | **No default — needed for footer, JSON-LD, `/contact`** |
-| 20 | VAT treatment wording | **No default — confirm with accountant before launch** |
+| 19c | KvK number | **No default - must be supplied before launch** |
+| 19d | Public contact email | **No default - needed for footer, JSON-LD, `/contact`** |
+| 20 | VAT treatment wording | **No default - confirm with accountant before launch** |
 | 21 | Payment on the site | None at launch; all services `call-first`, §12.5 seam built |
 | 22 | US-reachable call slots | Add Tue + Thu 18:00–20:30 CET to Calendly availability |
-| 23 | Governing law for `/legal/terms` | ✅ Dutch law, Rechtbank Amsterdam — lawyer to draft the B2C/B2B split (§16.1.6) |
-| 24 | W-8BEN-E / W-8BEN on file | Ops task, not a website blocker — prepare before first US invoice |
+| 23 | Governing law for `/legal/terms` | ✅ Dutch law, Rechtbank Amsterdam - lawyer to draft the B2C/B2B split (§16.1.6) |
+| 24 | W-8BEN-E / W-8BEN on file | Ops task, not a website blocker - prepare before first US invoice |
 
 Items **19c, 19d and 20** are the only ones that genuinely block go-live. Everything else ships on
 the default and is a one-line content edit afterwards.

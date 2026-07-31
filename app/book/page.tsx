@@ -9,7 +9,7 @@ import { Container } from '@/components/Container';
 import { PageHeader } from '@/components/PageHeader';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Book a Free 30-Minute Call — AIVI',
+  title: 'Book a Free 30-Minute Call - AIVI',
   description:
     "Book a free 30-minute call with AIVI. No obligation, no sales script. Describe your situation and we'll tell you honestly what we think.",
   path: '/book',
@@ -27,7 +27,7 @@ export default function BookPage() {
             {[
               {
                 num: '1',
-                text: "You describe your situation — what you're building, what you're worried about, or what you want to change.",
+                text: "You describe your situation - what you're building, what you're worried about, or what you want to change.",
               },
               {
                 num: '2',

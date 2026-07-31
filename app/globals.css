@@ -11,12 +11,12 @@
   /* Palette */
   --color-paper:        #FAF6EF;   /* warm paper ground */
   --color-surface:      #FFFFFF;
-  --color-surface-alt:  #ECE3D2;   /* felt step from paper — the raised panel bg */
+  --color-surface-alt:  #ECE3D2;   /* felt step from paper - the raised panel bg */
   --color-ink:          #1A1917;
   --color-ink-soft:     #57534C;
   --color-ink-muted:    #7A7169;
   --color-line:         #E2D9C8;
-  --color-accent:       #B0552B;   /* warm clay — AA on paper */
+  --color-accent:       #B0552B;   /* warm clay - AA on paper */
   --color-accent-hover: #8F441F;
   --color-accent-soft:  #F3E7D8;   /* warm tint for chips/soft fills */
   --color-accent-glow:  rgba(176, 85, 43, 0.14);
@@ -51,7 +51,7 @@
   --color-ink-soft:     rgba(245, 240, 231, 0.68);
   --color-ink-muted:    rgba(245, 240, 231, 0.42);
   --color-line:         rgba(255, 255, 255, 0.14);
-  --color-accent:       #E08A5C;   /* lifted clay — AA on dark */
+  --color-accent:       #E08A5C;   /* lifted clay - AA on dark */
   --color-accent-hover: #E8A074;
   --color-accent-soft:  rgba(224, 138, 92, 0.14);
   --color-accent-glow:  rgba(224, 138, 92, 0.20);
@@ -71,7 +71,7 @@
 
 /* ── Fixed dark-surface constants ─────────────────────
    The permanent dark anchor (footer + section-dark) never
-   register-switches — both registers agree on it.      */
+   register-switches - both registers agree on it.      */
 :root {
   --color-ink-deep:         #0B0D12;
   --color-surface-dark:     #16171A;
@@ -93,7 +93,7 @@
   --shadow-xl: 0 4px 8px rgba(15, 17, 21, 0.03), 0 16px 48px rgba(15, 17, 21, 0.10);
 }
 
-/* ── Alias layer — Tailwind design system ──────────────
+/* ── Alias layer - Tailwind design system ──────────────
    All --color-* names are aliased back to themselves;
    @theme inline makes them usable as Tailwind utilities
    and as CSS custom properties in component JSX.       */
@@ -290,7 +290,7 @@ body {
   background: linear-gradient(135deg, var(--color-surface), var(--color-surface-alt));
 }
 
-/* ── Accent word — solid clay (gradient retired) ───── */
+/* ── Accent word - solid clay (gradient retired) ───── */
 .text-gradient-accent {
   color: var(--color-accent);
 }
@@ -338,7 +338,7 @@ body {
 .btn-md { padding: 0.625rem 1.5rem; font-size: 0.9375rem; }
 .btn-lg { padding: 0.875rem 2rem; font-size: 1.0625rem; }
 
-/* Primary: ink pill — monochrome, register-adaptive */
+/* Primary: ink pill - monochrome, register-adaptive */
 .btn-primary {
   background-color: var(--cta-bg);
   color: var(--cta-ink);
@@ -350,7 +350,7 @@ body {
   transform: scale(1.02);
 }
 
-/* Secondary + Outline: merged — ink outline, transparent bg */
+/* Secondary + Outline: merged - ink outline, transparent bg */
 .btn-secondary,
 .btn-outline {
   background-color: transparent;
@@ -405,7 +405,7 @@ body {
   --color-line:         var(--color-line-dark);
   --color-surface:      var(--color-surface-dark);
   --color-surface-alt:  var(--color-surface-dark-2);
-  --color-accent:       #E08A5C;   /* lifted clay — AA on dark */
+  --color-accent:       #E08A5C;   /* lifted clay - AA on dark */
   --color-accent-2:     #E08A5C;
   --color-accent-3:     #E08A5C;
 }
@@ -442,7 +442,7 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
   background-color: var(--color-paper);
 }
 
-/* raised: emphasis chapter — felt step from body, hairlines */
+/* raised: emphasis chapter - felt step from body, hairlines */
 .role-raised {
   background-color: var(--bg-raised);
   border-top: 1px solid var(--color-line);
@@ -458,7 +458,7 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
   background-size: 56px 56px;
 }
 
-/* No grid in dark register — color step is enough */
+/* No grid in dark register - color step is enough */
 :root[data-theme="dark"] .role-raised {
   background-image: none;
 }
@@ -475,7 +475,7 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
   position: relative;
 }
 
-/* closing: the earned contrast flip — the page climax */
+/* closing: the earned contrast flip - the page climax */
 .role-closing {
   background-color: var(--bg-closing);
   color: var(--color-ink-on-dark);
@@ -485,7 +485,7 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
   --color-line:         var(--color-line-dark);
   --color-surface:      var(--color-surface-dark);
   --color-surface-alt:  var(--color-surface-dark-2);
-  --color-accent:       #E08A5C;   /* lifted clay — AA on dark in both registers */
+  --color-accent:       #E08A5C;   /* lifted clay - AA on dark in both registers */
   /* Override CTA tokens: paper pill in light, clay pill in dark */
   --cta-bg:  var(--cta-closing-bg);
   --cta-ink: var(--cta-closing-ink);
@@ -508,9 +508,9 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
 
 /* ── Decorative glow / texture layers (aria-hidden) ────
    Absolutely positioned within `position: relative; overflow: hidden`.
-   Static backgrounds — no motion, no reduced-motion guard needed. */
+   Static backgrounds - no motion, no reduced-motion guard needed. */
 
-/* Warm accent glow — for dark sections (closing, footer, dark register hero) */
+/* Warm accent glow - for dark sections (closing, footer, dark register hero) */
 .glow-accent {
   position: absolute;
   inset: 0;
@@ -544,7 +544,7 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
   mask-image: linear-gradient(to bottom, black, transparent 80%);
 }
 
-/* role-open decorative elements — toggled by register via CSS */
+/* role-open decorative elements - toggled by register via CSS */
 .role-open .glow-warm    { display: block; }
 .role-open .glow-accent,
 .role-open .grid-texture { display: none; }
@@ -582,7 +582,7 @@ html[data-hero='c'] [data-hero-slot='c'] { display: block; }
 }
 
 /* ── Students spotlight band ───────────────────────────
-   Folds into raised language — uses bg-raised + warm accent soft glow. */
+   Folds into raised language - uses bg-raised + warm accent soft glow. */
 .students-band {
   background-color: var(--bg-raised);
   background-image: radial-gradient(700px circle at 12% 0%, var(--color-accent-soft), transparent 60%);

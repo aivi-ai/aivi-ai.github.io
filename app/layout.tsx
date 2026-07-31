@@ -16,8 +16,8 @@ import { company } from '@/content/company';
 
 export const metadata: Metadata = {
   title: {
-    template: '%s — AIVI',
-    default: 'AIVI — AI expertise, by the hour.',
+    template: '%s - AIVI',
+    default: 'AIVI - AI expertise, by the hour.',
   },
   description:
     'Senior AI consulting in hours, not months. Fixed-scope engagements with prices on the page. Book a free 30-minute call.',
@@ -40,7 +40,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col">
-        {/* Register switch: set html[data-theme] before paint — no flash.
+        {/* Register switch: set html[data-theme] before paint - no flash.
             Default = light (substance-light). ?theme=light|dark forces + persists.
             aivi_theme persists across sessions. No-JS / crawlers → light. */}
         <script

@@ -71,7 +71,7 @@ export default async function SegmentPage({ params }: Props) {
             }}
           >
             <p className="text-sm" style={{ color: 'var(--color-ink)' }}>
-              <strong>Student rate:</strong> The student rate of €75 requires a valid student ID or recent graduation (within the last 12 months). State this openly — we confirm quickly, and it is all we need.
+              <strong>Student rate:</strong> The student rate of €75 requires a valid student ID or recent graduation (within the last 12 months). State this openly - we confirm quickly, and it is all we need.
             </p>
           </aside>
         )}
@@ -182,7 +182,7 @@ export default async function SegmentPage({ params }: Props) {
         </Container>
       </Section>
 
-      {/* What changes after — raised emphasis panel */}
+      {/* What changes after - raised emphasis panel */}
       <Section role="raised">
         <Container className="relative z-10">
           <div style={{ maxWidth: '720px', marginLeft: 'auto', marginRight: 'auto' }}>

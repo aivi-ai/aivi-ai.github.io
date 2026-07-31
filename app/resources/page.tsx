@@ -11,7 +11,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { CtaBand } from '@/components/CtaBand';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Resources — AIVI',
+  title: 'Resources - AIVI',
   description:
     'Free guides for founders, professionals, and students on AI tools, code review, and career planning.',
   path: '/resources',
@@ -143,7 +143,7 @@ export default function ResourcesPage() {
 
       <CtaBand
         heading="Have a question a guide didn't answer?"
-        sub="Book a free 30-minute call. No obligation, no sales script — we'll tell you honestly what we think."
+        sub="Book a free 30-minute call. No obligation, no sales script - we'll tell you honestly what we think."
         cta="Book a free call"
         href="/book"
       />

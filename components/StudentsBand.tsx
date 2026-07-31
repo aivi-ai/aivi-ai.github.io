@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Container } from './Container';
 import { studentsBand } from '@/content/home';
 
-// A distinct, warmer spotlight for students — the easy "yes" and the most
+// A distinct, warmer spotlight for students - the easy "yes" and the most
 // relatable segment. Light accent-tinted band (not the dark anchor), so it
 // reads as its own energetic moment in the page rhythm. Server component;
 // hover is CSS only.
@@ -14,7 +14,7 @@ export function StudentsBand() {
     <section className="relative overflow-hidden py-20 md:py-28 students-band role-raised">
       <Container className="relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-center">
-          {/* Left — the anthem + offer */}
+          {/* Left - the anthem + offer */}
           <div>
             <p className="eyebrow mb-3">{eyebrow}</p>
             <h2 className="text-h2 mb-4" style={{ color: 'var(--color-ink)' }}>
@@ -42,7 +42,7 @@ export function StudentsBand() {
             </div>
           </div>
 
-          {/* Right — the concrete detail */}
+          {/* Right - the concrete detail */}
           <div className="card p-7 md:p-8">
             <p
               className="text-small font-semibold uppercase tracking-wider mb-4"

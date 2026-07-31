@@ -4,7 +4,7 @@ import { heroVariants, type HeroContent } from '@/content/hero';
 
 // Renders BOTH A/B hero variants into the static HTML. Only one is visible:
 // the pre-paint script in app/layout.tsx sets `html[data-hero]`, and CSS in
-// globals.css shows the matching slot. Variant A is the control — it is the
+// globals.css shows the matching slot. Variant A is the control - it is the
 // one visible with no JS and to crawlers. This is a server component; the
 // variant switch is pure CSS, no event handlers.
 

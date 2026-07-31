@@ -7,7 +7,7 @@ import { Container } from '@/components/Container';
 import { PageHeader } from '@/components/PageHeader';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Privacy Policy — AIVI',
+  title: 'Privacy Policy - AIVI',
   description:
     'AIVI AI Services privacy policy. How we collect, use, and protect your data under GDPR.',
   path: '/legal/privacy',
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
             so we can prepare for and conduct the call.
           </p>
           <p>
-            <strong>Lawful basis:</strong> Legitimate interest (Article 6(1)(f) GDPR) — to
+            <strong>Lawful basis:</strong> Legitimate interest (Article 6(1)(f) GDPR) - to
             manage and deliver our consulting services. Where the booking relates to a paid
             engagement, performance of a contract (Article 6(1)(b) GDPR) also applies.
           </p>

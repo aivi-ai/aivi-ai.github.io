@@ -191,7 +191,7 @@ export function SiteHeader() {
               textDecoration: 'none',
               transition: 'color 200ms ease',
             }}
-            aria-label="AIVI — home"
+            aria-label="AIVI - home"
           >
             <AiviMark size={28} />
             AIVI

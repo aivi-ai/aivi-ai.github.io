@@ -12,7 +12,7 @@ interface Props {
   maxWidth?: string;
 }
 
-// Interior-page opening — shares the role-open geometry with HomeHero
+// Interior-page opening - shares the role-open geometry with HomeHero
 // but at reduced scale (text-h1, lighter padding). Register-adaptive:
 // light register gets the warm glow orb; dark register gets glow-accent + grid.
 export function PageHeader({

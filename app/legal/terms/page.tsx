@@ -7,7 +7,7 @@ import { Container } from '@/components/Container';
 import { PageHeader } from '@/components/PageHeader';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Terms of Service — AIVI',
+  title: 'Terms of Service - AIVI',
   description:
     'Terms of Service for AIVI AI Services. Engagement scope, payment terms, IP, confidentiality, and governing law.',
   path: '/legal/terms',
@@ -27,7 +27,7 @@ export default function TermsPage() {
       <Section role="body">
         <Container>
           <div className="prose max-w-3xl">
-          {/* Founder review note — visible on the page */}
+          {/* Founder review note - visible on the page */}
           <div
             className="rounded-[var(--radius-lg)] px-5 py-4 my-6"
             role="note"
@@ -76,7 +76,7 @@ export default function TermsPage() {
           </p>
           <p>
             AIVI will perform the services described in the Scope with reasonable skill and care.
-            We do not guarantee specific business outcomes — consulting advice is our considered
+            We do not guarantee specific business outcomes - consulting advice is our considered
             professional opinion, not a warranty of results.
           </p>
           <p>

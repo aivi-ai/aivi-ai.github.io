@@ -6,7 +6,7 @@ import { DEFAULT_HERO_VARIANT } from '@/content/hero';
 // Reports which hero variant the visitor saw, so the A/B test is measurable.
 // The variant itself is chosen before paint by the inline script in
 // app/layout.tsx; this only reads the resulting attribute and forwards it to
-// whatever analytics is present. Fully guarded — a harmless no-op until an
+// whatever analytics is present. Fully guarded - a harmless no-op until an
 // analytics tool (e.g. PostHog) is wired up.
 
 export function HeroExperiment() {
@@ -23,12 +23,12 @@ export function HeroExperiment() {
     try {
       w.posthog?.capture?.('hero_view', { variant });
     } catch {
-      /* analytics not present — ignore */
+      /* analytics not present - ignore */
     }
     try {
       w.dataLayer?.push?.({ event: 'hero_view', hero_variant: variant });
     } catch {
-      /* analytics not present — ignore */
+      /* analytics not present - ignore */
     }
   }, []);
 

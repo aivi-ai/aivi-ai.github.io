@@ -69,12 +69,12 @@ for (const service of services) {
     errors.push(`${ctx}: paymentMode is 'self-serve' but paymentLink is missing`);
   }
   if (service.paymentMode === 'call-first' && service.paymentLink) {
-    errors.push(`${ctx}: paymentLink is set on a 'call-first' service — remove it or change paymentMode`);
+    errors.push(`${ctx}: paymentLink is set on a 'call-first' service - remove it or change paymentMode`);
   }
 
   // TODO_ tokens
   if (JSON.stringify(service).includes('TODO_')) {
-    errors.push(`${ctx}: contains a TODO_ token — fill in or remove before launch`);
+    errors.push(`${ctx}: contains a TODO_ token - fill in or remove before launch`);
   }
 
   // Banned words
@@ -82,13 +82,13 @@ for (const service of services) {
 }
 
 // Check company.ts for TODO_ tokens at build time
-// (we import indirectly — the token check is in the content itself)
+// (we import indirectly - the token check is in the content itself)
 const { company } = require('../content/company');
 if (company.kvk === 'TODO_KVK') {
-  console.warn('⚠  WARNING: KvK number is still TODO_KVK — this blocks launch per §16 of the plan.');
+  console.warn('⚠  WARNING: KvK number is still TODO_KVK - this blocks launch per §16 of the plan.');
 }
 if (company.email === 'TODO_EMAIL') {
-  console.warn('⚠  WARNING: Contact email is still TODO_EMAIL — required for footer and JSON-LD.');
+  console.warn('⚠  WARNING: Contact email is still TODO_EMAIL - required for footer and JSON-LD.');
 }
 
 // Report

@@ -20,7 +20,7 @@ export function Reveal({ children, delay = 0, className = '' }: Props) {
     ).matches;
 
     if (prefersReducedMotion) {
-      // Skip animation — element stays fully visible
+      // Skip animation - element stays fully visible
       el.classList.remove('reveal-hidden');
       return;
     }

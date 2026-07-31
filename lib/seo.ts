@@ -15,7 +15,7 @@ export function buildMetadata({
   noindex?: boolean;
 }): Metadata {
   const url = `${siteUrl}${path}`;
-  const fullTitle = title.includes('AIVI') ? title : `${title} — AIVI`;
+  const fullTitle = title.includes('AIVI') ? title : `${title} - AIVI`;
 
   return {
     title: fullTitle,

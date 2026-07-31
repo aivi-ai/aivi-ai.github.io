@@ -1,7 +1,7 @@
 AIVI AI Services
 AI consulting by the hour, from Amsterdam.
 
-What we do: Senior AI expertise in hours, not months — scoped, priced, and delivered in days.
+What we do: Senior AI expertise in hours, not months - scoped, priced, and delivered in days.
 Website: https://weareaivi.com
 Booking (free 30-min call): https://weareaivi.com/book
 
@@ -22,7 +22,7 @@ Book: https://weareaivi.com/book?topic=ai-workflow-audit
 AI Career Roadmap (student rate)
 For: Students and recent graduates
 Scope: 45-min call + written roadmap | Price: €75 excl. VAT (student rate) | Turnaround: 3 working days
-Deliverable: One-page 90-day roadmap — what to learn, what to build, how to present it
+Deliverable: One-page 90-day roadmap - what to learn, what to build, how to present it
 Book: https://weareaivi.com/book?topic=ai-career-roadmap
 
 Working Session (hourly)

@@ -103,7 +103,7 @@ export function CalendlyEmbed({ paramName = 'topic' }: Props) {
         </div>
       )}
 
-      {/* The Calendly widget — always in DOM so Calendly's init scan finds it.
+      {/* The Calendly widget - always in DOM so Calendly's init scan finds it.
           height (not min-height) is required: the iframe inside uses height="100%"
           which only resolves against an explicit parent height, not min-height. */}
       <div

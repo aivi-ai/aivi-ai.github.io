@@ -8,7 +8,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { CtaBand } from '@/components/CtaBand';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Who We Help — AIVI',
+  title: 'Who We Help - AIVI',
   description:
     'AIVI works with students and early-career professionals, solo founders, knowledge workers, and small teams. Find out which engagements are right for where you are.',
   path: '/who-we-help',
@@ -20,7 +20,7 @@ export default function WhoWeHelpPage() {
       <PageHeader
         eyebrow="Where you're building from"
         title="Start where you are."
-        lede="A degree, a product, a workflow, a team — whatever you're building toward, one of these is the closest fit. Pick it and see what we'd do next."
+        lede="A degree, a product, a workflow, a team - whatever you're building toward, one of these is the closest fit. Pick it and see what we'd do next."
       />
 
       <Section role="body">
@@ -35,7 +35,7 @@ export default function WhoWeHelpPage() {
 
       <CtaBand
         heading="Not sure which fits you?"
-        sub="Book the free 30-minute call. We will figure it out together — and if we are not the right help, we will say so on the call."
+        sub="Book the free 30-minute call. We will figure it out together - and if we are not the right help, we will say so on the call."
         cta="Book a free call"
         href="/book"
       />

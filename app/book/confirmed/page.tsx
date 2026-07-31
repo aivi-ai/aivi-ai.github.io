@@ -8,7 +8,7 @@ import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Payment Received — AIVI',
+  title: 'Payment Received - AIVI',
   description: 'Your payment has been processed. Book your session time below.',
   path: '/book/confirmed',
   noindex: true,

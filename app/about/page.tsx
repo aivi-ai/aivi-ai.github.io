@@ -15,7 +15,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'About AIVI — AI Consulting from Amsterdam',
+  title: 'About AIVI - AI Consulting from Amsterdam',
   description:
     'AIVI AI Services is a boutique AI consulting firm in Amsterdam. Senior AI expertise by the hour. Registered in the Netherlands.',
   path: '/about',
@@ -39,10 +39,10 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About the firm"
         title="The senior second opinion you can actually book."
-        lede="AIVI is senior AI help, scoped and priced on the page, delivered in days. We're the front door to real expertise — not a six-month engagement, not a discovery phase. When you need the whole building, we'll tell you."
+        lede="AIVI is senior AI help, scoped and priced on the page, delivered in days. We're the front door to real expertise - not a six-month engagement, not a discovery phase. When you need the whole building, we'll tell you."
       />
 
-      {/* Firm statement — raised emphasis panel (replaces mid-page dark island) */}
+      {/* Firm statement - raised emphasis panel (replaces mid-page dark island) */}
       <Section role="raised">
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto">
@@ -61,7 +61,7 @@ export default function AboutPage() {
                 bookable this week, delivered in days.
               </p>
               <p>
-                We are the low-barrier alternative to the large AI consultancy — the front door,
+                We are the low-barrier alternative to the large AI consultancy - the front door,
                 not the whole building. When an engagement genuinely needs months of build, we say
                 so and refer or scope it up. That honesty is a deliberate part of how we work,
                 not a weakness.
@@ -113,7 +113,7 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      {/* Testimonials — renders nothing if empty */}
+      {/* Testimonials - renders nothing if empty */}
       {testimonials.length > 0 && (
         <Section role="body">
           <Container>
@@ -163,7 +163,7 @@ export default function AboutPage() {
                       company.kvk
                     ) : (
                       <span style={{ color: 'var(--color-warn)' }}>
-                        [FOUNDER INPUT — required before launch]
+                        [FOUNDER INPUT - required before launch]
                       </span>
                     )}
                   </span>

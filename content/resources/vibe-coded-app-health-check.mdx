@@ -6,12 +6,12 @@ readingTime: "8 min read"
 audience: "founders"
 faq:
   - q: "What is a vibe-coded app?"
-    a: "A vibe-coded app is a product built primarily with AI coding assistants — tools like Cursor, GitHub Copilot, or similar. The term describes apps where the developer directed the AI and reviewed the output, rather than writing every line by hand. These apps often work well but have predictable security and scalability blind spots."
+    a: "A vibe-coded app is a product built primarily with AI coding assistants - tools like Cursor, GitHub Copilot, or similar. The term describes apps where the developer directed the AI and reviewed the output, rather than writing every line by hand. These apps often work well but have predictable security and scalability blind spots."
   - q: "Do I need to be technical to run this checklist?"
-    a: "You need enough access to look at your hosting dashboard, your repository, and your environment variables. For items 4, 7, and 11, you may need a developer's help to interpret what you find — but you can still confirm whether the question has been answered."
+    a: "You need enough access to look at your hosting dashboard, your repository, and your environment variables. For items 4, 7, and 11, you may need a developer's help to interpret what you find - but you can still confirm whether the question has been answered."
 ---
 
-You shipped it. It works. People are paying. Now someone — an investor, a co-founder, a developer quoting you a rebuild — has asked whether it's actually safe.
+You shipped it. It works. People are paying. Now someone - an investor, a co-founder, a developer quoting you a rebuild - has asked whether it's actually safe.
 
 This checklist is for that moment. You can run most of it in an afternoon. The items are ordered roughly by how badly they hurt when they go wrong.
 
@@ -19,7 +19,7 @@ This checklist is for that moment. You can run most of it in an afternoon. The i
 
 ## 1. Are your secrets in your code?
 
-Open your repository and search for strings like `sk-`, `API_KEY`, `SECRET`, `PASSWORD`, `TOKEN`. If any of these appear in files that are committed to your repo — even in files that were later "deleted" — you have a problem. Git history preserves deleted content.
+Open your repository and search for strings like `sk-`, `API_KEY`, `SECRET`, `PASSWORD`, `TOKEN`. If any of these appear in files that are committed to your repo - even in files that were later "deleted" - you have a problem. Git history preserves deleted content.
 
 **What to look for:** Any credential, API key, or password committed to the repo, even once.
 
@@ -39,7 +39,7 @@ If you use Vercel, Netlify, Railway, or similar: open the environment variable s
 
 ## 3. Does your app expose data it shouldn't?
 
-Open your app and look at what's returned from your API endpoints in the browser's Network tab. Find a request that returns user data. Check the full response payload — not just what the UI shows.
+Open your app and look at what's returned from your API endpoints in the browser's Network tab. Find a request that returns user data. Check the full response payload - not just what the UI shows.
 
 **What to look for:** Fields like `passwordHash`, `internalId`, `stripeCustomerId`, `adminFlag`, or other users' data in a response meant for one user.
 
@@ -52,10 +52,10 @@ Open your app and look at what's returned from your API endpoints in the browser
 For every endpoint in your API: check whether it requires a logged-in user, and whether it checks that the logged-in user is allowed to access the specific resource they're requesting.
 
 **What to look for:**
-- `GET /api/invoices/123` — can you change `123` to another number and get someone else's invoice?
-- `DELETE /api/user/456` — does this check that the caller is actually user 456 or an admin?
+- `GET /api/invoices/123` - can you change `123` to another number and get someone else's invoice?
+- `DELETE /api/user/456` - does this check that the caller is actually user 456 or an admin?
 
-**Why it matters:** Missing authorisation is the single most common critical flaw in AI-assisted apps. The code is often syntactically correct but logically wrong — it checks "is the user logged in?" but not "is this user allowed to do this thing?"
+**Why it matters:** Missing authorisation is the single most common critical flaw in AI-assisted apps. The code is often syntactically correct but logically wrong - it checks "is the user logged in?" but not "is this user allowed to do this thing?"
 
 ---
 
@@ -91,7 +91,7 @@ Open your database and look at the access controls. Is there one user with full 
 
 ## 8. Are users' personal data and payment data separated?
 
-If you handle payments (even through Stripe): confirm that raw card data never touches your server. Stripe handles this, but check that you're using Stripe's hosted checkout or Elements — not a custom form that posts card numbers to your API.
+If you handle payments (even through Stripe): confirm that raw card data never touches your server. Stripe handles this, but check that you're using Stripe's hosted checkout or Elements - not a custom form that posts card numbers to your API.
 
 **What to look for:** `card_number`, `cvv`, or similar fields in your API code or database. If these exist, you have a PCI compliance problem.
 
@@ -141,8 +141,8 @@ Find any form in your app that takes text input and try: a very long string (10,
 
 ## What now?
 
-If items 4, 7, or 11 gave you pause — those are the three that tend to cause the most damage when they fail.
+If items 4, 7, or 11 gave you pause - those are the three that tend to cause the most damage when they fail.
 
 A [Code & Architecture Review](/services/code-architecture-review) covers all twelve of these, plus the parts of the codebase that aren't visible from the outside. The output is a ranked list of what to fix first, written in plain English, within 5 working days. You keep the report whether or not you work with us further.
 
-[Book a free 30-minute call](/book?topic=code-architecture-review) — describe what you've built and what you're worried about. We'll tell you honestly whether a review makes sense.
+[Book a free 30-minute call](/book?topic=code-architecture-review) - describe what you've built and what you're worried about. We'll tell you honestly whether a review makes sense.

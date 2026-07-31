@@ -1,4 +1,4 @@
-// Home hero copy — two A/B variants.
+// Home hero copy - two A/B variants.
 //
 // A = control / default (celebrates the builder). Rendered in static HTML and
 //     shown to no-JS visitors and crawlers.
@@ -36,7 +36,7 @@ export const heroVariants: Record<HeroVariantId, HeroContent> = {
       { text: 'building', accent: true },
       { text: '.' },
     ],
-    lede: "You didn't wait for permission to start. You don't need a three-month engagement either — just senior AI judgment, by the hour, so what you ship holds up.",
+    lede: "You didn't wait for permission to start. You don't need a three-month engagement either - just senior AI judgment, by the hour, so what you ship holds up.",
     primaryCta: { label: 'Book a free 30-min call', href: '/book' },
     secondaryCta: { label: 'See what we do and what it costs', href: '/pricing' },
     trustLine: 'Fixed scope · Price on the page · No sales script',
@@ -48,7 +48,7 @@ export const heroVariants: Record<HeroVariantId, HeroContent> = {
       { text: 'name on it', accent: true },
       { text: '.' },
     ],
-    lede: "Because it usually is. Get a senior read on what you've built with AI — what's fine, what breaks first at 10x, and what to do about it — in days, not months.",
+    lede: "Because it usually is. Get a senior read on what you've built with AI - what's fine, what breaks first at 10x, and what to do about it - in days, not months.",
     primaryCta: { label: 'Book a free 30-min call', href: '/book' },
     secondaryCta: { label: 'See what we do and what it costs', href: '/pricing' },
     trustLine: 'Fixed scope · Price on the page · No sales script',

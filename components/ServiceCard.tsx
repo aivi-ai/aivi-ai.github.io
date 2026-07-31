@@ -25,7 +25,7 @@ export function ServiceCard({ service }: Props) {
 
   const ctaLabel =
     paymentMode === 'self-serve'
-      ? `Book and pay — ${price}`
+      ? `Book and pay - ${price}`
       : 'Book a free 30-min call';
 
   return (

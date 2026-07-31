@@ -13,7 +13,7 @@ import { Button } from '@/components/Button';
 import { JsonLd } from '@/components/JsonLd';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Pricing — AIVI',
+  title: 'Pricing - AIVI',
   description:
     'All prices listed. Most AIVI engagements are measured in hours and start under €1,500. Fixed-price proposals after the free 30-minute call.',
   path: '/pricing',
@@ -47,7 +47,7 @@ export default function PricingPage() {
                 className="font-bold text-lg"
                 style={{ color: 'var(--color-ink)', marginBottom: '0.25rem' }}
               >
-                The free 30-minute call — €0
+                The free 30-minute call - €0
               </p>
               <p className="text-sm" style={{ color: 'var(--color-ink-soft)' }}>
                 No obligation. No sales script. Start here.
@@ -83,7 +83,7 @@ export default function PricingPage() {
         </Container>
       </Section>
 
-      {/* How billing works — raised emphasis panel (replaces mid-page dark island) */}
+      {/* How billing works - raised emphasis panel (replaces mid-page dark island) */}
       <Section role="raised" id="billing">
         <Container className="relative z-10">
           <div className="max-w-3xl mx-auto">
@@ -143,7 +143,7 @@ export default function PricingPage() {
                 Cancellation &amp; rescheduling
               </h2>
               <p className="text-sm" style={{ color: 'var(--color-ink-soft)', lineHeight: '1.7', margin: 0 }}>
-                Free reschedule up to 24 hours before a session — just reply to the calendar invite
+                Free reschedule up to 24 hours before a session - just reply to the calendar invite
                 or email us. Late cancellation (under 24 hours before) is billed at 50% of the
                 session cost. No-shows are billed in full.
               </p>

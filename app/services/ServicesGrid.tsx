@@ -66,7 +66,7 @@ export function ServicesGrid({ services }: Props) {
           })}
         </div>
 
-        {/* Cards grid — all cards are always in the DOM; only visibility changes */}
+        {/* Cards grid - all cards are always in the DOM; only visibility changes */}
         <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 list-none p-0 m-0">
           {sorted.map((service) => {
             const visible =

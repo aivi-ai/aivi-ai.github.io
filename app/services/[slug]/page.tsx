@@ -164,7 +164,7 @@ export default async function ServicePage({
           </Container>
         </Section>
 
-        {/* ── How it runs — raised emphasis panel ──────── */}
+        {/* ── How it runs - raised emphasis panel ──────── */}
         <Section role="raised">
           <Container className="relative z-10">
             <div className="text-center mb-12">

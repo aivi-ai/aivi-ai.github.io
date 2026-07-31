@@ -5,7 +5,7 @@ import { PageHeader } from '@/components/PageHeader';
 import { Button } from '@/components/Button';
 
 export const metadata: Metadata = buildMetadata({
-  title: 'Contact — AIVI',
+  title: 'Contact - AIVI',
   description:
     'Get in touch with AIVI AI Services. Email us or book a free 30-minute call.',
   path: '/contact',
@@ -34,7 +34,7 @@ export default function ContactPage() {
                   className="text-lede"
                   style={{ color: 'var(--color-ink-muted)' }}
                 >
-                  [Email address — required before launch]
+                  [Email address - required before launch]
                 </p>
               )}
               <p
@@ -60,7 +60,7 @@ export default function ContactPage() {
               >
                 If it&rsquo;s about working together, the free 30-minute call is faster and
                 more useful. You describe the situation, we ask questions and tell you what
-                we think — all in one conversation.
+                we think - all in one conversation.
               </p>
               <Button href="/book" variant="primary" size="md">
                 Book a free 30-min call
@@ -94,7 +94,7 @@ export default function ContactPage() {
                     company.kvk
                   ) : (
                     <span style={{ color: 'var(--color-warn)' }}>
-                      [FOUNDER INPUT — required before launch]
+                      [FOUNDER INPUT - required before launch]
                     </span>
                   )}
                 </span>

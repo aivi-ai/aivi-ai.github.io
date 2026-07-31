@@ -22,7 +22,7 @@ import { aiExperts, aiExpertCapabilities, aiExpertInstitutions, advisoryCapabili
 import { PersonCard } from '@/components/PersonCard';
 
 export const metadata: Metadata = {
-  title: 'AIVI — AI expertise, by the hour.',
+  title: 'AIVI - AI expertise, by the hour.',
   description:
     'Senior AI consulting in hours, not months. Fixed-scope engagements with prices on the page. Book a free 30-minute call.',
 };
@@ -36,7 +36,7 @@ const HOW_IT_WORKS_STEPS = [
   },
   {
     label: 'We scope it in writing',
-    detail: 'A fixed price, hours, and turnaround — in your inbox the next working day.',
+    detail: 'A fixed price, hours, and turnaround - in your inbox the next working day.',
   },
   {
     label: 'You accept, we invoice',
@@ -58,10 +58,10 @@ const WALK_AWAY_ITEMS = [
 export default function HomePage() {
   return (
     <>
-      {/* 1 — Hero (A/B: variant A control + variant C alternate) */}
+      {/* 1 - Hero (A/B: variant A control + variant C alternate) */}
       <HomeHero />
 
-      {/* 2 — Segment chooser */}
+      {/* 2 - Segment chooser */}
       <Reveal>
         <Section role="body">
           <Container>
@@ -81,12 +81,12 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 2b — Students spotlight */}
+      {/* 2b - Students spotlight */}
       <Reveal>
         <StudentsBand />
       </Reveal>
 
-      {/* 3 — Featured services */}
+      {/* 3 - Featured services */}
       <Reveal>
         <Section role="body">
           <Container>
@@ -115,7 +115,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 4 — How it works (raised emphasis chapter — replaces mid-page dark island) */}
+      {/* 4 - How it works (raised emphasis chapter - replaces mid-page dark island) */}
       <Reveal>
         <Section role="raised">
           <Container className="relative z-10">
@@ -140,7 +140,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 5 — What you walk away with */}
+      {/* 5 - What you walk away with */}
       <Reveal>
         <Section role="body">
           <Container>
@@ -160,7 +160,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 6 — Honesty band */}
+      {/* 6 - Honesty band */}
       <Reveal>
         <Section role="body">
           <Container>
@@ -171,7 +171,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 7 — Team */}
+      {/* 7 - Team */}
       <Reveal>
         <Section role="body" id="team">
           <Container>
@@ -188,7 +188,7 @@ export default function HomePage() {
                 AI Experts
               </h3>
               <div className="card p-6 md:p-8 flex flex-col gap-8">
-                {/* 1 — People: name / title / location */}
+                {/* 1 - People: name / title / location */}
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
                   {aiExperts.map(person => (
                     <PersonCard key={person.name} person={person} />
@@ -197,7 +197,7 @@ export default function HomePage() {
 
                 <div style={{ borderTop: '1px solid var(--color-line)' }} />
 
-                {/* 2 — Collective capabilities, not tied to any one person */}
+                {/* 2 - Collective capabilities, not tied to any one person */}
                 <div>
                   <p
                     className="text-xs font-semibold uppercase tracking-widest mb-5"
@@ -233,7 +233,7 @@ export default function HomePage() {
                   </ul>
                 </div>
 
-                {/* 3 — Affiliation tags, shared across the section */}
+                {/* 3 - Affiliation tags, shared across the section */}
                 <div className="flex flex-wrap gap-1.5">
                   {aiExpertInstitutions.map(inst => (
                     <span
@@ -257,7 +257,7 @@ export default function HomePage() {
                 Software Advisory Board
               </h3>
               <div className="card p-6 md:p-8 flex flex-col gap-8">
-                {/* 1 — One-line framing of the bench */}
+                {/* 1 - One-line framing of the bench */}
                 <p
                   className="text-lg md:text-xl font-semibold leading-snug"
                   style={{ color: 'var(--color-ink)', maxWidth: '70ch' }}
@@ -270,7 +270,7 @@ export default function HomePage() {
                   </span>
                 </p>
 
-                {/* 2 — Collective capabilities, mirroring the AI Experts checklist */}
+                {/* 2 - Collective capabilities, mirroring the AI Experts checklist */}
                 <div>
                   <p
                     className="text-xs font-semibold uppercase tracking-widest mb-5"
@@ -306,7 +306,7 @@ export default function HomePage() {
                   </ul>
                 </div>
 
-                {/* 3 — Company tags, shared across the section */}
+                {/* 3 - Company tags, shared across the section */}
                 <div className="flex flex-wrap gap-1.5">
                   {advisoryCompanies.map(company => (
                     <span
@@ -328,7 +328,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 9 — FAQ */}
+      {/* 9 - FAQ */}
       <Reveal>
         <Section role="body">
           <Container>
@@ -344,7 +344,7 @@ export default function HomePage() {
         </Section>
       </Reveal>
 
-      {/* 10 — Closing CTA band */}
+      {/* 10 - Closing CTA band */}
       <CtaBand
         heading="Tell us what you're building."
         sub="No commitment until after the call. We&rsquo;ll tell you honestly whether we&rsquo;re the right help."

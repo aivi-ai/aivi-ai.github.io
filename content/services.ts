@@ -29,7 +29,7 @@ export const services: Service[] = [
   {
     slug: 'code-architecture-review',
     name: 'Code & Architecture Review',
-    outcome: 'A written report of what will break first — ranked, explained, and fixable.',
+    outcome: 'A written report of what will break first - ranked, explained, and fixable.',
     audiences: ['founders', 'teams'],
     weight: { founders: 3, teams: 2 },
     hours: '8–10 hours',
@@ -37,7 +37,7 @@ export const services: Service[] = [
     turnaround: 'Report within 5 working days',
     format: 'Remote · async + 60-min walkthrough call',
     isThisYou: [
-      'You shipped it with AI tooling and it works — but you can\'t tell anyone whether it\'s safe.',
+      'You shipped it with AI tooling and it works - but you can\'t tell anyone whether it\'s safe.',
       'You have paying users and no idea what happens at 10× traffic.',
       'A developer quoted you €40k and you can\'t tell if that\'s fair.',
       'You know there are things wrong, you just don\'t know which ones will bite you first.',
@@ -65,7 +65,7 @@ export const services: Service[] = [
     howItRuns: [
       { label: 'Day 1', detail: 'Book the free 30-minute call. We ask about your app, your users, and your biggest concerns.' },
       { label: 'Day 2', detail: 'We send a written scope and price confirmation. You reply to accept, and we agree on NDA and repo access.' },
-      { label: 'Days 3–7', detail: 'We read the code. No interruptions — we come back with findings, not questions.' },
+      { label: 'Days 3–7', detail: 'We read the code. No interruptions - we come back with findings, not questions.' },
       { label: 'Day 8', detail: 'You receive the written report and the executive summary.' },
       { label: 'Day 9–10', detail: 'We hold the 60-minute walkthrough call on your schedule.' },
     ],
@@ -80,11 +80,11 @@ export const services: Service[] = [
       },
       {
         q: 'Will you fix the problems you find?',
-        a: 'Not in this engagement. The review tells you what is wrong and how to fix it. If you want the fixes implemented, that is a Build Sprint — a separate engagement we can scope on the same call.',
+        a: 'Not in this engagement. The review tells you what is wrong and how to fix it. If you want the fixes implemented, that is a Build Sprint - a separate engagement we can scope on the same call.',
       },
       {
         q: 'My app was built mostly with AI tools. Is that a problem?',
-        a: 'No, that is most of what we review. The review is about what breaks, not about how it was written. AI-assisted codebases have predictable patterns — we know what to look for.',
+        a: 'No, that is most of what we review. The review is about what breaks, not about how it was written. AI-assisted codebases have predictable patterns - we know what to look for.',
       },
       {
         q: 'How confidential is this?',
@@ -96,14 +96,14 @@ export const services: Service[] = [
     featured: true,
     paymentMode: 'call-first',
     seo: {
-      title: 'Code & Architecture Review — AIVI',
+      title: 'Code & Architecture Review - AIVI',
       description: 'An 8–10 hour review of your codebase, ranked by what will break first. Written report, walkthrough call, and executive summary. €1,200.',
     },
   },
   {
     slug: 'ai-workflow-audit',
     name: 'AI Workflow Audit',
-    outcome: 'A ranked map of where AI saves your team real hours — and where it creates risk.',
+    outcome: 'A ranked map of where AI saves your team real hours - and where it creates risk.',
     audiences: ['professionals', 'teams'],
     weight: { professionals: 3, teams: 3, founders: 1 },
     hours: '6–8 hours',
@@ -118,7 +118,7 @@ export const services: Service[] = [
       'You\'re a manager who needs to brief your team and you want something real, not a slide deck.',
     ],
     whatWeDo: [
-      'Watch how the work actually gets done this week — documents, tools, handoffs, and repetitive steps.',
+      'Watch how the work actually gets done this week - documents, tools, handoffs, and repetitive steps.',
       'Map where an LLM genuinely saves hours and where it silently creates risk.',
       'Identify the specific recurring tasks that are the best candidates for automation.',
       'Flag the tasks where AI is the wrong tool and explain why.',
@@ -166,7 +166,7 @@ export const services: Service[] = [
     featured: true,
     paymentMode: 'call-first',
     seo: {
-      title: 'AI Workflow Audit — AIVI',
+      title: 'AI Workflow Audit - AIVI',
       description: 'A 6–8 hour audit of your actual workflow. A ranked map of where AI saves real hours and where it creates risk. €950 for individuals and teams.',
     },
   },
@@ -185,7 +185,7 @@ export const services: Service[] = [
       'You\'re studying or recently graduated and the AI job market looks nothing like what your programme prepared you for.',
       'You\'ve built things but you don\'t know how to make a hiring manager believe you built them.',
       'You\'re changing careers and need to know what the market actually wants, not what the internet says.',
-      'You want to know what to learn in what order — not another list of courses.',
+      'You want to know what to learn in what order - not another list of courses.',
     ],
     whatWeDo: [
       'Give you an honest read of where you are and what the market is actually hiring for in your target role and region.',
@@ -214,7 +214,7 @@ export const services: Service[] = [
     faq: [
       {
         q: 'Do I qualify for the student rate?',
-        a: 'The student rate of €75 applies if you are currently enrolled at a university or college, or if you graduated within the last 12 months. We ask for a brief confirmation — a student email address or a graduation date is fine.',
+        a: 'The student rate of €75 applies if you are currently enrolled at a university or college, or if you graduated within the last 12 months. We ask for a brief confirmation - a student email address or a graduation date is fine.',
       },
       {
         q: 'Can you get me a job?',
@@ -222,7 +222,7 @@ export const services: Service[] = [
       },
       {
         q: 'What if I\'m not sure what role I want?',
-        a: 'That is fine — bring the uncertainty to the call. Part of what we do is help you narrow down what is realistic and appealing given where you are. Come as you are.',
+        a: 'That is fine - bring the uncertainty to the call. Part of what we do is help you narrow down what is realistic and appealing given where you are. Come as you are.',
       },
     ],
     related: ['working-session', 'ai-workflow-audit'],
@@ -230,7 +230,7 @@ export const services: Service[] = [
     featured: false,
     paymentMode: 'call-first',
     seo: {
-      title: 'AI Career Roadmap — AIVI',
+      title: 'AI Career Roadmap - AIVI',
       description: 'A 45-minute call and a one-page 90-day roadmap for students and recent graduates. €75 student rate. What to learn, what to build, and how to present it.',
     },
   },
@@ -254,7 +254,7 @@ export const services: Service[] = [
     whatWeDo: [
       'Work on your actual problem, live, in one hour.',
       'Ask the right questions to understand your situation fully.',
-      'Give you a direct, honest answer — including "don\'t do that" when that\'s the right answer.',
+      'Give you a direct, honest answer - including "don\'t do that" when that\'s the right answer.',
       'Demonstrate tools or approaches on-screen when it helps.',
     ],
     whatYouGet: [
@@ -275,7 +275,7 @@ export const services: Service[] = [
     faq: [
       {
         q: 'Can I just buy an hour without the free call?',
-        a: 'Yes. For a working session, the free call is optional — it helps us arrive prepared. If you\'d rather skip it, say so when you book and we\'ll note it.',
+        a: 'Yes. For a working session, the free call is optional - it helps us arrive prepared. If you\'d rather skip it, say so when you book and we\'ll note it.',
       },
       {
         q: 'What if we don\'t finish in an hour?',
@@ -291,7 +291,7 @@ export const services: Service[] = [
     featured: true,
     paymentMode: 'call-first',
     seo: {
-      title: 'Working Session — AIVI',
+      title: 'Working Session - AIVI',
       description: 'One hour on your actual problem, live. €140/hour or €375 for 3 hours. Written notes within 24 hours. The easiest way to find out whether we\'re useful.',
     },
   },
@@ -313,7 +313,7 @@ export const services: Service[] = [
       'You need an internal automation wired end to end this week, not in three months.',
     ],
     whatWeDo: [
-      'Implement the agreed target — working code, not a prototype.',
+      'Implement the agreed target - working code, not a prototype.',
       'Write clean, documented code in your existing stack.',
       'Set up any infrastructure or tooling required.',
       'Stay in sync via a shared channel during the sprint.',
@@ -350,7 +350,7 @@ export const services: Service[] = [
     featured: false,
     paymentMode: 'call-first',
     seo: {
-      title: 'Build Sprint — AIVI',
+      title: 'Build Sprint - AIVI',
       description: 'Two or three focused days of implementation. Working code in your repo, a README, and a handover call. €2,200 for 2 days, €3,000 for 3 days.',
     },
   },
@@ -369,7 +369,7 @@ export const services: Service[] = [
       'You\'re building something with AI and want a senior person to ask before you make expensive decisions.',
       'You want a monthly call to review what\'s changed and what to do next.',
       'You\'d rather pay for honest advice than discover the problem after it\'s happened.',
-      'You don\'t need a full-time hire — you need someone reachable.',
+      'You don\'t need a full-time hire - you need someone reachable.',
     ],
     whatWeDo: [
       'Hold a monthly call to review your situation and what\'s changed.',
@@ -378,7 +378,7 @@ export const services: Service[] = [
       'Write up monthly notes summarising what we discussed and what you decided.',
     ],
     whatYouGet: [
-      'Four hours of access per month — a monthly call plus async questions.',
+      'Four hours of access per month - a monthly call plus async questions.',
       'Monthly written notes.',
       'Honest "don\'t do that" advice before it costs you.',
     ],
@@ -390,7 +390,7 @@ export const services: Service[] = [
     howItRuns: [
       { label: 'Month 1, Week 1', detail: 'Onboarding call (60 minutes) to understand your context.' },
       { label: 'Each month', detail: 'A scheduled monthly call, async access throughout, written notes after.' },
-      { label: 'Any month', detail: 'Cancel with no notice required — billed monthly in advance.' },
+      { label: 'Any month', detail: 'Cancel with no notice required - billed monthly in advance.' },
     ],
     faq: [
       {
@@ -399,7 +399,7 @@ export const services: Service[] = [
       },
       {
         q: 'What counts as "async questions"?',
-        a: 'Email or a shared Slack channel — your choice. We answer within one working day. Questions that need more than 30 minutes of work become a sprint item, and we\'ll tell you that when it happens.',
+        a: 'Email or a shared Slack channel - your choice. We answer within one working day. Questions that need more than 30 minutes of work become a sprint item, and we\'ll tell you that when it happens.',
       },
     ],
     related: ['working-session', 'build-sprint', 'code-architecture-review'],
@@ -407,7 +407,7 @@ export const services: Service[] = [
     featured: false,
     paymentMode: 'call-first',
     seo: {
-      title: 'Advisory Retainer — AIVI',
+      title: 'Advisory Retainer - AIVI',
       description: 'Four hours per month: a monthly call and async access by email or Slack. €500/month, cancel any time. Senior AI advice when you need it.',
     },
   },
@@ -423,13 +423,13 @@ export const services: Service[] = [
     turnaround: 'Scheduled within 2 weeks',
     format: 'Remote or on-site in the Netherlands',
     isThisYou: [
-      'Your team is using AI tools inconsistently — some people swear by them, others don\'t use them at all.',
+      'Your team is using AI tools inconsistently - some people swear by them, others don\'t use them at all.',
       'You want everyone at a shared baseline before the inconsistency becomes a quality problem.',
       'Your team\'s AI usage is ad hoc and you want a playbook.',
       'You\'re a manager who needs to brief the team and wants something hands-on, not a presentation.',
     ],
     whatWeDo: [
-      'Run a hands-on half-day session using your team\'s own documents and tasks — not generic slide examples.',
+      'Run a hands-on half-day session using your team\'s own documents and tasks - not generic slide examples.',
       'Cover what these tools are actually good at, where they fail, and how to verify their output.',
       'Establish the data and confidentiality rules your team needs.',
       'Build prompt templates for the team\'s real recurring tasks during the session.',
@@ -457,7 +457,7 @@ export const services: Service[] = [
       },
       {
         q: 'Do you offer this in Dutch?',
-        a: 'The default is English. Dutch delivery is possible — ask when you book.',
+        a: 'The default is English. Dutch delivery is possible - ask when you book.',
       },
     ],
     related: ['ai-workflow-audit', 'working-session', 'advisory-retainer'],
@@ -465,7 +465,7 @@ export const services: Service[] = [
     featured: false,
     paymentMode: 'call-first',
     seo: {
-      title: 'Team Workshop — AIVI',
+      title: 'Team Workshop - AIVI',
       description: 'A half-day hands-on workshop for teams of 5–25. A written playbook and prompt templates for your real tasks. €1,400 remote, €1,900 on-site in NL.',
     },
   },
@@ -515,7 +515,7 @@ export const services: Service[] = [
     featured: false,
     paymentMode: 'call-first',
     seo: {
-      title: 'Custom Project — AIVI',
+      title: 'Custom Project - AIVI',
       description: 'AI consulting for work that needs weeks or months. Fixed-price quotes after a paid discovery. We take on a small number of projects and say so plainly.',
     },
   },
