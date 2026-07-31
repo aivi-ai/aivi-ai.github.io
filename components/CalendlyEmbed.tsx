@@ -8,8 +8,9 @@ import { company } from '@/content/company';
 
 /** Fire a GA4 event if gtag is loaded. */
 function gtagEvent(name: string, params?: Record<string, unknown>) {
-  if (typeof window !== 'undefined' && typeof (window as Window & { gtag?: Function }).gtag === 'function') {
-    (window as Window & { gtag: Function }).gtag('event', name, params ?? {});
+  const w = window as Window & { gtag?: (...args: unknown[]) => void };
+  if (typeof window !== 'undefined' && typeof w.gtag === 'function') {
+    w.gtag('event', name, params ?? {});
   }
 }
 
