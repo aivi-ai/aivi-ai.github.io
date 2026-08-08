@@ -31,13 +31,13 @@ function getResources(): ResourceMeta[] {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.mdx'))
+    .filter((f) => f.endsWith('.md'))
     .map((filename) => {
       const raw = fs.readFileSync(path.join(dir, filename), 'utf-8');
       const { data } = matter(raw);
       return {
-        slug: filename.replace('.mdx', ''),
-        title: data.title ?? filename.replace('.mdx', ''),
+        slug: filename.replace(/\.md$/, ''),
+        title: data.title ?? filename.replace(/\.md$/, ''),
         description: data.description,
         date: data.date ?? '2024-01-01',
         readingTime: data.readingTime,

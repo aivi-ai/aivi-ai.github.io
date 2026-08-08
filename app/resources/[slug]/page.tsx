@@ -1,27 +1,20 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import fs from 'fs';
-import path from 'path';
-import matter from 'gray-matter';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
 
 import { buildMetadata } from '@/lib/seo';
-import { articleJsonLd } from '@/lib/jsonld';
+import { articleJsonLd, faqJsonLd } from '@/lib/jsonld';
 import { company } from '@/content/company';
+import { getResourceMeta, getResourceHtml, getResourceSlugs } from '@/lib/resources';
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { JsonLd } from '@/components/JsonLd';
+import { Faq } from '@/components/Faq';
 
 // ── Static generation ───────────────────────────────────────────────────────
 
 export async function generateStaticParams() {
-  const dir = path.join(process.cwd(), 'content/resources');
-  if (!fs.existsSync(dir)) return [];
-  return fs
-    .readdirSync(dir)
-    .filter((f) => f.endsWith('.mdx'))
-    .map((f) => ({ slug: f.replace('.mdx', '') }));
+  return getResourceSlugs().map((slug) => ({ slug }));
 }
 
 // ── Metadata ────────────────────────────────────────────────────────────────
@@ -32,13 +25,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const filePath = path.join(process.cwd(), 'content/resources', `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) return {};
-  const { data } = matter(fs.readFileSync(filePath, 'utf-8'));
+  const meta = getResourceMeta(slug);
+  if (!meta) return {};
 
   return buildMetadata({
-    title: data.title ?? slug,
-    description: data.description ?? '',
+    title: meta.title,
+    description: meta.description ?? '',
     path: `/resources/${slug}`,
   });
 }
@@ -53,26 +45,12 @@ export default async function ResourcePage({
   const { slug } = await params;
 
   // Guard: file must exist
-  const filePath = path.join(process.cwd(), 'content/resources', `${slug}.mdx`);
-  if (!fs.existsSync(filePath)) notFound();
+  const meta = getResourceMeta(slug);
+  const html = getResourceHtml(slug);
+  if (!meta || !html) notFound();
 
-  const raw = fs.readFileSync(filePath, 'utf-8');
-  const { data } = matter(raw);
-
-  // Dynamically import the compiled MDX file.
-  // @next/mdx compiles .mdx files in content/ when imported, because the
-  // next.config.ts includes 'mdx' in pageExtensions.
-  let MDXContent: React.ComponentType;
-  try {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const mod = await import(`@/content/resources/${slug}.mdx`) as any;
-    MDXContent = mod.default;
-  } catch {
-    notFound();
-  }
-
-  const displayDate = data.date
-    ? new Date(data.date).toLocaleDateString('en-GB', {
+  const displayDate = meta.date
+    ? new Date(meta.date).toLocaleDateString('en-GB', {
         day: 'numeric',
         month: 'long',
         year: 'numeric',
@@ -80,15 +58,16 @@ export default async function ResourcePage({
     : null;
 
   const jsonLd = articleJsonLd({
-    headline: data.title ?? slug,
-    description: data.description ?? '',
-    datePublished: data.date ?? new Date().toISOString(),
+    headline: meta.title,
+    description: meta.description ?? '',
+    datePublished: meta.date ?? new Date().toISOString(),
     url: `${company.siteUrl}/resources/${slug}`,
   });
 
   return (
     <>
       <JsonLd data={jsonLd} />
+      {(meta.faq ?? []).length > 0 && <JsonLd data={faqJsonLd(meta.faq!)} />}
 
       {/* Header */}
       <Section role="body">
@@ -115,24 +94,24 @@ export default async function ResourcePage({
               </li>
               <li aria-hidden="true" style={{ color: 'var(--color-line)' }}>/</li>
               <li aria-current="page" style={{ color: 'var(--color-ink-muted)' }}>
-                {data.title ?? slug}
+                {meta.title ?? slug}
               </li>
             </ol>
           </nav>
 
           <div className="flex flex-wrap gap-2 items-center mb-4 text-small">
             {displayDate && (
-              <time dateTime={data.date} style={{ color: 'var(--color-ink-muted)' }}>
+              <time dateTime={meta.date} style={{ color: 'var(--color-ink-muted)' }}>
                 {displayDate}
               </time>
             )}
-            {data.readingTime && (
+            {meta.readingTime && (
               <>
                 <span aria-hidden="true" style={{ color: 'var(--color-line)' }}>·</span>
-                <span style={{ color: 'var(--color-ink-muted)' }}>{data.readingTime}</span>
+                <span style={{ color: 'var(--color-ink-muted)' }}>{meta.readingTime}</span>
               </>
             )}
-            {data.audience && (
+            {meta.audience && (
               <>
                 <span aria-hidden="true" style={{ color: 'var(--color-line)' }}>·</span>
                 <span
@@ -142,17 +121,17 @@ export default async function ResourcePage({
                     color: 'var(--color-accent)',
                   }}
                 >
-                  {data.audience}
+                  {meta.audience}
                 </span>
               </>
             )}
           </div>
 
-          <h1 className="text-h1 max-w-3xl">{data.title ?? slug}</h1>
+          <h1 className="text-h1 max-w-3xl">{meta.title ?? slug}</h1>
 
-          {data.description && (
+          {meta.description && (
             <p className="text-lede mt-4 max-w-2xl" style={{ color: 'var(--color-ink-soft)' }}>
-              {data.description}
+              {meta.description}
             </p>
           )}
         </Container>
@@ -163,9 +142,10 @@ export default async function ResourcePage({
         <Container>
           <div className="lg:grid lg:grid-cols-[1fr_280px] lg:gap-16">
             {/* Main content */}
-            <article className="prose">
-              <MDXContent />
-            </article>
+            <article
+              className="prose"
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
 
             {/* Sidebar - soft CTA */}
             <aside className="hidden lg:block">
@@ -204,6 +184,18 @@ export default async function ResourcePage({
               </div>
             </aside>
           </div>
+
+          {/* FAQ — from the article's frontmatter */}
+          {(meta.faq ?? []).length > 0 && (
+            <Section role="body">
+              <Container>
+                <h2 className="text-h2 mb-6">Frequently asked questions</h2>
+                <Faq
+                  items={(meta.faq ?? []) as { q: string; a: string }[]}
+                />
+              </Container>
+            </Section>
+          )}
 
           {/* Mobile CTA - below article */}
           <div
