@@ -1,12 +1,4 @@
 import type { NextConfig } from "next";
-import createMDX from "@next/mdx";
-
-const withMDX = createMDX({
-  options: {
-    remarkPlugins: [],
-    rehypePlugins: [],
-  },
-});
 
 // basePath is empty for the normal case: a repo named <org>.github.io serves
 // at the root, https://<org>.github.io/. Only set NEXT_PUBLIC_BASE_PATH if
@@ -15,7 +7,9 @@ const withMDX = createMDX({
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
-  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
+  // Markdown resources live in content/ and are rendered to HTML at build
+  // time via `marked` (see lib/resources.ts) — no MDX pipeline needed.
+  pageExtensions: ["js", "jsx", "ts", "tsx"],
   // Static export: every route becomes a pre-rendered HTML file in ./out,
   // served directly by GitHub Pages (no Node server).
   output: "export",
@@ -25,4 +19,4 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
 };
 
-export default withMDX(nextConfig);
+export default nextConfig;
