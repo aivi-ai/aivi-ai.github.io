@@ -43,7 +43,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return allRoutes.map((route) => ({
-    url: `${base}${route}`,
+    // trailingSlash: true — the site serves every non-root route at
+    // /path/ (a 301 from /path). List the canonical, slash-terminated URL
+    // so the sitemap doesn't point Google at redirects.
+    url: `${base}${route === '/' ? '/' : `${route}/`}`,
     lastModified: now,
     changeFrequency: route === '/' ? 'weekly' : 'monthly',
     priority:
