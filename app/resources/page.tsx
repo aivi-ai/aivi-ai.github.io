@@ -31,7 +31,7 @@ function getResources(): ResourceMeta[] {
   if (!fs.existsSync(dir)) return [];
   return fs
     .readdirSync(dir)
-    .filter((f) => f.endsWith('.md'))
+    .filter((f) => f.endsWith('.md') && !f.startsWith('_'))
     .map((filename) => {
       const raw = fs.readFileSync(path.join(dir, filename), 'utf-8');
       const { data } = matter(raw);

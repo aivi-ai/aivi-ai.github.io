@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import Link from 'next/link';
+
 import { Section } from '@/components/Section';
 import { Container } from '@/components/Container';
 import { HomeHero } from '@/components/HomeHero';
@@ -98,13 +100,13 @@ export default function HomePage() {
                   Fixed scope, published price, delivered in days.
                 </p>
               </div>
-              <a
+              <Link
                 href="/services"
                 className="link-arrow text-sm font-medium"
                 style={{ color: 'var(--color-accent)', textDecoration: 'none', whiteSpace: 'nowrap' }}
               >
                 See all engagements <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               {featuredServices.map(service => (
