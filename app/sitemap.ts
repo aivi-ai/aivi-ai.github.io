@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const resourceSlugs = fs.existsSync(resourceDir)
     ? fs
         .readdirSync(resourceDir)
-        .filter((f) => f.endsWith('.md'))
+        .filter((f) => f.endsWith('.md') && !f.startsWith('_'))
         .map((f) => `/resources/${f.replace(/\.md$/, '')}`)
     : [];
 

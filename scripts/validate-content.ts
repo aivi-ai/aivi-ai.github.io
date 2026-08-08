@@ -12,7 +12,7 @@ const BANNED_WORDS = [
   'next-level', 'next level', 'robust',
 ];
 
-let errors: string[] = [];
+const errors: string[] = [];
 
 function check(value: string, context: string) {
   for (const word of BANNED_WORDS) {
@@ -83,7 +83,7 @@ for (const service of services) {
 
 // Check company.ts for TODO_ tokens at build time
 // (we import indirectly - the token check is in the content itself)
-const { company } = require('../content/company');
+import { company } from '../content/company';
 if (company.kvk === 'TODO_KVK') {
   console.warn('⚠  WARNING: KvK number is still TODO_KVK - this blocks launch per §16 of the plan.');
 }

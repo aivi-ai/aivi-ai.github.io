@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AIVI website
 
-## Getting Started
+Company site for [AIVI](https://weareaivi.com) — senior AI consulting by the
+hour. Next.js 16 (App Router), statically exported to GitHub Pages.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** with `output: "export"` → `./out`, deployed via GitHub
+  Pages on push to `main` (`.github/workflows/deploy.yml`)
+- **Content:** Markdown resources (guides for founders, professionals, and
+  students) under `content/resources/`, rendered at build time with
+  `marked` (see `lib/resources.ts`). No MDX.
+- **CI** (`.github/workflows/ci.yml`): `tsc --noEmit` → `lint` → `build` →
+  `npm audit --audit-level=high` on every PR and push to main.
+
+## Adding a resource (article)
+
+1. Copy `content/resources/_TEMPLATE.md` to `content/resources/<slug>.md`
+   — `<slug>` becomes the URL path (`/resources/<slug>`).
+2. Fill in the frontmatter: `title`, `description`, `date` (ISO),
+   `readingTime` (e.g. `"7 min read"`), `audience`
+   (`students` | `professionals` | `founders`), and an optional `faq`
+   list (shown as an accordion + FAQPage JSON-LD on the article page).
+3. Write the body in plain Markdown — headings, lists, links, **bold**.
+   No JSX/MDX. Keep the house voice: specific, concrete, honest. The
+   content validator (`scripts/validate-content.ts`) rejects buzzwords
+   like "revolutionize", "unlock", "supercharge".
+4. Submit as a branch + PR (CI must pass), or push to `main` directly —
+   deploy happens automatically on merge/push.
+
+Files starting with `_` in `content/resources/` are ignored by the index,
+sitemap, and RSS feed — that's how the template stays unpublished.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev       # dev server on :3000
+npm run build     # static export to ./out (runs the prebuild validator)
+npm run lint
+npx tsc --noEmit
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Notes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **No Vercel**: this site deploys to GitHub Pages. `basePath` and
+  `assetPrefix` are empty for the `<org>.github.io` case; set
+  `NEXT_PUBLIC_BASE_PATH` only if the repo serves under a subpath.
+- RSS feed at `/feed.xml` (built from `content/resources/`).
+- Sitemap at `/sitemap.xml` includes all resources.
