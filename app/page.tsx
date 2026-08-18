@@ -131,7 +131,7 @@ export default function HomePage() {
             <StepList steps={HOW_IT_WORKS_STEPS} />
             <div className="mt-10 text-center">
               <a
-                href="/approach"
+                href="/approach/"
                 className="link-arrow text-sm font-medium"
                 style={{ color: 'var(--color-accent)', textDecoration: 'none' }}
               >
