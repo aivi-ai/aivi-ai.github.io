@@ -15,7 +15,9 @@ export function buildMetadata({
   noindex?: boolean;
 }): Metadata {
   const url = `${siteUrl}${path}`;
-  const fullTitle = title.includes('AIVI') ? title : `${title} - AIVI`;
+  // The root layout's title template ('%s - AIVI') appends the brand exactly
+  // once. Strip any author-written suffix so it never doubles.
+  const fullTitle = title.endsWith(' - AIVI') ? title.replace(/ - AIVI$/, '') : title;
 
   return {
     title: fullTitle,

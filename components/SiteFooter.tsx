@@ -99,6 +99,7 @@ export function SiteFooter() {
             <ul className="flex flex-col gap-2 list-none p-0 m-0">
               <FooterLink href="/about">About</FooterLink>
               <FooterLink href="/resources">Resources</FooterLink>
+              <FooterLink href="/nl/locaties">Locaties</FooterLink>
               <FooterLink href="/contact">Contact</FooterLink>
             </ul>
           </div>
