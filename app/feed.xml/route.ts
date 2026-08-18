@@ -52,7 +52,7 @@ export function GET(): Response {
 
   const items = resources
     .map((r) => {
-      const url = `${base}/resources/${r.slug}`;
+      const url = `${base}/resources/${r.slug}/`;
       // Noon UTC keeps the date stable regardless of the build machine's zone.
       const pubDate = new Date(`${r.date}T12:00:00Z`).toUTCString();
       return [

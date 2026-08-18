@@ -145,4 +145,4 @@ If items 4, 7, or 11 gave you pause - those are the three that tend to cause the
 
 A [Code & Architecture Review](/services/code-architecture-review) covers all twelve of these, plus the parts of the codebase that aren't visible from the outside. The output is a ranked list of what to fix first, written in plain English, within 5 working days. You keep the report whether or not you work with us further.
 
-[Book a free 30-minute call](/book?topic=code-architecture-review) - describe what you've built and what you're worried about. We'll tell you honestly whether a review makes sense.
+[Book a free 30-minute call](/book/?topic=code-architecture-review) - describe what you've built and what you're worried about. We'll tell you honestly whether a review makes sense.

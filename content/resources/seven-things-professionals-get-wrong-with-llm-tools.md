@@ -120,4 +120,4 @@ Knowing which tasks fall into which category - for your specific role and workfl
 
 If you want to map where AI genuinely saves time in your workflow - and where it creates risk - an [AI Workflow Audit](/services/ai-workflow-audit) is the practical version of this. We watch how you actually work, map the opportunities, and build the prompt templates together.
 
-[Book a free 30-minute call](/book?topic=ai-workflow-audit) to find out whether it would be worth it for your situation.
+[Book a free 30-minute call](/book/?topic=ai-workflow-audit) to find out whether it would be worth it for your situation.

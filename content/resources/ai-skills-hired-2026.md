@@ -119,4 +119,4 @@ This is a rough order, not a rigid plan. Adjust based on your starting point.
 
 If you want a roadmap that is specific to your background, target role, and region, an [AI Career Roadmap](/services/ai-career-roadmap) session is €75 for students. It is a 45-minute call and a one-page document telling you exactly what to do next.
 
-[Book a free 30-minute call](/book?topic=ai-career-roadmap) to find out whether it would be useful for you.
+[Book a free 30-minute call](/book/?topic=ai-career-roadmap) to find out whether it would be useful for you.

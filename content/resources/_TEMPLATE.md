@@ -21,7 +21,7 @@ problem it addresses. No hype — the content validator bans buzzwords
 ## Section heading
 
 Plain markdown only — no JSX/MDX. **Bold**, *italic*,
-[links](/services), lists:
+[links](/services/), lists:
 
 1. First point
 2. Second point
@@ -30,4 +30,4 @@ Keep paragraphs short. The house style is specific and concrete: name the
 trade-offs, show the reasoning. A call to action at the end is welcome
 when it genuinely helps:
 
-[Book a free 30-minute call](/book) to talk it through.
+[Book a free 30-minute call](/book/) to talk it through.
