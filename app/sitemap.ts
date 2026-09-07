@@ -4,6 +4,7 @@ import path from 'path';
 
 import { services } from '@/content/services';
 import { segments } from '@/content/segments';
+import { locaties } from '@/content/locaties';
 import { company } from '@/content/company';
 
 export const dynamic = 'force-static';
@@ -25,6 +26,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const serviceRoutes = services.map((s) => `/services/${s.slug}`);
   const segmentRoutes = segments.map((s) => `/who-we-help/${s.slug}`);
+  const locatieRoutes = [
+    '/nl/locaties',
+    ...locaties.map((l) => `/nl/locaties/${l.slug}`),
+  ];
 
   // Resource slugs from MDX files - read at build time
   const resourceDir = path.join(process.cwd(), 'content/resources');
@@ -39,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...serviceRoutes,
     ...segmentRoutes,
+    ...locatieRoutes,
     ...resourceSlugs,
   ];
 

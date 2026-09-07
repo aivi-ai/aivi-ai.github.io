@@ -5,6 +5,13 @@ What we do: Senior AI expertise in hours, not months - scoped, priced, and deliv
 Website: https://weareaivi.com
 Booking (free 30-min call): https://weareaivi.com/book
 
+--- Locaties (Nederlands) ---
+
+AI-consultancy Amsterdam: https://weareaivi.com/nl/locaties/amsterdam
+AI-consultancy Utrecht: https://weareaivi.com/nl/locaties/utrecht
+AI-consultancy Rotterdam: https://weareaivi.com/nl/locaties/rotterdam
+AI-consultancy Den Haag: https://weareaivi.com/nl/locaties/den-haag
+
 --- Engagements ---
 
 Code & Architecture Review
